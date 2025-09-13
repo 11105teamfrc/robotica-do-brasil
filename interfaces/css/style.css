@@ -1,0 +1,231 @@
+:root {
+  /* Paleta de Cores */
+  --azul: #004aad;
+  --amarelo: #f1b10d;
+  --verde: #179b5b;
+  --vermelho: #d41e1e;
+  --rosa: #e42d84;
+  --laranja: #f1740d;
+
+  /* Cores Complementares */
+  --vermelho-complementar: #ffa0a0;
+  --rosa-complementar: #f77eb8;
+  --azul-completamentar: #a3bee2;
+  --laranja-complementar: #f4c49c;
+  --verde-complementar: #8ad0ae;
+
+  /* Cores Neutras */
+  --cinza-escuro: #4f4f52;
+  /* Para Fontes e Footer */
+  --cinza-claro: #a4a0a0;
+  --fundo-branco: #efefef;
+  --fundo-bege: #d4cece;
+  /* Para Cards */
+  --fundo-footer: #4f4f52;
+
+  /* Fontes */
+  --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fundo-branco);
+  font-family: var(--fonte-principal);
+}
+
+/* menu NORMAL */
+nav {
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fundo-bege);
+  height: 50px;
+  width: 100%;
+  font-family: var(--fonte-principal);
+}
+
+nav li {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--cinza-escuro);
+}
+
+#container-nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+/* menu HAMBURGUER */
+.nav-container-hamburguer {
+  display: none;
+  /* escondido por padrão */
+}
+
+.btn-toggle-nav {
+  width: 60px;
+  height: 100%;
+  background-size: 60%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-sidebar {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background: var(--fundo-bege);
+  overflow-x: hidden;
+  transition: 0.4s;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.nav-sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-sidebar li {
+  padding: 15px;
+}
+
+.nav-sidebar a {
+  text-decoration: none;
+  color: var(--fundo-footer);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Responsividade para o menu */
+@media (max-width: 768px) {
+  #container-nav-menu {
+    display: none;
+  }
+
+  .nav-container-hamburguer {
+    display: flex;
+    position: relative;
+    background-color: var(--fundo-bege);
+    height: 60px;
+    align-items: center;
+    padding-left: 10px;
+  }
+}
+
+/* footer */
+footer {
+  background-color: var(--cinza-escuro);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Seção de contatos */
+footer .contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 300px;
+  /* ocupa metade no desktop e se ajusta no mobile */
+}
+
+footer .contato-info h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Cada item de contato */
+footer .contato-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .contato-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer .contato-item a:hover {
+  text-decoration: underline;
+}
+
+/* Logo/banner */
+footer .logo-banner {
+  max-width: 260px;
+  height: auto; 
+  object-fit: contain; 
+  align-self: center;
+  flex: 1 1 200px;
+}
+
+/* Responsividade do footer */
+@media (max-width: 1024px) {
+  footer {
+    padding: 40px 40px;
+    flex-direction: column;
+    align-items: flex-start; 
+    
+  }
+
+  footer .contato-info {
+    align-items: flex-start; 
+    width: 100%; 
+  }
+
+  
+
+  footer .logo-banner {
+    margin-top: 20px;
+    max-width: 220px;
+    align-self: flex-start; 
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 20px;
+  }
+
+  footer .contato-info h1 {
+    font-size: 22px;
+  }
+
+  footer .contato-item a {
+    font-size: 14px;
+  }
+
+  footer .logo-banner {
+    max-width: 180px;
+  }
+}
