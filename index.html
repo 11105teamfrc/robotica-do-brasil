@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica do Brasil</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <header class="header-container-banner">
+        <img class="gctomorrow-banner" src="./public/img/4tomorrow_banner-inicial.png" alt="">
+    </header>
+
+    <!--menu HAMBURGUER-->
+    <nav class="nav-container-hamburguer">
+        <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
+        <ul class="nav-sidebar">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pesquise-regiao">Pesquise por Região</a></li>
+            <li><a href="#conheca-categorias">Categorias</a></li>
+            <li><a href="#premios">Prêmios</a></li>
+            <li><a href="#registrar-time">Registre seu Time</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <nav id="container-nav-menu">
+        <!--Barra de Navegação-->
+        <li class="barra-navegacao"><a id="inicio" href="#inicio">Início</a></li>
+        <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
+        <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
+        <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios</a></li>
+        <li class="barra-navegacao"><a id="resgistrar-time" href="#registrar-time">Registre seu Time</a></li>
+        <li class="barra-navegacao"><a id="sobre-nos" href="#sobre-nos">Sobre Nós</a></li>
+        <li class="barra-navegacao"><a id="contatos" href="#contatos">Contatos</a></li>
+    </nav>
+    <main class="main-container">
+        <!--Robótica do Brasil-->
+        <section>
+            <img class="robotica-do-brasil" src="./public/img/robotica-do-brasil_main.png" alt="">
+            <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
+        </section>
+    </main>
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>
