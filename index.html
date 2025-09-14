@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica do Brasil</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <header class="header-container-banner">
+        <img class="gctomorrow-banner" src="./public/img/4tomorrow_banner-inicial.png" alt="">
+    </header>
+
+    <!--menu HAMBURGUER-->
+    <nav class="nav-container-hamburguer">
+        <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
+        <ul class="nav-sidebar">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pesquise-regiao">Pesquise por Região</a></li>
+            <li><a href="#conheca-categorias">Categorias</a></li>
+            <li><a href="#premios">Prêmios</a></li>
+            <li><a href="#registrar-time">Registre seu Time</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <nav id="container-nav-menu">
+        <!--Barra de Navegação-->
+        <li class="barra-navegacao"><a id="inicio" href="#inicio">Início</a></li>
+        <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
+        <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
+        <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios</a></li>
+        <li class="barra-navegacao"><a id="resgistrar-time" href="#registrar-time">Registre seu Time</a></li>
+        <li class="barra-navegacao"><a id="sobre-nos" href="#sobre-nos">Sobre Nós</a></li>
+        <li class="barra-navegacao"><a id="contatos" href="#contatos">Contatos</a></li>
+    </nav>
+    <main class="main-container">
+        <!-- Robótica do Brasil -->
+        <section>
+            <img class="robotica-do-brasil" src="./public/img/robotica-do-brasil_main.png" alt="">
+            <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
+        </section>
+    </main>
+
+    <main class="main-container-categorias">
+        <!-- Categorias -->
+        <section class="section-container-categorias">
+            <article id="article-fll">
+                <img class="img-categorias" src="./public/img/first-lego-league_logo.png" alt="logo da first lego league">
+                <h3>FLL</h3>
+                <p>
+                    A FIRST LEGO League (FLL) é um programa de robótica educacional que desafia equipes a resolverem problemas do mundo real usando tecnologia, robôs LEGO e programação, promovendo inovação, colaboração e habilidades STEM.
+                </p>
+            </article>
+
+            <article id="article-ftc">
+                <img class="img-categorias" src="./public/img/first-tech-challenge_logo.png" alt="logo da first tech challenge">
+                <h3>FTC</h3>
+                <p>
+                    A FIRST Tech Challenge (FTC) é um torneio onde equipes projetam, constroem e programam robôs para realizar tarefas específicas em arenas, promovendo criatividade, trabalho em equipe e habilidades em engenharia e tecnologia.
+                </p>
+            </article>
+
+            <article id="article-frc">
+                <img class="img-categorias" src="./public/img/first-robotics-competition_logo.png" alt="logo da first robotics competition">
+                <h3>FRC</h3>
+                <p>
+                    A FIRST Robotics Competition (FRC) é um torneio global onde equipes constroem robôs industriais para enfrentar desafios complexos em arena, incentivando inovação, trabalho em equipe e o desenvolvimento de habilidades em engenharia.
+                </p>
+            </article>
+
+            <article id="article-stem-racing">
+                <img class="img-categorias" src="./public/img/stem-racing_logo.png" alt="logo da first lego league">
+                <h3>STEM Racing</h3>
+                <p>
+                    STEM Racing é um projeto educacional que conecta ciência, tecnologia, engenharia e matemática ao automobilismo, desafiando estudantes a criar carrinhos de corrida em miniatura enquanto aprendem de forma prática e divertida.
+                </p>
+            </article>
+
+            <article id="article-obr">
+                <img class="img-categorias" src="./public/img/olimpiadas-brasileiras-de-roboticas_logo.png" alt="logo da olimpíada brasileira de robótica">
+                <h3>OBR</h3>
+                <p>
+                    A Olimpíada Brasileira de Robótica é uma competição nacional que desafia equipes a resolverem problemas práticos usando robôs, incentivando o aprendizado de programação, engenharia e tecnologia em diferentes modalidades e desafios.
+                </p>
+            </article>
+
+            <article id="article-wro">
+                <img class="img-categorias" src="./public/img/world-robot-olympiad_logo.png" alt="logo da world robot olympiad">
+                <h3>WRO</h3>
+                <p>
+                    A World Robot Olympiad (WRO)  é um torneio internacional que desafia estudantes a resolverem problemas por meio da robótica e da programação. Ela acontece em mais de 90 países e tem um torneio mundial anual.
+                </p>
+            </article>
+        </section>
+    </main>
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>
