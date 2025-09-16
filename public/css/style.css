@@ -150,6 +150,7 @@ nav li a {
 header .gctomorrow-banner {
   margin: 5px;
 }
+
 /* FIM - BANNER INICIAL */
 
 /* HEAD (ROBÓTICA DO BRASIL)*/
@@ -182,24 +183,116 @@ main section .button-equipes:hover {
   background-color: #d2d1d1;
   transition: 0.3s;
 }
+
 /* FIM - HEAD (ROBÓTICA DO BRASIL) */
 
 /* CONHEÇA AS CATEGORIAS */
-main .section-container-categorias {
-  display:grid;
-  grid-template-columns: max-content(100%);
-  margin-top: 20px;
-  margin-bottom: 20px;
+.main-container-titulos {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--fundo-bege);
 }
 
-main section article {
+main .h-categorias {
+  width: 100%;
+}
+
+main h3 {
+  color: var(--fundo-branco);
+}
+
+main h2 {
+  color: var();
+}
+
+.main-container-categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--fundo-bege);
+}
+
+main .section-container-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main section .article-container-categorias {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: var(--fundo-bege);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  background-color: var(--fundo-branco);
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 60px;
+}
+
+main section article .image-extra {
+  width: 90%;
+  border-radius: 24px;
+}
+
+main section article .img-logo-categorias {
+  height: 30%;
+  overflow-y: hidden;
+  margin-top: 20px;
+}
+
+main section article .idade-categoria {
+  font-size: 1rem;
+  color: var(--cinza-escuro);
+  margin: 10px 0;
+}
+
+main section .article-container-categorias p {
+  font-size: 0.9rem;
+  color: var(--cinza-escuro);
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+main section article .btn-equipes-categoria,
+.btn-saiba-mais-categoria {
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--cinza-escuro);
+  color: var(--cinza-bem-claro);
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+}
+
+main section article .btn-equipes-categoria {
+  margin-right: 10px;
+}
+
+
+main section article .btn-equipes-categoria:hover,
+.btn-saiba-mais-categoria:hover {
+  background-color: var(--fundo-branco);
+  color: var(--cinza-escuro);
+  border: 1px solid var(--cinza-escuro);
+}
+
+@media (max-width: 1024px) {
+  main .section-container-categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main .section-container-categorias {
+    grid-template-columns: 1fr;
+  }
 }
