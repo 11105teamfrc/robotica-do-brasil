@@ -1,4 +1,3 @@
-// variável que checa se o toggle está clicado ou não
 let toggleNavStatus = false;
 
 let toggleNav = function () {
@@ -7,7 +6,6 @@ let toggleNav = function () {
   let logoBtnMenu = document.querySelector('.btn-toggle-nav');
 
   if (toggleNavStatus === false) {
-    // abrir menu
     getSidebar.style.width = "250px";
     getSidebar.style.visibility = "visible";
 
@@ -18,7 +16,6 @@ let toggleNav = function () {
     logoBtnMenu.style.backgroundColor = "var(--fundo-bege)";
     toggleNavStatus = true;
   } else {
-    // fechar menu
     getSidebar.style.width = "0";
     getSidebar.style.visibility = "hidden";
 
@@ -31,13 +28,12 @@ let toggleNav = function () {
   }
 };
 
-// Fecha o menu automaticamente quando clicar em algum link
 document.addEventListener("DOMContentLoaded", () => {
   let menuLinks = document.querySelectorAll(".nav-sidebar a");
   menuLinks.forEach(link => {
     link.addEventListener("click", () => {
       if (toggleNavStatus) {
-        toggleNav(); // chama a função para fechar
+        toggleNav();
       }
     });
   });

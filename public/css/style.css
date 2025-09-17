@@ -159,6 +159,7 @@ header .gctomorrow-banner {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 70px;
 }
 
 main section .robotica-do-brasil {
@@ -194,15 +195,18 @@ main section .button-equipes:hover {
 }
 
 main .h-categorias {
+  text-align: center;
   width: 100%;
 }
 
 main h3 {
   color: var(--fundo-branco);
+  margin-top: 30px;
 }
 
 main h2 {
-  color: var();
+  color: var(--cinza-escuro);
+  margin-bottom: 10px;
 }
 
 .main-container-categorias {
@@ -219,6 +223,7 @@ main .section-container-categorias {
   gap: 20px;
   width: 100%;
   max-width: 1200px;
+  height: 100%;
 }
 
 main section .article-container-categorias {
@@ -228,9 +233,11 @@ main section .article-container-categorias {
   text-align: center;
   background-color: var(--fundo-branco);
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   transition: transform 0.3s ease-in-out;
   border-radius: 60px;
+  height: auto;
+  margin: 0;
 }
 
 main section article .image-extra {
@@ -259,30 +266,30 @@ main section .article-container-categorias p {
   margin-bottom: 15px;
 }
 
-main section article .btn-equipes-categoria,
+main section article .bottuns-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+main section article div .btn-equipes-categoria,
 .btn-saiba-mais-categoria {
+  display: inline-block;
   padding: 10px 15px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
   background-color: var(--cinza-escuro);
   color: var(--cinza-bem-claro);
-  transition: background-color 0.3s, color 0.3s;
-  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
-
-main section article .btn-equipes-categoria {
-  margin-right: 10px;
-}
-
 
 main section article .btn-equipes-categoria:hover,
 .btn-saiba-mais-categoria:hover {
-  background-color: var(--fundo-branco);
+  background-color: var(--fundo-bege);
   color: var(--cinza-escuro);
-  border: 1px solid var(--cinza-escuro);
 }
 
 @media (max-width: 1024px) {
