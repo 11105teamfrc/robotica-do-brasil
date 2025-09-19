@@ -254,6 +254,14 @@ main section article .img-logo-categorias {
   margin-top: 20px;
 }
 
+main section article .logo-ftc {
+  width: 40%;
+}
+
+main section article .logo-frc {
+  width: 40%;
+}
+
 main section article .caso-especial-um {
   width: 40%
 }
