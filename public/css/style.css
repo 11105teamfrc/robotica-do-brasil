@@ -242,17 +242,28 @@ main section .article-container-categorias {
   margin: 0;
 }
 
-
 main section article .image-extra {
   width: 90%;
   border-radius: 24px;
 }
 
 main section article .img-logo-categorias {
-  width: 50%;
+  width: 30%;
   height: 30%;
   overflow-y: hidden;
   margin-top: 20px;
+}
+
+main section article .caso-especial-um {
+  width: 40%
+}
+
+main section article .caso-especial-dois {
+  width: 30%
+}
+
+main section article .caso-especial-tres {
+  width: 40%
 }
 
 main section article .idade-categoria {
