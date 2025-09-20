@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tabela FRC (CSV → HTML)</title>
+<style>
+  :root{
+    --bg:#0b1020;--panel:#111735;--muted:#a9b1d6;--text:#e7ecff;--acc:#6ca4ff;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0b1020,#0d1430 40%,#0b1020);
+    color:var(--text);font:15px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .container{max-width:1200px;margin:24px auto;padding:0 16px}
+  .card{background:var(--panel);border:1px solid #1a2350;border-radius:var(--radius);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);padding:18px}
+  h1{font-size:clamp(20px,3vw,28px);margin:0 0 12px}
+  .table-wrap{max-height:70vh;overflow:auto;border-radius:12px;margin-top:10px}
+  table{width:100%;border-collapse:separate;border-spacing:0;background:#0f1540;
+    border:1px solid #1e2a63;border-radius:12px;overflow:hidden}
+  thead th{position:sticky;top:0;background:#0f174a;text-align:left;padding:8px 10px;
+    border-bottom:1px solid #23306d;white-space:nowrap}
+  tbody td{padding:8px 10px;border-bottom:1px solid #131b44;color:#d9e1ff;vertical-align:top}
+  tbody tr:hover{background:#121c53}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+  select, input[type="search"]{
+    padding:8px 10px;border-radius:10px;border:1px solid #26306b;
+    background:#0f1540;color:var(--text)
+  }
+  #q{flex:2;min-width:250px} /* barra de busca global mais larga */
+  #estado,#cidade{flex:1;min-width:150px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Tabela FRC</h1>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Buscar por equipe, número, etc..." />
+        <select id="estado"><option value="">Todos os estados</option></select>
+        <select id="cidade"><option value="">Todas as cidades</option></select>
+      </div>
+      <div class="table-wrap">
+        <table id="tabela">
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script>
+  const CSV_PATH = './frc_teams_brasil.csv';
+
+  const thead = document.getElementById('thead');
+  const tbody = document.getElementById('tbody');
+  const q = document.getElementById('q');
+  const estadoSel = document.getElementById('estado');
+  const cidadeSel = document.getElementById('cidade');
+
+  let DATA = [];
+  let COLS = [];
+
+  function buildHeader(){
+    thead.innerHTML = '';
+    const headRow = document.createElement('tr');
+    COLS.forEach(c => {
+      const th = document.createElement('th');
+      th.textContent = c;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+  }
+
+  function populateSelects(){
+    const estados = [...new Set(DATA.map(r => r.Estado).filter(Boolean))].sort();
+    const cidades = [...new Set(DATA.map(r => r.Cidade).filter(Boolean))].sort();
+
+    estadoSel.innerHTML = '<option value="">Todos os estados</option>' + 
+      estados.map(e => `<option value="${e}">${e}</option>`).join('');
+    cidadeSel.innerHTML = '<option value="">Todas as cidades</option>' + 
+      cidades.map(c => `<option value="${c}">${c}</option>`).join('');
+  }
+
+  function rowMatches(rowObj) {
+    const global = q.value.trim().toLowerCase();
+    if (global) {
+      const any = COLS.some(col => String(rowObj[col] ?? '').toLowerCase().includes(global));
+      if (!any) return false;
+    }
+    if (estadoSel.value && rowObj.Estado !== estadoSel.value) return false;
+    if (cidadeSel.value && rowObj.Cidade !== cidadeSel.value) return false;
+    return true;
+  }
+
+  function render() {
+    const filtered = DATA.filter(rowMatches);
+    tbody.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    for (const row of filtered) {
+      const tr = document.createElement('tr');
+      for (const col of COLS) {
+        const td = document.createElement('td');
+        td.textContent = row[col] ?? '';
+        tr.appendChild(td);
+      }
+      frag.appendChild(tr);
+    }
+    tbody.appendChild(frag);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    Papa.parse(CSV_PATH, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        DATA = results.data.map(r => Object.fromEntries(Object.entries(r).map(([k,v]) => [k, String(v ?? '')])));
+        COLS = results.meta.fields || (DATA[0] ? Object.keys(DATA[0]) : []);
+        buildHeader();
+        populateSelects();
+        render();
+      }
+    });
+  });
+
+  q.addEventListener('input', render);
+  estadoSel.addEventListener('change', render);
+  cidadeSel.addEventListener('change', render);
+</script>
+</body>
+</html>

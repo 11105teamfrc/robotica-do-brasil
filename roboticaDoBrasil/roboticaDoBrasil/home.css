@@ -1,0 +1,25 @@
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--color-white-soft);
+      color: var(--color-dark);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    input.filter {
+      width: 95%;
+      padding: 4px;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }

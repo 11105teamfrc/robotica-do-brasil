@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tabela FRC (CSV → HTML)</title>
+<style>
+  :root{
+    --bg:#0b1020;--panel:#111735;--muted:#a9b1d6;--text:#e7ecff;--acc:#6ca4ff;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0b1020,#0d1430 40%,#0b1020);
+    color:var(--text);font:15px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .container{max-width:1200px;margin:24px auto;padding:0 16px}
+  .card{background:var(--panel);border:1px solid #1a2350;border-radius:var(--radius);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);padding:18px}
+  h1{font-size:clamp(20px,3vw,28px);margin:0 0 6px}
+  .status{font-size:13px;color:var(--muted);margin-top:4px}
+  .table-wrap{max-height:70vh;overflow:auto;border-radius:12px;margin-top:10px}
+  table{width:100%;border-collapse:separate;border-spacing:0;background:#0f1540;
+    border:1px solid #1e2a63;border-radius:12px;overflow:hidden}
+  thead th{position:sticky;top:0;background:#0f174a;text-align:left;padding:8px 10px;
+    border-bottom:1px solid #23306d;white-space:nowrap}
+  thead tr.filters th{top:38px;background:#101a57;border-bottom:1px solid #1d2a66}
+  thead input{width:100%;padding:6px 8px;border-radius:10px;border:1px solid #26306b;background:#0f1540;color:var(--text)}
+  tbody td{padding:8px 10px;border-bottom:1px solid #131b44;color:#d9e1ff;vertical-align:top}
+  tbody tr:hover{background:#121c53}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px}
+  select, input[type="search"]{padding:8px 10px;border-radius:10px;border:1px solid #26306b;background:#0f1540;color:var(--text)}
+  .pill{font-size:12px;padding:4px 8px;border-radius:999px;background:#122060;border:1px solid #293581;color:#a8b1d8}
+  .count{margin-left:auto;font-size:13px;color:var(--muted)}
+  .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Tabela FRC (CSV → HTML)</h1>
+      <div class="controls">
+        <label class="pill">Filtros por coluna abaixo do cabeçalho</label>
+        <input id="q" type="search" placeholder="Filtro global (todas as colunas)..." />
+        <select id="limite">
+          <option value="100">Limite: 100</option>
+          <option value="500">Limite: 500</option>
+          <option value="1000">Limite: 1000</option>
+          <option value="-1">Sem limite</option>
+        </select>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="tabela">
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="status mono" id="status"></div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script>
+  // Caminho relativo do CSV dentro da pasta do projeto.
+  // Ex.: coloque o arquivo ao lado do index.html, ou ajuste para "data/frc_teams_brasil.csv" se estiver numa subpasta.
+  const CSV_PATH = './frc_teams_brasil.csv';
+
+  const thead = document.getElementById('thead');
+  const tbody = document.getElementById('tbody');
+  const q = document.getElementById('q');
+  const limiteSel = document.getElementById('limite');
+  const countEl = document.getElementById('count');
+  const statusEl = document.getElementById('status');
+
+  let DATA = [];
+  let COLS = [];
+  let colFilters = [];
+
+  function buildHeader(){
+    thead.innerHTML = '';
+    const headRow = document.createElement('tr');
+    COLS.forEach(c => {
+      const th = document.createElement('th');
+      th.textContent = c;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+
+    const filterRow = document.createElement('tr');
+    filterRow.className = 'filters';
+    colFilters = COLS.map(() => '');
+    COLS.forEach((c, idx) => {
+      const th = document.createElement('th');
+      const input = document.createElement('input');
+      input.placeholder = 'Filtrar ' + c;
+      input.addEventListener('input', () => {
+        colFilters[idx] = input.value.trim().toLowerCase();
+        render();
+      });
+      th.appendChild(input);
+      filterRow.appendChild(th);
+    });
+    thead.appendChild(filterRow);
+  }
+
+  function rowMatchesFilters(rowObj) {
+    const global = q.value.trim().toLowerCase();
+    if (global) {
+      const any = COLS.some(col => String(rowObj[col] ?? '').toLowerCase().includes(global));
+      if (!any) return false;
+    }
+    for (let i=0; i<COLS.length; i++) {
+      const f = colFilters[i];
+      if (!f) continue;
+      const v = String(rowObj[COLS[i]] ?? '').toLowerCase();
+      if (!v.includes(f)) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    const limit = parseInt(limiteSel.value, 10);
+    const filtered = DATA.filter(rowMatchesFilters);
+    countEl.textContent = 'Mostrando ' + (limit < 0 ? filtered.length : Math.min(filtered.length, limit)) +
+                          ' de ' + filtered.length + ' linhas (CSV com ' + DATA.length + ' no total)';
+
+    tbody.innerHTML = '';
+
+    const rowsToShow = limit < 0 ? filtered : filtered.slice(0, limit);
+    const frag = document.createDocumentFragment();
+
+    for (const row of rowsToShow) {
+      const tr = document.createElement('tr');
+      for (const col of COLS) {
+        const td = document.createElement('td');
+        td.textContent = row[col] ?? '';
+        tr.appendChild(td);
+      }
+      frag.appendChild(tr);
+    }
+    tbody.appendChild(frag);
+  }
+
+  // Carrega o CSV assim que a página é aberta (servidor local necessário)
+  document.addEventListener('DOMContentLoaded', () => {
+    Papa.parse(CSV_PATH, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        DATA = results.data.map(r => Object.fromEntries(Object.entries(r).map(([k,v]) => [k, String(v ?? '')])));
+        COLS = results.meta.fields || (DATA[0] ? Object.keys(DATA[0]) : []);
+        buildHeader();
+        statusEl.textContent = 'Colunas: ' + COLS.length + ' | Linhas: ' + DATA.length + ' | Fonte: ' + CSV_PATH;
+        render();
+      },
+      error: (err) => {
+        statusEl.textContent = 'Erro ao ler CSV: ' + err;
+      }
+    });
+  });
+
+  q.addEventListener('input', render);
+  limiteSel.addEventListener('change', render);
+</script>
+</body>
+</html>
