@@ -29,132 +29,22 @@
 
     <nav id="container-nav-menu">
         <!--Barra de Navegação-->
-        <li class="barra-navegacao"><a id="inicio" href="#inicio">Início</a></li>
+        <li class="barra-navegacao"><a id="inicio" href="#inicio">Início  </a></li>
         <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
         <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
-        <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios</a></li>
+        <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios  </a></li>
         <li class="barra-navegacao"><a id="resgistrar-time" href="#registrar-time">Registre seu Time</a></li>
         <li class="barra-navegacao"><a id="sobre-nos" href="#sobre-nos">Sobre Nós</a></li>
         <li class="barra-navegacao"><a id="contatos" href="#contatos">Contatos</a></li>
     </nav>
+
     <main class="main-container">
-        <!-- Robótica do Brasil -->
         <section>
-            <img class="robotica-do-brasil" src="./public/img/robotica-do-brasil_main.png" alt="">
-            <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
+            <img class="logo-fll" src="./public/img/logo-fll-premios.png" alt="">
         </section>
     </main>
 
-    <main class="main-container-titulos">
-        <h3 id="h3-ou" class="h-categorias">Ou...</h3>
-        <h2 class="h-categorias">Pesquise por Categoria</h2>
-    </main>
-
-    <main class="main-container-categorias">
-        <section class="section-container-categorias">
-            <article class="article-container-categorias" id="article-fll">
-                <img class="img-logo-categorias" src="./public/img/first-lego-league_logo.png"
-                    alt="logo da first lego league">
-                <h4 class="idade-categoria">9 a 15 anos</h4>
-                <p>
-                    A FIRST LEGO League (FLL) é um programa de robótica educacional que desafia equipes a resolverem
-                    problemas do mundo real usando tecnologia, robôs LEGO e programação, promovendo inovação,
-                    colaboração e habilidades STEM.
-                </p>
-                <img class="image-extra" src="./public/img/fll-extra.png" alt="desafio da FLL">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="https://www.firstlegoleague.org/" class="btn-saiba-mais-categoria"
-                        target="_blank">SaibaMais</a>
-                </div>
-            </article>
-
-            <article class="article-container-categorias" id="article-ftc">
-                <img class="img-logo-categorias logo-ftc" src="./public/img/first-tech-challenge_logo.png"
-                    alt="logo da first tech challenge">
-                <h4 class="idade-categoria">14 a 18 anos</h4>
-                <p>
-                    A FIRST Tech Challenge (FTC) é um torneio onde equipes projetam, constroem e programam robôs para
-                    realizar tarefas específicas em arenas, promovendo criatividade, trabalho em equipe e habilidades em
-                    engenharia e tecnologia.
-                </p>
-                <img class="image-extra" src="./public/img/ftc-extra.png" alt="desafio da FTC">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="https://www.firstinspires.org/robotics/ftc" class="btn-saiba-mais-categoria"
-                        target="_blank">Saiba Mais</a>
-                </div>
-            </article>
-
-            <article class="article-container-categorias" id="article-frc">
-                <img class="img-logo-categorias logo-frc" src="./public/img/first-robotics-competition_logo.png"
-                    alt="logo da first robotics competition">
-                <h4 class="idade-categoria">14 a 18 anos</h4>
-                <p>
-                    A FIRST Robotics Competition (FRC) é um torneio global onde equipes constroem robôs industriais para
-                    enfrentar desafios complexos em arena, incentivando inovação, trabalho em equipe e o desenvolvimento
-                    de habilidades em engenharia.
-                </p>
-                <img class="image-extra" src="./public/img/frc-extra.png" alt="desafio da FRC">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="https://www.firstinspires.org/robotics/frc" class="btn-saiba-mais-categoria"
-                        target="_blank">Saiba Mais</a>
-                </div>
-            </article>
-
-            <article class="article-container-categorias caso-especial" id="article-stem-racing">
-                <img class="img-logo-categorias caso-especial-um" src="./public/img/stem-racing_logo.png"
-                    alt="logo da stem racing">
-                <h4 class="idade-categoria">8 a 19 anos</h4>
-                <p>
-                    STEM Racing é um projeto educacional que conecta ciência, tecnologia, engenharia e matemática ao
-                    automobilismo, desafiando estudantes a criar carrinhos de corrida em miniatura enquanto aprendem de
-                    forma prática e divertida.
-                </p>
-                <img class="image-extra" src="./public/img/sr-extra.png" alt="desafio da Stem Racing">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="http://stemracing.com/" class="btn-saiba-mais-categoria" target="_blank">Saiba Mais</a>
-                </div>
-            </article>
-
-            <article class="article-container-categorias caso-especial" id="article-obr">
-                <img class="img-logo-categorias caso-especial-dois" src="./public/img/olimpiadas-brasileiras-de-robotica_logo.png"
-                    alt="logo da olimpíada brasileira de robótica">
-                <h4 class="idade-categoria">6 a 19 anos</h4>
-                <p>
-                    A Olimpíada Brasileira de Robótica é uma competição nacional que desafia equipes a resolverem
-                    problemas práticos usando robôs, incentivando o aprendizado de programação, engenharia e tecnologia
-                    em diferentes modalidades e desafios.
-                </p>
-                <img class="image-extra" src="./public/img/obr-extra.png" alt="desafio da OBR">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="https://obr.robocup.org.br/" class="btn-saiba-mais-categoria" target="_blank">Saiba
-                        Mais</a>
-                </div>
-                </div>
-            </article>
-
-            <article class="article-container-categorias caso-especial" id="article-wro">
-                <img class="img-logo-categorias caso-especial-tres" src="./public/img/world-robot-olympiad_logo.png"
-                    alt="logo da world robot olympiad">
-                <h4 class="idade-categoria">8 a 19 anos</h4>
-                <p>
-                    A World Robot Olympiad (WRO) é um torneio internacional que desafia estudantes a resolverem
-                    problemas por meio da robótica e da programação. Ela acontece em mais de 90 países e tem um torneio
-                    mundial anual.
-                </p>
-                <img class="image-extra" src="./public/img/wro-extra.png" alt="desafio da WRO">
-                <div class="buttons-container">
-                    <a href="#" class="btn-equipes-categoria">Equipes</a>
-                    <a href="https://wro-association.org/" class="btn-saiba-mais-categoria" target="_blank">Saiba
-                        Mais</a>
-                </div>
-            </article>
-        </section>
-    </main>
+    
     <script src="./public/js/script.js"></script>
 </body>
 
