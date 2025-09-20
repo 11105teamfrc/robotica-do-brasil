@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+    <style>
+  :root {
+    --chat--color-primary: #ff00ea; /* Cor principal (botão e cabeçalho) */
+    --chat--message--user--background: #ff00ff; /* Cor do balão de mensagem do usuário */
+	 }
+     
+</style>
+</head>
+<body>
+
+    <link 
+  href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" 
+  rel="stylesheet" 
+/>
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat'
+  });
+</script>
+
+</body>
+</html>
