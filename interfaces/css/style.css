@@ -71,7 +71,7 @@ nav li a {
 /* menu HAMBURGUER */
 .nav-container-hamburguer {
   display: none;
-  /* escondido por padrão */
+  
 }
 
 .btn-toggle-nav {
@@ -264,8 +264,8 @@ footer .logo-banner {
 }
 
 .logos-container img {
-  max-width: 180px;
-  /* Tamanho máximo para os logos */
+  max-width: 200px;
+  
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -273,7 +273,7 @@ footer .logo-banner {
 
 .logos-container img:hover {
   transform: scale(1.05);
-  /* Efeito de zoom sutil */
+  
 }
 
 /* Caixa de Registro de Time */
