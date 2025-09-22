@@ -32,104 +32,18 @@
   padding: 0;
 }
 
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none; 
+}
+
 body {
   background-color: var(--fundo-branco);
   font-family: var(--fonte-principal);
-}
-
-/* menu NORMAL */
-nav {
-  margin: 0;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--fundo-bege);
-  height: 50px;
-  width: 100%;
-  font-family: var(--fonte-principal);
-}
-
-nav li {
-  list-style: none;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-nav li a {
-  text-decoration: none;
-  color: var(--cinza-escuro);
-}
-
-#container-nav-menu {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-}
-
-/* menu HAMBURGUER */
-.nav-container-hamburguer {
-  display: none;
-  
-}
-
-.btn-toggle-nav {
-  width: 60px;
-  height: 100%;
-  background-size: 60%;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-sidebar {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 0;
-  height: 100vh;
-  background: var(--fundo-bege);
-  overflow-x: hidden;
-  transition: 0.4s;
-  visibility: hidden;
-  z-index: 999;
-}
-
-.nav-sidebar ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav-sidebar li {
-  padding: 15px;
-}
-
-.nav-sidebar a {
-  text-decoration: none;
-  color: var(--fundo-footer);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Responsividade para o menu */
-@media (max-width: 768px) {
-  #container-nav-menu {
-    display: none;
-  }
-
-  .nav-container-hamburguer {
-    display: flex;
-    position: relative;
-    background-color: var(--fundo-bege);
-    height: 60px;
-    align-items: center;
-    padding-left: 10px;
-  }
 }
 
 /* footer */
@@ -145,13 +59,13 @@ footer {
   gap: 30px;
 }
 
-/* Seção de contatos */
+
 footer .contato-info {
   display: flex;
   flex-direction: column;
   gap: 18px;
   flex: 1 1 300px;
-  /* ocupa metade no desktop e se ajusta no mobile */
+  
 }
 
 footer .contato-info h1 {
@@ -258,7 +172,6 @@ footer .logo-banner {
   justify-content: center;
   align-items: center;
   gap: 40px 60px;
-  /* Espaçamento vertical e horizontal */
   margin-bottom: 80px;
   max-width: 900px;
 }
@@ -337,6 +250,7 @@ footer .logo-banner {
   font-style: italic;
 }
 
+
 @media (max-width: 768px) {
   .main-container-premios {
     padding: 60px 20px;
@@ -393,5 +307,109 @@ footer .logo-banner {
   }
   .registro-box .footnote {
     font-size: 0.75rem;
+  }  
+}
+
+
+
+.main-container-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: var(--fonte-principal);
+  background-color: var(--fundo-branco);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-container-mapa h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+  margin-bottom: 50px;
+}
+
+.map-container {
+  position: relative; 
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  
+}
+
+.map-image-full {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+
+.map-label-link {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.map-label-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-label-link:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.label-norte {
+  width: 19%;
+  top: 18%;
+  left: 1%;
+}
+
+.label-nordeste {
+  width: 28%;
+  top: 15%;
+  left: 90%;
+}
+
+.label-centro-oeste {
+  width: 24%;
+  top: 61%;
+  left: 23%;
+}
+
+.label-sudeste {
+  width: 24%;
+  top: 70%;
+  left: 97%;
+}
+
+.label-sul {
+  width: 16%;
+  top: 89%;
+  left: 71%;
+}
+
+/* === RESPONSIVIDADE DA SEÇÃO MAPA === */
+
+@media (max-width: 768px) {
+  .main-container-mapa {
+    padding: 60px 20px;
+  }
+  .main-container-mapa h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container-mapa {
+    padding: 40px 15px;
+  }
+  .main-container-mapa h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
   }
 }
