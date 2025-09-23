@@ -1,0 +1,338 @@
+:root {
+    /* Paleta de Cores */
+    --azul: #004aad;
+    --amarelo: #f1b10d;
+    --verde: #179b5b;
+    --vermelho: #d41e1e;
+    --rosa: #e42d84;
+    --laranja: #f1740d;
+    /* Cores Complementares */
+    --vermelho-complementar: #ffa0a0;
+    --rosa-complementar: #f77eb8;
+    --azul-completamentar: #a3bee2;
+    --laranja-complementar: #f4c49c;
+    --verde-complementar: #8ad0ae;
+    /* Cores Neutras */
+    --cinza-escuro: #4f4f52;
+    /* Para Fontes e Footer*/
+    --cinza-claro: #a4a0a0;
+    --fundo-branco: #efefef;
+    --fundo-bege: #d4cece;
+    --cinza-bem-claro: #d9d9d9;
+    /* Serve também para estruturas geométricas */
+    --fundo-footer: #4f4f52;
+    /* Fontes */
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fundo-branco);
+    font-family: var(--fonte-principal);
+}
+
+/* BARRA DE NAVEGAÇÃO */
+/* menu normal */
+nav {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-bege);
+    height: 50px;
+    width: 100%;
+    font-family: var(--fonte-principal);
+}
+
+nav li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav:focus {
+    color: #bdbcbc;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+}
+
+#container-nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+/* ===== MENU HAMBÚRGUER (MOBILE) ===== */
+.nav-container-hamburguer {
+    display: none;
+}
+
+.btn-toggle-nav {
+    width: 60px;
+    height: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-sidebar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background: var(--fundo-bege);
+    overflow-x: hidden;
+    transition: 0.4s;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.nav-sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-sidebar li {
+    padding: 15px;
+}
+
+.nav-sidebar a {
+    text-decoration: none;
+    color: var(--fundo-footer);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-sidebar li:hover {
+    background-color: #e0dfdd;
+}
+
+@media (max-width: 768px) {
+    #container-nav-menu {
+        display: none;
+    }
+
+    .nav-container-hamburguer {
+        display: flex;
+        position: relative;
+        background-color: var(--fundo-bege);
+        height: 60px;
+        align-items: center;
+    }
+}
+
+/* FIM - BARRA DE NAVEGAÇÃO */
+
+/* BANNER INICIAL */
+
+.header-container-banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .gctomorrow-banner {
+    margin: 2%;
+    width: 15%;
+}
+
+@media (max-width: 768px) {
+    header .gctomorrow-banner {
+        width: 30%;
+    }
+}
+
+/* FIM - BANNER INICIAL */
+
+/* HEAD (ROBÓTICA DO BRASIL)*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+main section .robotica-do-brasil {
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+
+main section .button-equipes {
+    margin-top: 20px;
+    padding: 1rem 2.5rem;
+    color: var(--cinza-escuro);
+    border: none;
+    border-radius: 15px;
+    background-color: var(--cinza-bem-claro);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    justify-self: center;
+}
+
+main section .button-equipes:hover {
+    background-color: #d2d1d1;
+    transition: 0.3s;
+}
+
+/* FIM - HEAD (ROBÓTICA DO BRASIL) */
+
+/* CONHEÇA AS CATEGORIAS */
+.main-container-titulos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--fundo-bege);
+}
+
+main .h-categorias {
+    text-align: center;
+    width: 100%;
+}
+
+main h3 {
+    color: var(--cinza-escuro);
+    margin-top: 30px;
+}
+
+main h2 {
+    color: var(--cinza-escuro);
+    margin-bottom: 10px;
+}
+
+.main-container-categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fundo-bege);
+    height: auto;
+}
+
+main .section-container-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    height: 50%;
+    padding: 0;
+}
+
+main section .article-container-categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--fundo-branco);
+    overflow: hidden;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 60px;
+    height: auto;
+    margin: 0;
+}
+
+main section article .image-extra {
+    width: 90%;
+    border-radius: 24px;
+}
+
+main section article .img-logo-categorias {
+    width: 30%;
+    height: 30%;
+    overflow-y: hidden;
+    margin-top: 20px;
+}
+
+main section article .logo-ftc {
+    width: 40%;
+}
+
+main section article .logo-frc {
+    width: 40%;
+}
+
+main section article .caso-especial-um {
+    width: 40%
+}
+
+main section article .caso-especial-dois {
+    width: 30%
+}
+
+main section article .caso-especial-tres {
+    width: 40%
+}
+
+main section article .idade-categoria {
+    font-size: 1.3rem;
+    color: var(--cinza-escuro);
+    margin: 10px 0;
+}
+
+main section .article-container-categorias p {
+    font-size: 0.95rem;
+    color: var(--cinza-escuro);
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+main section article .bottuns-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+main section article div .btn-equipes-categoria,
+.btn-saiba-mais-categoria {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    background-color: var(--cinza-escuro);
+    color: var(--cinza-bem-claro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    gap: 20px;
+}
+
+main section article .btn-equipes-categoria:hover,
+.btn-saiba-mais-categoria:hover {
+    background-color: var(--fundo-bege);
+    color: var(--cinza-escuro);
+}
+
+@media (max-width: 1024px) {
+    main .section-container-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    main .section-container-categorias {
+        grid-template-columns: 1fr;
+    }
+}
