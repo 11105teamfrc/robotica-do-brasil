@@ -1,4 +1,4 @@
-:root {
+    :root {
   /* Paleta de Cores */
   --azul: #004aad;
   --amarelo: #f1b10d;
@@ -325,4 +325,161 @@ main section article .btn-equipes-categoria:hover,
   main .section-container-categorias {
     grid-template-columns: 1fr;
   }
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--cinza-escuro);
+    margin: 20px 0 30px 0;
+    font-size: 1.3rem;
+}
+
+.award {
+    background: #d4cece;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 15px 60px;
+    max-width: calc(100% - 40px);
+}
+
+.award h2 {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.award .award-name {
+    color: #231e1e;
+    font-size: 0.85rem;
+}
+
+.award p {
+    color: #4a4a4a;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.see-also {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.see-also h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.competitions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.comp-btn {
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.comp-btn:nth-child(1) {
+    background-color: #ff6b6b;
+}
+
+.comp-btn:nth-child(2) {
+    background-color: #4285f4;
+}
+
+.comp-btn:nth-child(3) {
+    background-color: #ff4757;
+}
+
+.comp-btn:nth-child(4) {
+    background-color: #2ed573;
+}
+
+.comp-btn:nth-child(5) {
+    background-color: #ff3867;
+}
+
+.comp-btn:nth-child(6) {
+    background-color: #845EC2;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.credits {
+    text-align: right;
+}
+
+.credits h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.credits p {
+    font-size: 1rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .credits {
+        text-align: left;
+    }
+    
+    .competitions {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+    }
+    
+    .award {
+        margin: 15px 30px;
+        max-width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .competitions {
+        grid-template-columns: 1fr;
+        max-width: 200px;
+    }
 }
