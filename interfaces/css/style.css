@@ -59,7 +59,7 @@ footer {
   gap: 30px;
 }
 
-
+/* Seção de contatos */
 footer .contato-info {
   display: flex;
   flex-direction: column;
