@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica do Brasil</title>
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header class="header-container-banner">
-        <img class="gctomorrow-banner" src="./public/img/gc4tomorrow_logo.png"
+        <img class="gctomorrow-banner" src="../img/gc4tomorrow_logo.png"
             alt="Banner Inicial da equipe desenvolvedora do site">
     </header>
 
@@ -41,8 +41,41 @@
     <main class="main-container">
         <!-- Robótica do Brasil -->
         <section id="inicio">
-            <img class="robotica-do-brasil" src="./public/img/robotica-do-brasil_main.png" alt="">
+            <img class="robotica-do-brasil" src="./public/img/robotica-do-brasil_main.png"
+                alt="logo da robotica do brasil">
             <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
+        </section>
+    </main>
+
+    <main class="main-container-categoria">
+        <form class="form-container-search" action="/search" method="get">
+            <input class="input-search" type="search" id="search-input" name="query" placeholder="Search...">
+            <button class="button-search" type="submit">?</button>
+        </form>
+    </main>
+
+    <main class="page-container">
+        <header class="page-header">
+            <h1>LISTA COMPLETA</h1>
+            <h2>EQUIPES DE ROBÓTICA <span class="highlight-text">DO BRASIL</span></h2>
+        </header>
+
+        <section class="team-card">
+            <div class="card-content">
+                <img class="logo-equipe" src="../img/logo_9305.jpg" alt="logo da equipe">
+                <div class="team-info">
+                    <h3>Mont #9305</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Localização: Montenegro, Rio Grande do Sul</p>
+                    <p><i class="fas fa-building"></i> Instituição: Escola de Ensino Médio SESI Heitor José Müller</p>
+                    <p><i class="fas fa-medal"></i> Categoria: FIRST Robotics Competition</p>
+                    <p><i class="fas fa-users"></i> Alunos: Entre 6 a 10 competidores</p>
+                    <p><i class="fas fa-calendar-alt"></i> Criada em: 2023</p>
+                </div>
+            </div>
+
+            <footer class="card-footer">
+                <button class="contact-button">CONTATO</button>
+            </footer>
         </section>
     </main>
 
