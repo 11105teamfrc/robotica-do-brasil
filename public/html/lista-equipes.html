@@ -19,9 +19,9 @@
 
     <!--menu HAMBURGUER-->
     <nav class="nav-container-hamburguer">
-        <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
+        <a class="btn-toggle-nav" onclick="toggleNav()">O</a>
         <ul class="nav-sidebar">
-            <li><a href="#inicio">Início</a></li>
+            <li><a href="">Início</a></li>
             <li><a href="#pesquise-regiao">Pesquise por Região</a></li>
             <li><a href="#conheca-categorias">Categorias</a></li>
             <li><a href="#premios">Prêmios</a></li>
@@ -33,7 +33,7 @@
 
     <nav id="container-nav-menu">
         <!--Barra de Navegação-->
-        <li class="barra-navegacao"><a id="inicio" href="#inicio">Início</a></li>
+        <li class="barra-navegacao"><a id="inicio" href="../../index.html">Início</a></li>
         <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
         <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
         <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios</a></li>
@@ -62,10 +62,13 @@
             <button class="btn-filtrar"><i class="fa fa-sliders"></i> FILTRAR E ORDENAR</button>
         </section>
     </main>
+
     <main class="main-card">
         <section class="team-card">
             <article class="card-content">
-                <img class="logo-equipe" src="../img/logo_9305.png" alt="logo da equipe">
+                <figure class="logo-card">
+                    <img class="logo-equipe" src="../img/logo_9305.png" alt="logo da equipe">
+                </figure>
                 <div class="team-info">
                     <h3>Mont #9305</h3>
                     <p><i class="fa fa-map-marker" style="color: red;"></i><strong>Localização:</strong> Montenegro, Rio
@@ -87,7 +90,9 @@
 
         <section class="team-card">
             <article class="card-content">
-                <img class="logo-equipe" src="../img/logo-4t-insta.png" alt="logo da equipe">
+                <figure class="logo-card">
+                    <img class="logo-equipe" src="../img/logo-4t-insta.png" alt="logo da equipe">
+                </figure>
                 <div class="team-info">
                     <h3>GC 4Tomorrow #11105</h3>
                     <p><i class="fa fa-map-marker" style="color: red;"></i><strong>Localização:</strong> Porto Alegre,
@@ -109,12 +114,17 @@
 
         <section class="team-card">
             <article class="card-content">
-                <img class="logo-equipe" src="../img/logo_1156.png" alt="logo da equipe">
+                <figure class="logo-card">
+                    <img class="logo-equipe" src="../img/logo_1156.png" alt="logo da equipe">
+                </figure>
                 <div class="team-info">
                     <h3>STRIKE #6902</h3>
-                    <p><i class="fa fa-map-marker" style="color: red;"></i><strong>Localização:</strong> Foz do Iguaçu, Paraná</p>
-                    <p><i class="fa fa-school" style="color: green;"></i><strong>Instituição:</strong> Colégio BERT International Schools</p>
-                    <p><i class="fa fa-robot" style="color: blue;"></i><strong>Categoria:</strong> FIRST Robotics Competition</p>
+                    <p><i class="fa fa-map-marker" style="color: red;"></i><strong>Localização:</strong> Foz do Iguaçu,
+                        Paraná</p>
+                    <p><i class="fa fa-school" style="color: green;"></i><strong>Instituição:</strong> Colégio BERT
+                        International Schools</p>
+                    <p><i class="fa fa-robot" style="color: blue;"></i><strong>Categoria:</strong> FIRST Robotics
+                        Competition</p>
                     <p><i class="fa fa-user" style="color:orange;"></i><strong>Alunos:</strong> Cerca de 15 competidores
                     </p>
                     <p><i class="fa fa-calendar" style="color:chocolate;"></i><strong>Criada em:</strong> 2003</p>
@@ -126,6 +136,47 @@
             </footer>
         </section>
     </main>
+
+    <main class="overlay" id="filterOverlay">
+        <section class="overlay-content">
+            <h2>FILTRAR E ORDENAR</h2>
+
+            <article class="filter-section">
+                <h3>Filtrar</h3>
+                <p>Categoria</p>
+                <div class="filter-buttons">
+                    <button>FIRST Robotics Competition</button>
+                    <button>FIRST Tech Challenge</button>
+                    <button>FIRST Lego League</button>
+                    <button>STEM Racing</button>
+                    <button>Olimpíada Brasileira de Robótica</button>
+                    <button>World Robotics Olympiad</button>
+                </div>
+
+                <p>Região</p>
+                <div class="filter-buttons">
+                    <button>Norte</button>
+                    <button>Nordeste</button>
+                    <button>Centro Oeste</button>
+                    <button>Sudeste</button>
+                    <button>Sul</button>
+                </div>
+            </article>
+
+            <div class="order-section">
+                <h3>Ordenar</h3>
+                <div class="filter-buttons">
+                    <button>Classificar A a Z</button>
+                    <button>Classificar Z a A</button>
+                    <button>Mais antiga</button>
+                    <button>Mais nova</button>
+                </div>
+            </div>
+
+            <button class="close-overlay" id="closeOverlay">&times;</button>
+        </section>
+    </main>
+
 
     <script src="./public/js/script.js"></script>
 </body>

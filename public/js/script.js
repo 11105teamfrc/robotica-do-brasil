@@ -38,28 +38,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-function navegarListaEquipes() {
-    window.location.href = "../public/html/lista-equipes.html";
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const contactButton = document.querySelector('.contact-button');
-
-    if (contactButton) {
-        contactButton.addEventListener('click', () => {
-            alert('Você clicou no botão CONTATO! Aqui você pode adicionar lógica para abrir um formulário, modal ou link de contato.');
-            // Exemplo: window.location.href = 'mailto:equipe.mont9305@email.com';
-        });
-    }
-
-    // Adiciona funcionalidade de hover/focus para os ícones sociais (exemplo)
-    document.querySelectorAll('.social-icon').forEach(icon => {
-        icon.addEventListener('mouseenter', () => {
-            console.log(`Hover em: ${icon.title}`);
-        });
-        icon.addEventListener('focus', () => {
-            console.log(`Foco em: ${icon.title}`);
-        });
-    });
-});

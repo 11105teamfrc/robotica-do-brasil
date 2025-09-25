@@ -352,7 +352,6 @@ main section article .btn-equipes-categoria:hover,
 
 /* LISTA COMPLETA DE EQUIPES */
 
-
 .page-container {
     width: auto;
     padding: 20px;
@@ -399,6 +398,41 @@ main section article .btn-equipes-categoria:hover,
     transition: 0.5s ease-in-out;
 }
 
+.form-container-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-search,
+.button-search {
+    background-color: var(----fundo-branco);
+    color: var(--cinza-escuro);
+    border: solid 1px var(--cinza-claro);
+    border-radius: 30px;
+    margin: 1%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-search {
+    background-color: var(--cinza-bem-claro);
+    border-color: var(--cinza-claro);
+    border-width: 0.5px;
+    color: var(--fundo-footer);
+}
+
+.input-search:hover {
+    background-color: var(--fundo-branco);
+    border-color: var(--cinza-escuro);
+    transition: 0.3s ease-in-out;
+}
+
 #h-destaque-um {
     color: var(--azul);
     font-weight: 700;
@@ -418,25 +452,18 @@ main section article .btn-equipes-categoria:hover,
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center
+    justify-content: center;
 }
 
 .team-card {
     background-color: var(--card-background);
     border-radius: 20px;
     box-shadow: var(--card-shadow);
-    width: 25%;
+    width: 30%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     margin: 20px;
-}
-
-.card-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-    flex-grow: 1;
 }
 
 .team-logo {
@@ -445,7 +472,6 @@ main section article .btn-equipes-categoria:hover,
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: contain;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
@@ -526,14 +552,33 @@ main section article .btn-equipes-categoria:hover,
 }
 
 .contact-button:hover {
-    background-color: var(--button-hover-background);
+    background-color: var(--fundo-branco);
     transform: translateY(-1px);
+    border: solid 1px var(--cinza-escuro);
+    color: var(--cinza-escuro);
 }
 
 .frc-badge {
     width: 110px;
     height: auto;
     object-fit: contain;
+}
+
+.logo-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-equipe {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.team-info p {
+    text-align: left;
+    margin-left: 10px;
 }
 
 /* RESPONSIVIDADE TESTE*/
@@ -561,6 +606,7 @@ main section article .btn-equipes-categoria:hover,
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
+        overflow: hidden;
     }
 
     .team-info h3 {
@@ -569,22 +615,6 @@ main section article .btn-equipes-categoria:hover,
 
     .team-info p {
         justify-content: center;
-    }
-
-    .social-links {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        transform: none;
-        margin-top: 20px;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-
-    .social-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
     }
 
     .card-footer {
@@ -600,29 +630,93 @@ main section article .btn-equipes-categoria:hover,
     }
 }
 
-.logo-equipe {
-    border-radius: 200px;
-    width: 20%;
-}
-
 /* DEU CERTO */
 
 @media (max-width: 600px) {
     .team-card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .form-container-search {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .input-search {
         width: 100%;
+        display: flex;
+        text-align: left;
+    }
+}
+
+/* FILTRAGEM */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background: white;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--cinza-escuro);
+}
+
+.overlay-content h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--cinza-escuro);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.filter-buttons button {
+    border: 1px solid var(--cinza-claro);
+    border-radius: 50px;
+    padding: 8px 15px;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.filter-buttons button:hover {
+    background: var(--cinza-bem-claro);
+    color: var(--cinza-escuro);
+}
+
+.close-overlay {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cinza-escuro);
+}
+
+@media (max-width: 600px) {
+    .overlay-content {
+        width: 90%;
+        padding: 20px;
     }
 
-    .button-search {
-        width: 100%;
+    .filter-buttons {
+        justify-content: center;
     }
 }
