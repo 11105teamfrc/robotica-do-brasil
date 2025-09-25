@@ -351,20 +351,22 @@ main section article .btn-equipes-categoria:hover,
 }
 
 /* LISTA COMPLETA DE EQUIPES */
+
+
 .page-container {
-    width: 90%;
-    max-width: 800px;
-    /* Aumentado para melhor visualização */
+    width: auto;
     padding: 20px;
 }
 
 .page-header {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-header h1 {
     font-size: 2.8rem;
-    /* Um pouco maior */
     font-weight: 700;
     color: var(--primary-text-color);
     margin-bottom: 5px;
@@ -373,25 +375,61 @@ main section article .btn-equipes-categoria:hover,
 
 .page-header h2 {
     font-size: 1.4rem;
-    /* Ajustado */
     font-weight: 400;
     color: var(--primary-text-color);
     margin-top: 0;
 }
 
-.highlight-text {
-    color: var(--highlight-color);
+.btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn-filtrar {
+    color: var(--cinza-claro);
+    border-radius: 50px;
+    border-color: var(--cinza-claro);
+    border-style: solid;
+    padding: 0.5rem;
+}
+
+.btn-filtrar:hover {
+    color: var(--cinza-escuro);
+    border-color: var(--cinza-escuro);
+    transition: 0.5s ease-in-out;
+}
+
+#h-destaque-um {
+    color: var(--azul);
     font-weight: 700;
 }
 
-/* Card da Equipe */
+#h-destaque-dois {
+    color: var(--amarelo);
+    font-weight: 700;
+}
+
+#h-destaque-tres {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.main-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center
+}
+
 .team-card {
     background-color: var(--card-background);
     border-radius: 20px;
     box-shadow: var(--card-shadow);
+    width: 25%;
     padding: 30px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .card-content {
@@ -420,39 +458,30 @@ main section article .btn-equipes-categoria:hover,
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0 0 12px 0;
-    color: var(--primary-text-color);
+    color: var(--cinza-escuro);
 }
 
 .team-info p {
     font-size: 0.95rem;
-    color: var(--secondary-text-color);
+    color: var(--cinza-escuro);
     margin: 8px 0;
     line-height: 1.5;
-    display: flex;
-    /* Para alinhar ícone e texto */
-    align-items: flex-start;
 }
 
 .team-info p i {
-    color: var(--highlight-color);
-    /* Ícones com a cor de destaque */
     width: 25px;
     text-align: center;
     margin-right: 8px;
     font-size: 1.1em;
     position: relative;
     top: 2px;
-    /* Pequeno ajuste vertical */
 }
 
-/* Links Sociais */
 .social-links {
     display: flex;
     gap: 12px;
-    /* Mais espaço entre os ícones */
     position: absolute;
     right: 30px;
-    /* Alinhado com o padding do card */
     top: 50%;
     transform: translateY(-50%);
 }
@@ -473,25 +502,20 @@ main section article .btn-equipes-categoria:hover,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Rodapé do Card */
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    /* Mais espaçamento */
     padding-top: 25px;
     border-top: 1px solid #eee;
-    /* Linha mais sutil */
 }
 
 .contact-button {
     background-color: var(--button-background);
     color: #fff;
     padding: 12px 30px;
-    /* Padding ajustado */
     border-radius: 25px;
-    /* Mais arredondado */
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
@@ -508,7 +532,6 @@ main section article .btn-equipes-categoria:hover,
 
 .frc-badge {
     width: 110px;
-    /* Logo FRC um pouco maior */
     height: auto;
     object-fit: contain;
 }
@@ -529,7 +552,6 @@ main section article .btn-equipes-categoria:hover,
 
     .card-content {
         flex-direction: column;
-        /* Logo e info em coluna no mobile */
         align-items: center;
         text-align: center;
         gap: 15px;
@@ -547,20 +569,16 @@ main section article .btn-equipes-categoria:hover,
 
     .team-info p {
         justify-content: center;
-        /* Centraliza texto com ícone */
     }
 
     .social-links {
         position: static;
-        /* Remove posicionamento absoluto */
         flex-direction: row;
-        /* Ícones em linha no mobile */
         justify-content: center;
         transform: none;
         margin-top: 20px;
         gap: 8px;
         flex-wrap: wrap;
-        /* Quebra linha se muitos ícones */
     }
 
     .social-icon {
@@ -585,4 +603,26 @@ main section article .btn-equipes-categoria:hover,
 .logo-equipe {
     border-radius: 200px;
     width: 20%;
+}
+
+/* DEU CERTO */
+
+@media (max-width: 600px) {
+    .team-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .form-container-search {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .input-search {
+        width: 100%;
+    }
+
+    .button-search {
+        width: 100%;
+    }
 }
