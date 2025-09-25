@@ -1,3 +1,4 @@
+
     :root {
   /* Paleta de Cores */
   --azul: #004aad;
@@ -5,8 +6,21 @@
   --verde: #179b5b;
   --vermelho: #d41e1e;
   --rosa: #e42d84;
-  --laranja: #f1740d;
-  /* Cores Complementares */
+  --laranja: #f1740d.header-container-banner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;  /* Limita a largura máxima */
+  margin: 40px auto;  /* Aumenta o espaço vertical e mantém centralizado */
+  padding-top: 20px;  /* Espaço adicional no topo */
+}der .gctomorrow-banner {
+  margin: 30px 5px;  /* Aumentado margin-top e margin-bottom para 30px */
+  width: 50%;
+  height: auto;
+  max-width: 600px;
+}s Complementares */
   --vermelho-complementar: #ffa0a0;
   --rosa-complementar: #f77eb8;
   --azul-completamentar: #a3bee2;
@@ -25,22 +39,24 @@
   --fonte-principal: 'Poppins', sans-serif;
 }
 
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 body {
   background-color: var(--fundo-branco);
   font-family: var(--fonte-principal);
 }
 
+
 /* BARRA DE NAVEGAÇÃO */
 /* menu normal */
-nav {
+.nav-desktop, .nav-container-hamburguer {
   margin: 0;
   display: flex;
-  gap: 10%;
   justify-content: center;
   align-items: center;
   background-color: var(--fundo-bege);
@@ -49,32 +65,40 @@ nav {
   font-family: var(--fonte-principal);
 }
 
-nav li {
+
+.barra-navegacao {
   list-style: none;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;  /* Negrito mais suave */
   cursor: pointer;
+  padding: 0 10px;  /* Reduzido o padding lateral */
 }
 
-nav:focus {
+
+.nav-desktop:focus {
   color: #bdbcbc;
 }
 
-nav li a {
+
+.barra-navegacao a {
   text-decoration: none;
   color: var(--cinza-escuro);
 }
 
+
 #container-nav-menu {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;  /* Reduzido o espaçamento entre itens */
+  width: 100%;
 }
+
 
 /* ===== MENU HAMBÚRGUER (MOBILE) ===== */
 .nav-container-hamburguer {
   display: none;
 }
+
 
 .btn-toggle-nav {
   width: 60px;
@@ -86,6 +110,7 @@ nav li a {
   align-items: center;
   justify-content: center;
 }
+
 
 .nav-sidebar {
   position: absolute;
@@ -100,44 +125,53 @@ nav li a {
   z-index: 999;
 }
 
+
 .nav-sidebar ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
+
 .nav-sidebar li {
-  padding: 15px;
+  padding: 15px;  /* Reduzido o padding */
 }
+
 
 .nav-sidebar a {
   text-decoration: none;
   color: var(--fundo-footer);
   opacity: 0;
   transition: opacity 0.3s;
+  font-weight: 500;  /* Negrito mais suave */
 }
+
 
 .nav-sidebar li:hover {
   background-color: #bdbcbc;
 }
+
 
 @media (max-width: 768px) {
   #container-nav-menu {
     display: none;
   }
 
+
   .nav-container-hamburguer {
     display: flex;
     position: relative;
-    background-color: var(--fundo-bege);
     height: 60px;
     align-items: center;
   }
 }
 
+
 /* FIM - BARRA DE NAVEGAÇÃO */
 
+
 /* BANNER INICIAL */
+
 
 .header-container-banner {
   width: 100%;
@@ -145,13 +179,21 @@ nav li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;  /* Limita a largura máxima */
+  margin: 20 auto;     /* Centraliza horizontalmente */
 }
+
 
 header .gctomorrow-banner {
-  margin: 5px;
+  margin: 10px /* Margem padrão para todos os tamanhos */
+  width: 50%;        /* Reduz para 50% da largura do container */
+  height: auto;      /* Mantém a proporção */
+  max-width: 100px;  /* Limita a largura máxima absoluta */
 }
 
+
 /* FIM - BANNER INICIAL */
+
 
 /* HEAD (ROBÓTICA DO BRASIL)*/
 .main-container {
@@ -162,10 +204,12 @@ header .gctomorrow-banner {
   margin-bottom: 70px;
 }
 
+
 main section .logo-fll {
   width: 100%;
   height: auto;
 }
+
 
 main section .button-equipes {
   margin-top: 20px;
@@ -180,12 +224,15 @@ main section .button-equipes {
   justify-self: center;
 }
 
+
 main section .button-equipes:hover {
   background-color: #d2d1d1;
   transition: 0.3s;
 }
 
+
 /* FIM - HEAD (ROBÓTICA DO BRASIL) */
+
 
 /* CONHEÇA AS CATEGORIAS */
 .main-container-titulos {
@@ -194,20 +241,24 @@ main section .button-equipes:hover {
   background-color: var(--fundo-bege);
 }
 
+
 main .h-categorias {
   text-align: center;
   width: 100%;
 }
+
 
 main h3 {
   color: var(--fundo-branco);
   margin-top: 30px;
 }
 
+
 main h2 {
   color: var(--cinza-escuro);
   margin-bottom: 10px;
 }
+
 
 .main-container-categorias {
   display: flex;
@@ -218,6 +269,7 @@ main h2 {
   height: auto;
 }
 
+
 main .section-container-categorias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -227,6 +279,7 @@ main .section-container-categorias {
   height: 50%;
   padding: 0;
 }
+
 
 main section .article-container-categorias {
   display: flex;
@@ -242,10 +295,12 @@ main section .article-container-categorias {
   margin: 0;
 }
 
+
 main section article .image-extra {
   width: 90%;
   border-radius: 24px;
 }
+
 
 main section article .img-logo-categorias {
   width: 30%;
@@ -254,31 +309,40 @@ main section article .img-logo-categorias {
   margin-top: 20px;
 }
 
-main section article .logo-ftc {
-  width: 40%;
+
+.logo-ftc {
+  width: 90%;  /* Ajustado para 90% */
+  margin: 50px auto 0;  /* Margem superior, centralização horizontal, sem margem inferior */
+  display: block;
 }
+
 
 main section article .logo-frc {
   width: 40%;
 }
 
+
 main section article .caso-especial-um {
   width: 40%
 }
+
 
 main section article .caso-especial-dois {
   width: 30%
 }
 
+
 main section article .caso-especial-tres {
   width: 40%
 }
+
 
 main section article .idade-categoria {
   font-size: 1rem;
   color: var(--cinza-escuro);
   margin: 10px 0;
 }
+
 
 main section .article-container-categorias p {
   font-size: 0.9rem;
@@ -289,31 +353,8 @@ main section .article-container-categorias p {
   margin-bottom: 15px;
 }
 
-main section article .bottuns-container {
-  display: flex;
-  justify-content: space-around;
-}
 
-main section article div .btn-equipes-categoria,
-.btn-saiba-mais-categoria {
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 20px;
-  background-color: var(--cinza-escuro);
-  color: var(--cinza-bem-claro);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
 
-main section article .btn-equipes-categoria:hover,
-.btn-saiba-mais-categoria:hover {
-  background-color: var(--fundo-bege);
-  color: var(--cinza-escuro);
-}
 
 @media (max-width: 1024px) {
   main .section-container-categorias {
@@ -321,11 +362,13 @@ main section article .btn-equipes-categoria:hover,
   }
 }
 
+
 @media (max-width: 768px) {
   main .section-container-categorias {
     grid-template-columns: 1fr;
   }
 }
+
 
 .subtitle {
     text-align: center;
@@ -334,92 +377,139 @@ main section article .btn-equipes-categoria:hover,
     font-size: 1.3rem;
 }
 
+
+/* ===== PRÊMIOS E ARTIGOS ===== */
 .award {
+    /* Estilo do container */
     background: #d4cece;
-    border-radius: 10px;
-    padding: 15px 30px;
-    margin: 15px 60px;
-    max-width: calc(100% - 40px);
+    border-radius: 25px;
+    padding: 35px 45px;
+    margin: 30px auto;
+    width: calc(100% - 650px); /* 250px de cada lado - mais espaço em desktop */
+    
+    /* Sombra suave para destacar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Fonte padrão para todo o artigo */
+    font-family: var(--fonte-principal);
+    font-size: 18px;
 }
 
+/* Título do prêmio */
 .award h2 {
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 8px;
+    color: var(--cinza-escuro);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: var(--fonte-principal);
+    letter-spacing: 0.5px;
 }
 
+/* Nome traduzido do prêmio */
 .award .award-name {
-    color: #231e1e;
-    font-size: 0.85rem;
+    color: var(--cinza-escuro);
+    font-size: 1.4rem;
+    font-family: var(--fonte-principal);
+    font-weight: normal;
 }
 
+/* Texto descritivo do prêmio */
 .award p {
     color: #4a4a4a;
-    font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.6;
     text-align: justify;
+    font-family: var(--fonte-principal);
+    margin-top: 15px;
+    font-size: 19px;  /* Aumentado de 16.5px */
 }
+
 
 .see-also {
     text-align: center;
-    margin: 40px 0 20px 0;
+    margin: 60px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 .see-also h3 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
+
 
 .competitions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto 40px auto;
-    padding: 0 20px;
+    gap: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
 }
+
 
 .comp-btn {
     color: rgb(255, 255, 255);
-    padding: 10px 15px;
+    padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 1rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
+
+
+.comp-btn:hover {
+    transform: translateY(-2px);
+}
+
 
 .comp-btn:nth-child(1) {
-    background-color: #ff6b6b;
+    background-color: #ffa0a0;
+    color: #cc4040;
 }
+
 
 .comp-btn:nth-child(2) {
-    background-color: #4285f4;
+    background-color: #a3bee2;
+    color: #2c5c9c;
 }
+
 
 .comp-btn:nth-child(3) {
-    background-color: #ff4757;
+    background-color: #8ad0ae;
+    color: #2c805c;
 }
+
 
 .comp-btn:nth-child(4) {
-    background-color: #2ed573;
+    background-color: #ffa0a0;
+    color: #cc4040;
 }
+
 
 .comp-btn:nth-child(5) {
-    background-color: #ff3867;
+    background-color: #f77eb8;
+    color: #b92475;
 }
 
+
 .comp-btn:nth-child(6) {
-    background-color: #845EC2;
+    background-color: #a3bee2;
+    color: #2c5c9c;
 }
+
 
 footer {
     background-color: #555;
     color: white;
     padding: 30px 0;
 }
+
 
 .footer-content {
     max-width: 600px;
@@ -430,20 +520,24 @@ footer {
     align-items: flex-start;
 }
 
+
 .contacts h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
+
 .contact-item {
     margin-bottom: 10px;
     font-size: 0.95rem;
 }
 
+
 .credits {
     text-align: right;
 }
+
 
 .credits h3 {
     font-size: 0.9rem;
@@ -451,35 +545,71 @@ footer {
     color: #ccc;
 }
 
+
 .credits p {
     font-size: 1rem;
     color: white;
 }
 
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
         gap: 20px;
+        max-width: 600px;
+        padding: 0 20px;
     }
-    
+   
     .credits {
         text-align: left;
     }
-    
+   
     .competitions {
         grid-template-columns: repeat(2, 1fr);
         max-width: 300px;
     }
-    
+   
     .award {
-        margin: 15px 30px;
-        max-width: calc(100% - 20px);
+        width: calc(100% - 160px); /* 80px de cada lado - tablet */
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    .award h2 {
+        font-size: 28px;  /* Ajustado proporcionalmente */
+    }
+
+    .award .award-name {
+        font-size: 1.2rem;  /* Ajustado proporcionalmente */
+    }
+
+    .award p {
+        font-size: 17px;  /* Ajustado proporcionalmente */
     }
 }
+
 
 @media (max-width: 480px) {
     .competitions {
         grid-template-columns: 1fr;
         max-width: 200px;
+    }
+
+    .award {
+        width: calc(100% - 32px); /* 16px de cada lado - mobile */
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .award h2 {
+        font-size: 24px;  /* Aumentado, mas ainda menor que tablet */
+    }
+
+    .award .award-name {
+        font-size: 1.1rem;  /* Aumentado, mas ainda menor que tablet */
+    }
+
+    .award p {
+        font-size: 16px;  /* Aumentado, mas ainda menor que tablet */
     }
 }
