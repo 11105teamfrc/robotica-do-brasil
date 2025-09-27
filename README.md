@@ -1,2 +1,0 @@
-# robotica-do-brasil
-Repositório destinado ao desenvolvimento do projeto social da equipe FRC 11105. Objetivo do projeto: reunir informações sobre todas as equipes de robótica do Brasil de forma acessível e intuitiva.

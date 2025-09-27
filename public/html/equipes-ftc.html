@@ -1,0 +1,156 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica do Brasil</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header-container-banner">
+        <img class="gctomorrow-banner" src="../img/gc4tomorrow_logo.png"
+            alt="Banner Inicial da equipe desenvolvedora do site">
+    </header>
+
+    <nav class="nav-container-hamburguer">
+        <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
+        <ul class="nav-sidebar">
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="#pesquise-regiao">Pesquise por Região</a></li>
+            <li><a href="#conheca-categorias">Categorias</a></li>
+            <li><a href="#premios">Prêmios</a></li>
+            <li><a href="#registrar-time">Registre seu Time</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <nav id="container-nav-menu">
+        <li class="barra-navegacao"><a id="inicio" href="../../index.html">Início</a></li>
+        <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
+        <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
+        <li class="barra-navegacao"><a id="premios" href="#premios">Prêmios</a></li>
+        <li class="barra-navegacao"><a id="resgistrar-time" href="#registrar-time">Registre seu Time</a></li>
+        <li class="barra-navegacao"><a id="sobre-nos" href="#sobre-nos">Sobre Nós</a></li>
+        <li class="barra-navegacao"><a id="contatos" href="#contatos">Contatos</a></li>
+    </nav>
+
+    <main class="main-container-categoria">
+        <form class="form-container-search" action="/search" method="get">
+            <input class="input-search" type="search" id="search-input" name="query" placeholder="Search...">
+            <button class="button-search" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </main>
+
+    <main class="page-container">
+        <header class="page-header">
+            <h1>FIRST TECH CHALLENGE</h1>
+            <h2>
+                <span id="h-destaque-um">EQUIPES DE ROBÓTICA</span>
+                <span id="h-destaque-dois"> DO </span>
+                <span id="h-destaque-tres">BRASIL</span>
+            </h2>
+        </header>
+        <section class="btn-container">
+            <button class="btn-filtrar" onclick="openFilterOverlay()"><i class="fa fa-sliders"></i> FILTRAR E
+                ORDENAR</button>
+        </section>
+    </main>
+
+    <main class="main-card">
+        <section class="team-card">
+            <header class="card-header-top">
+                <figure class="team-logo-figure">
+                    <img class="logo-equipe" src="../img/logo_23504.jpg" alt="logo da equipe">
+                </figure>
+                <figure class="categoria-container-figure">
+                    <img class="categoria-container-img" src="../img/first-tech-challenge_logo.png"
+                        alt="Logo da Categoria">
+                </figure>
+            </header>
+            <article class="card-content">
+                <div class="team-info">
+                    <h3>Space Tech #23504</h3>
+                    <p><i class="fa fa-map-marker" style="color: red;"></i><strong>Localização: </strong>Paulista,
+                        Pernambuco</p>
+                    <p><i class="fa fa-school" style="color: green;"></i><strong>Instituição: </strong>Escola SESI
+                        Paulista</p>
+                    <p><i class="fa fa-robot" style="color: blue;"></i><strong>Categoria: </strong>FIRST Tech Challenge
+                    </p>
+                    <p><i class="fa fa-user" style="color:orange;"></i><strong>Alunos: </strong>Entre 6 a 10
+                        competidores
+                    </p>
+                    <p><i class="fa fa-calendar" style="color:chocolate;"></i><strong>Criada em: </strong>2003</p>
+                </div>
+            </article>
+
+            <footer class="card-footer">
+                <button class="contato-button" onclick="openContatoOverlay('spacetech')">CONTATO</button>
+            </footer>
+        </section>
+    </main>
+
+    <main class="overlay" id="contatoOverlay">
+        <section class="overlay-content contato-overlay-content">
+            <h2 id="contatoTitle">CONTATO DA EQUIPE</h2>
+            <p>Siga abaixo os contatos disponíveis da equipe:</p>
+
+            <article class="contato-options">
+                <a href="#" class="contato-link email-link">
+                    <i class="fa fa-envelope"></i>
+                    <span>E-mail da Equipe</span>
+                    <p>placeholder@email.com</p>
+                </a>
+                <a href="#" target="_blank" class="contato-link instagram-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                    <p>@placeholder_ig</p>
+                </a>
+                <a href="#" target="_blank" class="contato-link website-link">
+                    <i class="fa fa-globe"></i>
+                    <span>Website / Página</span>
+                    <p>placeholder.com</p>
+                </a>
+            </article>
+
+            <button class="close-overlay" id="closecontatoOverlay">&times;</button>
+        </section>
+    </main>
+
+    <main class="overlay" id="filterOverlay">
+        <section class="overlay-content">
+            <button class="close-overlay" id="closeOverlay">&times;</button>
+            <h2>FILTRAR E ORDENAR</h2>
+
+            <article class="filter-section">
+                <h3>Filtrar</h3>
+                <p>Região</p>
+                <div class="filter-buttons">
+                    <button>Norte</button>
+                    <button>Nordeste</button>
+                    <button>Centro Oeste</button>
+                    <button>Sudeste</button>
+                    <button>Sul</button>
+                </div>
+            </article>
+
+            <div class="order-section">
+                <h3>Ordenar</h3>
+                <div class="filter-buttons">
+                    <button>Classificar A a Z</button>
+                    <button>Classificar Z a A</button>
+                    <button>Mais antiga</button>
+                    <button>Mais nova</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
