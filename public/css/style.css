@@ -1,35 +1,45 @@
 :root {
-    /* Paleta de Cores */
+    /* Paleta de Cores Principais */
     --azul: #004aad;
     --amarelo: #f1b10d;
     --verde: #179b5b;
     --vermelho: #d41e1e;
     --rosa: #e42d84;
     --laranja: #f1740d;
-    /* Cores Neutras */
-    --cinza-escuro: #4f4f52;
-    /* Para Fontes e Footer*/
-    --cinza-claro: #a4a0a0;
+
+    /* Cores Complementares */
+    --vermelho-complementar: #ffa0a0;
+    --rosa-complementar: #f77eb8;
+    --azul-completamentar: #a3bee2;
+    --laranja-complementar: #f4c49c;
+    --verde-complementar: #8ad0ae;
+
+    /* Cores Neutras e de Fundo */
     --fundo-branco: #efefef;
     --fundo-bege: #d4cece;
+    --cinza-escuro: #4f4f52;
+    --cinza-claro: #a4a0a0;
     --cinza-bem-claro: #d9d9d9;
-    /* Serve também para estruturas geométricas */
     --fundo-footer: #4f4f52;
-    /* Fontes */
-    --fonte-principal: 'Poppins', sans-serif;
-    /* Cor para "DO BRASIL" */
-    --background-color: #f0f2f5;
+
+    /* Cores para Cards e Componentes */
     --card-background: #fff;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --button-background: #a9a9a9;
-    /* Cinza para o botão */
     --button-hover-background: #888;
     --logo-background: #d1f1e2;
+
+    /* Fontes */
+    --fonte-principal: 'Poppins', sans-serif;
 }
 
+/* ================================= 
+   ESTILOS GLOBAIS E RESETS
+==================================== */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -37,44 +47,61 @@ body {
     font-family: var(--fonte-principal);
 }
 
-/* BARRA DE NAVEGAÇÃO */
-/* menu normal */
-nav {
-    margin: 0;
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ================================= 
+   HEADER / BANNER
+==================================== */
+.header-container-banner {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--fundo-bege);
-    height: 50px;
-    width: 100%;
-    font-family: var(--fonte-principal);
+    padding: 2% 0;
 }
 
-nav li {
-    list-style: none;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+.header-container-banner .gctomorrow-banner {
+    width: 15%;
+    min-width: 150px;
 }
 
-nav:focus {
-    color: #bdbcbc;
-}
-
-nav li a {
-    text-decoration: none;
-    color: var(--cinza-escuro);
-}
-
+/* ================================= 
+   BARRAS DE NAVEGAÇÃO
+==================================== */
+/* Navegação Principal (Desktop) */
 #container-nav-menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5%;
+    background-color: var(--fundo-bege);
+    height: 50px;
+    width: 100%;
+    list-style: none;
 }
 
-/* ===== MENU HAMBÚRGUER (MOBILE) ===== */
+#container-nav-menu li {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#container-nav-menu li a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    cursor: pointer;
+}
+
+/* Menu Hambúrguer (Mobile) */
 .nav-container-hamburguer {
     display: none;
+    position: relative;
+    background-color: var(--fundo-bege);
+    height: 60px;
+    align-items: center;
 }
 
 .btn-toggle-nav {
@@ -99,11 +126,6 @@ nav li a {
     transition: 0.4s;
     visibility: hidden;
     z-index: 999;
-}
-
-.nav-sidebar ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -122,96 +144,97 @@ nav li a {
     background-color: #e0dfdd;
 }
 
-@media (max-width: 768px) {
-    #container-nav-menu {
-        display: none;
-    }
-
-    .nav-container-hamburguer {
-        display: flex;
-        position: relative;
-        background-color: var(--fundo-bege);
-        height: 60px;
-        align-items: center;
-    }
-}
-
-/* FIM - BARRA DE NAVEGAÇÃO */
-
-/* BANNER INICIAL */
-
-.header-container-banner {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .gctomorrow-banner {
-    margin: 2%;
-    width: 15%;
-}
-
-@media (max-width: 768px) {
-    header .gctomorrow-banner {
-        width: 30%;
-    }
-}
-
-/* FIM - BANNER INICIAL */
-
-/* HEAD (ROBÓTICA DO BRASIL)*/
+/* ================================= 
+   SEÇÃO INICIAL (Robótica do Brasil)
+==================================== */
 .main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 70px;
 }
 
-main section .robotica-do-brasil {
+.main-container .robotica-do-brasil {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 5%;
+}
+
+/* ================================= 
+   SEÇÃO MAPA
+==================================== */
+.main-container-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--fundo-branco);
+    width: 100%;
+}
+
+.main-container-mapa h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cinza-escuro);
+    margin-bottom: 50px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.map-image-full {
     width: 100%;
     height: auto;
-    margin-top: 10%;
+    display: block;
 }
 
-main section .button-equipes {
-    margin-top: 20px;
-    padding: 1rem 2.5rem;
-    color: var(--cinza-escuro);
-    border: none;
-    border-radius: 15px;
-    background-color: var(--cinza-bem-claro);
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.3rem;
-    display: flex;
-    justify-self: center;
+.map-label-link {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
 }
 
-/* FIM - HEAD (ROBÓTICA DO BRASIL) */
+.map-label-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: auto; /* Permite que a imagem no link seja clicável */
+}
 
-/* CONHEÇA AS CATEGORIAS */
+.map-label-link:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.label-norte { width: 19%; top: 18%; left: 1%; }
+.label-nordeste { width: 28%; top: 15%; left: 90%; }
+.label-centro-oeste { width: 24%; top: 61%; left: 23%; }
+.label-sudeste { width: 24%; top: 70%; left: 93%; }
+.label-sul { width: 16%; top: 89%; left: 71%; }
+
+/* ================================= 
+   SEÇÃO CATEGORIAS
+==================================== */
 .main-container-titulos {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--fundo-bege);
+    padding: 30px 20px 10px;
 }
 
-main .h-categorias {
-    text-align: center;
+.main-container-titulos h2,
+.main-container-titulos h3 {
+    color: var(--cinza-escuro);
     width: 100%;
-}
-
-main h3 {
-    color: var(--cinza-escuro);
-    margin-top: 30px;
-}
-
-main h2 {
-    color: var(--cinza-escuro);
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .main-container-categorias {
@@ -220,414 +243,173 @@ main h2 {
     align-items: center;
     padding: 20px;
     background-color: var(--fundo-bege);
-    height: auto;
 }
 
-main .section-container-categorias {
+.section-container-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    height: 50%;
-    padding: 0;
 }
 
-main section .article-container-categorias {
+.article-container-categorias {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: var(--fundo-branco);
+    border-radius: 60px;
     overflow: hidden;
     padding-bottom: 10px;
     transition: transform 0.3s ease-in-out;
-    border-radius: 60px;
-    height: auto;
-    margin: 0;
 }
 
-main section article .image-extra {
-    width: 90%;
-    border-radius: 24px;
+.article-container-categorias:hover {
+    transform: translateY(-5px);
 }
 
-main section article .img-logo-categorias {
+.img-logo-categorias {
     width: 30%;
-    height: 30%;
-    overflow-y: hidden;
+    height: auto;
     margin-top: 20px;
 }
+.logo-ftc, .logo-frc, .caso-especial-um, .caso-especial-tres { width: 40%; }
+.caso-especial-dois { width: 30%; }
 
-main section article .logo-ftc {
-    width: 40%;
-}
-
-main section article .logo-frc {
-    width: 40%;
-}
-
-main section article .caso-especial-um {
-    width: 40%
-}
-
-main section article .caso-especial-dois {
-    width: 30%
-}
-
-main section article .caso-especial-tres {
-    width: 40%
-}
-
-main section article .idade-categoria {
+.idade-categoria {
     font-size: 1.3rem;
     color: var(--cinza-escuro);
     margin: 10px 0;
 }
 
-main section .article-container-categorias p {
+.article-container-categorias p {
     font-size: 0.95rem;
     color: var(--cinza-escuro);
     line-height: 1.5;
-    text-align: center;
     padding: 0 15px;
     margin-bottom: 15px;
+    flex-grow: 1;
 }
 
-main section article .bottuns-container {
+.image-extra {
+    width: 90%;
+    border-radius: 24px;
+}
+
+/* ================================= 
+   SEÇÃO PRÊMIOS E REGISTRO
+==================================== */
+.main-container-premios {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--fundo-branco);
 }
 
-@media (max-width: 1024px) {
-    main .section-container-categorias {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.trophy-icon {
+    width: 75px;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    main .section-container-categorias {
-        grid-template-columns: 1fr;
-    }
+.main-container-premios h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cinza-escuro);
+    margin-bottom: 50px;
 }
 
-/* LISTA COMPLETA DE EQUIPES */
-
-.page-container {
-    width: auto;
-    padding: 20px;
+.logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 60px;
+    margin-bottom: 80px;
+    max-width: 900px;
 }
 
-.page-header {
-    margin-bottom: 30px;
+.logos-container img {
+    max-width: 210px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logos-container img:hover {
+    transform: scale(1.05);
+}
+
+.registro-box {
+    background-color: var(--fundo-bege);
+    border-radius: 25px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.page-header h1 {
+.registro-box h3 {
     font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--primary-text-color);
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.page-header h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--primary-text-color);
-    margin-top: 0;
-}
-
-.btn-container {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.btn-filtrar {
-    color: var(--cinza-claro);
-    border-radius: 50px;
-    border-color: var(--cinza-claro);
-    border-style: solid;
-    padding: 0.5rem;
-}
-
-.btn-filtrar:hover {
+    font-weight: 900;
     color: var(--cinza-escuro);
-    border-color: var(--cinza-escuro);
-    transition: 0.5s ease-in-out;
+    margin-bottom: 15px;
 }
 
-#h-destaque-um {
-    color: var(--azul);
-    font-weight: 700;
-}
-
-#h-destaque-dois {
-    color: var(--amarelo);
-    font-weight: 700;
-}
-
-#h-destaque-tres {
-    color: var(--verde);
-    font-weight: 700;
-}
-
-
-.team-logo {
-    min-width: 120px;
-    min-height: 120px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-}
-
-.team-info {
-    flex-grow: 1;
-}
-
-.team-info h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin: 0 0 12px 0;
-    color: var(--cinza-escuro);
-}
-
-.team-info p {
+.registro-box p {
     font-size: 1rem;
     color: var(--cinza-escuro);
-    margin: 8px 0;
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 550px;
+    margin-bottom: 30px;
 }
 
-.team-info p i {
-    width: 25px;
-    text-align: center;
-    margin-right: 8px;
-    font-size: 1.1em;
-    position: relative;
-    top: 2px;
-}
-
-.card-footer {
-    display: flex;
-    bottom: 5px;
-    margin: 1%;
-    padding-top: 5%;
-}
-
-.contato-button,
-.btn-equipes-categoria,
-.btn-saiba-mais-categoria,
-.button-equipes {
-    background-color: var(--button-background);
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contato-button:hover,
-.btn-equipes-categoria:hover,
-.btn-saiba-mais-categoria:hover,
-.button-equipes:hover {
-    background-color: var(--fundo-branco);
-    border: solid 1px var(--cinza-escuro);
-    color: var(--cinza-escuro);
-}
-
-main section article div .btn-equipes-categoria,
-.btn-saiba-mais-categoria {
+.registro-btn {
     display: inline-flex;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    gap: 20px;
-}
-
-.frc-container {
-    width: 110px;
-    height: auto;
-    object-fit: contain;
-}
-
-.logo-card {
-    width: 100%;
-    display: flex;
+    align-items: center;
     justify-content: center;
     gap: 15px;
-}
-
-.logo-equipe {
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-.team-info p {
-    text-align: left;
-    margin-left: 10px;
-}
-
-/* RESPONSIVIDADE TESTE*/
-@media (max-width: 600px) {
-    .page-header h1 {
-        font-size: 2rem;
-    }
-
-    .page-header h2 {
-        font-size: 1rem;
-    }
-
-    .team-card {
-        padding: 20px;
-    }
-
-    .card-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .team-logo {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-        overflow: hidden;
-    }
-
-    .team-info h3 {
-        font-size: 1.4rem;
-    }
-
-    .team-info p {
-        justify-content: center;
-    }
-
-    .card-footer {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 20px;
-        padding-top: 15px;
-    }
-
-    .contato-button {
-        width: 100%;
-        max-width: 200px;
-    }
-}
-
-/* DEU CERTO */
-
-@media (max-width: 600px) {
-    .team-card {
-        width: 100%;
-        display: flex;
-        text-align: left;
-    }
-}
-
-/* FILTRAGEM */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.overlay-content {
-    background: white;
-    width: 80%;
-    max-width: 700px;
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.overlay-content h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--cinza-escuro);
-}
-
-.overlay-content h3 {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: var(--cinza-escuro);
-}
-
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px 0 20px 0;
-}
-
-.filter-buttons button {
-    border: 1px solid var(--cinza-claro);
+    background-color: var(--azul);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 15px 45px;
     border-radius: 50px;
-    padding: 8px 15px;
-    background: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-size: 0.9rem;
-}
-
-.filter-buttons button:hover {
-    background: var(--cinza-bem-claro);
-    color: var(--cinza-escuro);
-}
-
-.close-overlay {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
+    text-decoration: none;
     border: none;
-    font-size: 2rem;
     cursor: pointer;
-    color: var(--cinza-escuro);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .overlay-content {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .filter-buttons {
-        justify-content: center;
-    }
+.registro-btn:hover {
+    background-color: #003a8c;
+    transform: translateY(-3px);
 }
 
+.registro-btn .link-icon {
+    font-size: 1.5rem;
+}
+
+.registro-box .footnote {
+    font-size: 0.85rem;
+    color: var(--cinza-claro);
+    font-style: italic;
+}
+
+/* ================================= 
+   PÁGINA LISTA DE EQUIPES E CARDS
+==================================== */
 .main-card {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    gap: 20px;
 }
 
 .team-card {
@@ -636,14 +418,16 @@ main section article div .btn-equipes-categoria,
     box-shadow: var(--card-shadow);
     width: 25%;
     min-width: 300px;
-    height: 100%;
-    min-height: 520px;
     padding: 30px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 20px;
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
 }
 
 .card-header-top {
@@ -651,14 +435,6 @@ main section article div .btn-equipes-categoria,
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-}
-
-.team-logo-figure {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin: 0;
 }
 
 .logo-equipe {
@@ -693,94 +469,31 @@ main section article div .btn-equipes-categoria,
     object-fit: contain;
 }
 
-.main-container-categoria {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: var(--fundo-branco);
-}
-
-.form-container-search {
-    display: flex;
-    width: 90%;
-    max-width: 600px;
-    border: 2px solid var(--cinza-bem-claro);
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.input-search {
-    flex-grow: 1;
-    padding: 12px 20px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    color: var(--cinza-escuro);
-}
-
-.button-search {
-    background-color: var(--azul);
-    color: var(--fundo-branco);
-    border: none;
-    padding: 0 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-}
-
-.button-search:hover {
-    background-color: var(--verde);
-}
-
-.button-search i {
-    color: var(--fundo-branco);
-}
-
-.input-search:focus {
-    box-shadow: none;
-}
-
-
-@media (max-width: 600px) {
-    .input-search {
-        padding: 10px 15px;
-    }
-
-    .button-search {
-        padding: 0 15px;
-    }
-}
-
-
-
-.team-card {
-    background-color: var(--card-background);
-    border-radius: 20px;
-    box-shadow: var(--card-shadow);
-    width: 25%;
-    min-width: 300px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column; 
-    margin: 20px;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
 .card-content {
     flex-grow: 1;
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
 
 .team-info {
     flex-grow: 1;
     width: 100%;
+}
+
+.team-info h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: var(--cinza-escuro);
+    text-align: center;
+}
+
+.team-info p {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    margin: 8px 0;
+    line-height: 1.5;
+    text-align: left;
 }
 
 .card-footer {
@@ -790,78 +503,281 @@ main section article div .btn-equipes-categoria,
     margin-top: auto;
     padding-top: 15px;
     border-top: 1px solid #eee;
+    gap: 15px;
 }
 
-.contato-overlay-content {
+/* ================================= 
+   BOTÕES GERAIS
+==================================== */
+.button-equipes,
+.btn-equipes-categoria,
+.btn-saiba-mais-categoria,
+.contato-button {
+    background-color: var(--button-background);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.button-equipes:hover,
+.btn-equipes-categoria:hover,
+.btn-saiba-mais-categoria:hover,
+.contato-button:hover {
+    background-color: var(--fundo-branco);
+    border: solid 1px var(--cinza-escuro);
+    color: var(--cinza-escuro);
+    transform: translateY(-2px);
+}
+
+.button-equipes {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    padding: 1rem 2.5rem;
+    background-color: var(--cinza-bem-claro);
+    color: var(--cinza-escuro);
+}
+
+/* ================================= 
+   FILTROS E OVERLAYS
+==================================== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background: white;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.contato-overlay-content h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-.contato-overlay-content p {
+.close-overlay {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
     color: var(--cinza-escuro);
-    margin-bottom: 30px;
 }
 
-.contato-options {
+/* ================================= 
+   FOOTER
+==================================== */
+footer {
+    background-color: var(--cinza-escuro);
+    color: white;
+    padding: 50px 80px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 25px;
-    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.contato-link {
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 10px;
-    width: 250px;
+footer .contato-info {
     display: flex;
     flex-direction: column;
+    gap: 18px;
+    flex: 1 1 300px;
+}
+
+footer h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+footer .contato-item {
+    display: flex;
     align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
-    border: 2px solid var(--cinza-bem-claro);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    background-color: var(--fundo-branco);
-    color: var(--cinza-escuro);
+    gap: 12px;
 }
 
-.contato-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+footer .contato-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.contato-link i {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+footer .contato-item a:hover {
+    text-decoration: underline;
 }
 
-.contato-link span {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+footer .logo-banner {
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+    flex: 1 1 200px;
 }
 
-.contato-link p {
-    font-size: 0.9rem;
-    color: var(--cinza-escuro);
-    margin: 0;
+/* ================================= 
+   RESPONSIVIDADE
+==================================== */
+
+/* Telas Grandes (Ajustes finos no Mapa) */
+@media (min-width: 1025px) {
+    .label-norte { width: 21%; left: 1%; }
+    .label-nordeste { width: 31%; }
+    .label-centro-oeste { width: 26%; }
+    .label-sudeste { width: 26%; left: 96%; }
+    .label-sul { width: 18%; }
 }
 
-.email-link {
-    color: var(--azul); 
-    border-color: var(--azul);
+/* Telas Médias (Tablets) */
+@media (max-width: 1024px) {
+    .section-container-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .logo-banner {
+        margin-top: 20px;
+        max-width: 220px;
+        align-self: flex-start;
+    }
 }
 
-.instagram-link {
-    color: var(--amarelo);
-    border-color: var(--amarelo);
+/* Telas Pequenas (Tablets e Celulares Maiores) */
+@media (max-width: 768px) {
+    /* Esconde nav principal e mostra o hambúrguer */
+    #container-nav-menu {
+        display: none;
+    }
+    .nav-container-hamburguer {
+        display: flex;
+    }
+
+    .header-container-banner .gctomorrow-banner {
+        width: 30%;
+    }
+    
+    .section-container-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .main-container-mapa,
+    .main-container-premios {
+        padding: 60px 20px;
+    }
+
+    .main-container-mapa h2,
+    .main-container-premios h2 {
+        font-size: 1.8rem;
+    }
+    
+    .trophy-icon {
+        width: 65px;
+    }
+
+    .logos-container {
+        gap: 30px 40px;
+    }
+    .logos-container img {
+        max-width: 150px;
+    }
+
+    .registro-box h3 {
+        font-size: 2.2rem;
+    }
+    .registro-box p {
+        font-size: 0.95rem;
+    }
+    .registro-btn {
+        font-size: 1.4rem;
+        padding: 12px 35px;
+    }
 }
 
-.website-link {
-    color: var(--verde);
-    border-color: var(--verde);
+/* Telas Muito Pequenas (Celulares) */
+@media (max-width: 480px) {
+    .main-container-mapa,
+    .main-container-premios {
+        padding: 40px 15px;
+    }
+
+    .main-container-mapa h2,
+    .main-container-premios h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .label-norte { width: 17%; left: 3%; }
+    .label-nordeste { width: 24%; }
+    .label-centro-oeste { width: 21%; }
+    .label-sudeste { width: 21%; left: 94%; }
+    .label-sul { width: 14%; }
+
+    .trophy-icon {
+        width: 55px;
+    }
+
+    .logos-container {
+        gap: 25px;
+    }
+    .logos-container img {
+        max-width: 120px;
+    }
+
+    .registro-box {
+        padding: 30px 20px;
+    }
+    .registro-box h3 {
+        font-size: 1.8rem;
+    }
+    .registro-box p {
+        font-size: 0.9rem;
+    }
+    .registro-btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+        width: 100%;
+    }
+    .registro-box .footnote {
+        font-size: 0.75rem;
+    }
+    
+    footer {
+        padding: 30px 20px;
+    }
+    footer h1 {
+        font-size: 22px;
+    }
+    footer .contato-item a {
+        font-size: 14px;
+    }
+    footer .logo-banner {
+        max-width: 180px;
+    }
 }
