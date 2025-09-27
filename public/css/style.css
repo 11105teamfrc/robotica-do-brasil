@@ -6,12 +6,6 @@
     --vermelho: #d41e1e;
     --rosa: #e42d84;
     --laranja: #f1740d;
-    /* Cores Complementares */
-    --vermelho-complementar: #ffa0a0;
-    --rosa-complementar: #f77eb8;
-    --azul-completamentar: #a3bee2;
-    --laranja-complementar: #f4c49c;
-    --verde-complementar: #8ad0ae;
     /* Cores Neutras */
     --cinza-escuro: #4f4f52;
     /* Para Fontes e Footer*/
@@ -23,11 +17,6 @@
     --fundo-footer: #4f4f52;
     /* Fontes */
     --fonte-principal: 'Poppins', sans-serif;
-
-    /*teste - ignora isso Jean*/
-    --primary-text-color: #333;
-    --secondary-text-color: #666;
-    --highlight-color: #f7b20d;
     /* Cor para "DO BRASIL" */
     --background-color: #f0f2f5;
     --card-background: #fff;
@@ -201,11 +190,6 @@ main section .button-equipes {
     justify-self: center;
 }
 
-main section .button-equipes:hover {
-    background-color: #d2d1d1;
-    transition: 0.3s;
-}
-
 /* FIM - HEAD (ROBÓTICA DO BRASIL) */
 
 /* CONHEÇA AS CATEGORIAS */
@@ -315,29 +299,6 @@ main section article .bottuns-container {
     justify-content: space-around;
 }
 
-main section article div .btn-equipes-categoria,
-.btn-saiba-mais-categoria {
-    display: inline-flex;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    border-radius: 20px;
-    background-color: var(--cinza-escuro);
-    color: var(--cinza-bem-claro);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    gap: 20px;
-}
-
-main section article .btn-equipes-categoria:hover,
-.btn-saiba-mais-categoria:hover {
-    background-color: var(--fundo-bege);
-    color: var(--cinza-escuro);
-}
-
 @media (max-width: 1024px) {
     main .section-container-categorias {
         grid-template-columns: repeat(2, 1fr);
@@ -398,41 +359,6 @@ main section article .btn-equipes-categoria:hover,
     transition: 0.5s ease-in-out;
 }
 
-.form-container-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.input-search,
-.button-search {
-    background-color: var(----fundo-branco);
-    color: var(--cinza-escuro);
-    border: solid 1px var(--cinza-claro);
-    border-radius: 30px;
-    margin: 1%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.input-search {
-    background-color: var(--cinza-bem-claro);
-    border-color: var(--cinza-claro);
-    border-width: 0.5px;
-    color: var(--fundo-footer);
-}
-
-.input-search:hover {
-    background-color: var(--fundo-branco);
-    border-color: var(--cinza-escuro);
-    transition: 0.3s ease-in-out;
-}
-
 #h-destaque-um {
     color: var(--azul);
     font-weight: 700;
@@ -448,23 +374,6 @@ main section article .btn-equipes-categoria:hover,
     font-weight: 700;
 }
 
-.main-card {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.team-card {
-    background-color: var(--card-background);
-    border-radius: 20px;
-    box-shadow: var(--card-shadow);
-    width: 30%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
 
 .team-logo {
     min-width: 120px;
@@ -488,7 +397,7 @@ main section article .btn-equipes-categoria:hover,
 }
 
 .team-info p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--cinza-escuro);
     margin: 8px 0;
     line-height: 1.5;
@@ -503,41 +412,17 @@ main section article .btn-equipes-categoria:hover,
     top: 2px;
 }
 
-.social-links {
-    display: flex;
-    gap: 12px;
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.social-icon {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
 .card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 1px solid #eee;
+    bottom: 5px;
+    margin: 1%;
+    padding-top: 5%;
 }
 
-.contact-button {
+.contato-button,
+.btn-equipes-categoria,
+.btn-saiba-mais-categoria,
+.button-equipes {
     background-color: var(--button-background);
     color: #fff;
     padding: 12px 30px;
@@ -551,14 +436,30 @@ main section article .btn-equipes-categoria:hover,
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-button:hover {
+.contato-button:hover,
+.btn-equipes-categoria:hover,
+.btn-saiba-mais-categoria:hover,
+.button-equipes:hover {
     background-color: var(--fundo-branco);
-    transform: translateY(-1px);
     border: solid 1px var(--cinza-escuro);
     color: var(--cinza-escuro);
 }
 
-.frc-badge {
+main section article div .btn-equipes-categoria,
+.btn-saiba-mais-categoria {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    gap: 20px;
+}
+
+.frc-container {
     width: 110px;
     height: auto;
     object-fit: contain;
@@ -624,7 +525,7 @@ main section article .btn-equipes-categoria:hover,
         padding-top: 15px;
     }
 
-    .contact-button {
+    .contato-button {
         width: 100%;
         max-width: 200px;
     }
@@ -719,4 +620,248 @@ main section article .btn-equipes-categoria:hover,
     .filter-buttons {
         justify-content: center;
     }
+}
+
+.main-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.team-card {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    min-height: 520px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+.card-header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-logo-figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin: 0;
+}
+
+.logo-equipe {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 3px solid var(--cinza-bem-claro);
+    padding: 5px;
+}
+
+.categoria-container-figure {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    z-index: 10;
+    margin: 0;
+}
+
+.categoria-container-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.main-container-categoria {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--fundo-branco);
+}
+
+.form-container-search {
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid var(--cinza-bem-claro);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-search {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+}
+
+.button-search {
+    background-color: var(--azul);
+    color: var(--fundo-branco);
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.button-search:hover {
+    background-color: var(--verde);
+}
+
+.button-search i {
+    color: var(--fundo-branco);
+}
+
+.input-search:focus {
+    box-shadow: none;
+}
+
+
+@media (max-width: 600px) {
+    .input-search {
+        padding: 10px 15px;
+    }
+
+    .button-search {
+        padding: 0 15px;
+    }
+}
+
+
+
+.team-card {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    width: 25%;
+    min-width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex; 
+    flex-direction: column;
+}
+
+.team-info {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.contato-overlay-content {
+    text-align: center;
+}
+
+.contato-overlay-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contato-overlay-content p {
+    color: var(--cinza-escuro);
+    margin-bottom: 30px;
+}
+
+.contato-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap; 
+}
+
+.contato-link {
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+    border: 2px solid var(--cinza-bem-claro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--fundo-branco);
+    color: var(--cinza-escuro);
+}
+
+.contato-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contato-link i {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.contato-link span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contato-link p {
+    font-size: 0.9rem;
+    color: var(--cinza-escuro);
+    margin: 0;
+}
+
+.email-link {
+    color: var(--azul); 
+    border-color: var(--azul);
+}
+
+.instagram-link {
+    color: var(--amarelo);
+    border-color: var(--amarelo);
+}
+
+.website-link {
+    color: var(--verde);
+    border-color: var(--verde);
 }
