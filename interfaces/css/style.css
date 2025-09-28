@@ -6,25 +6,25 @@
   --vermelho: #d41e1e;
   --rosa: #e42d84;
   --laranja: #f1740d;
-
-  /* Cores Complementares */
-  --vermelho-complementar: #ffa0a0;
-  --rosa-complementar: #f77eb8;
-  --azul-completamentar: #a3bee2;
-  --laranja-complementar: #f4c49c;
-  --verde-complementar: #8ad0ae;
-
   /* Cores Neutras */
   --cinza-escuro: #4f4f52;
-  /* Para Fontes e Footer */
+  /* Para Fontes e Footer*/
   --cinza-claro: #a4a0a0;
   --fundo-branco: #efefef;
   --fundo-bege: #d4cece;
-  /* Para Cards */
+  --cinza-bem-claro: #d9d9d9;
+  /* Serve também para estruturas geométricas */
   --fundo-footer: #4f4f52;
-
   /* Fontes */
   --fonte-principal: 'Poppins', sans-serif;
+  /* Cor para "DO BRASIL" */
+  --background-color: #f0f2f5;
+  --card-background: #fff;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --button-background: #a9a9a9;
+  /* Cinza para o botão */
+  --button-hover-background: #888;
+  --logo-background: #d1f1e2;
 }
 
 * {
@@ -32,21 +32,13 @@
   padding: 0;
 }
 
-img {
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none; 
-}
-
 body {
   background-color: var(--fundo-branco);
   font-family: var(--fonte-principal);
 }
 
-
+/* BARRA DE NAVEGAÇÃO */
+/* menu normal */
 nav {
   margin: 0;
   display: flex;
@@ -873,6 +865,13 @@ main section article div .btn-equipes-categoria,
   color: var(--verde);
   border-color: var(--verde);
 }
+
+
+
+
+
+
+
 
 /* footer */
 footer {

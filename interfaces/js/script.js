@@ -104,7 +104,7 @@ let closecontatoOverlay = function () {
 };
 
 let navegarListaEquipes = function () {
-    window.location.href = '../../public/html/lista-equipes.html';
+    window.location.href = '../../interfaces/html/lista-equipes.html';
 }
 
 document.addEventListener("DOMContentLoaded", () => {
