@@ -30,7 +30,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 img {
@@ -39,7 +38,7 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
 body {
@@ -47,90 +46,102 @@ body {
   font-family: var(--fonte-principal);
 }
 
-/* ================================= 
-   SEÇÃO MAPA
-==================================== */
-.main-container-mapa {
+/* footer */
+footer {
+  background-color: var(--cinza-escuro);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Seção de contatos */
+footer .contato-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 80px 20px;
-  text-align: center;
-  font-family: var(--fonte-principal);
-  background-color: var(--fundo-branco);
-  width: 100%;
+  gap: 18px;
+  flex: 1 1 300px;
+  
 }
 
-.main-container-mapa h2 {
-  font-size: 2rem;
+footer .contato-info h1 {
+  font-size: 26px;
   font-weight: 700;
-  color: var(--cinza-escuro);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.map-container {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
+/* Cada item de contato */
+footer .contato-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.map-image-full {
-  width: 100%;
+footer .contato-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer .contato-item a:hover {
+  text-decoration: underline;
+}
+
+/* Logo/banner */
+footer .logo-banner {
+  max-width: 260px;
   height: auto;
-  display: block;
+  object-fit: contain;
+  align-self: center;
+  flex: 1 1 200px;
 }
 
-.map-label-link {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease;
+/* Responsividade do footer */
+@media (max-width: 1024px) {
+  footer {
+    padding: 40px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .contato-info {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  footer .logo-banner {
+    margin-top: 20px;
+    max-width: 220px;
+    align-self: flex-start;
+  }
 }
 
-.map-label-link img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 20px;
+  }
 
-.map-label-link:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-}
+  footer .contato-info h1 {
+    font-size: 22px;
+  }
 
-.label-norte {
-  width: 19%;
-  top: 18%;
-  left: 1%;
-}
+  footer .contato-item a {
+    font-size: 14px;
+  }
 
-.label-nordeste {
-  width: 28%;
-  top: 15%;
-  left: 90%;
-}
-
-.label-centro-oeste {
-  width: 24%;
-  top: 61%;
-  left: 23%;
-}
-
-.label-sudeste {
-  width: 24%;
-  top: 70%;
-  left: 93%;
-}
-
-.label-sul {
-  width: 16%;
-  top: 89%;
-  left: 71%;
+  footer .logo-banner {
+    max-width: 180px;
+  }
 }
 
 
-/* ================================= 
-   SEÇÃO PRÊMIOS
-==================================== */
 .main-container-premios {
   display: flex;
   flex-direction: column;
@@ -146,7 +157,6 @@ body {
   width: 75px;
   height: auto;
   margin-bottom: 20px;
-  transition: width 0.3s ease;
 }
 
 .main-container-premios h2 {
@@ -168,6 +178,7 @@ body {
 
 .logos-container img {
   max-width: 210px;
+  
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -175,14 +186,17 @@ body {
 
 .logos-container img:hover {
   transform: scale(1.05);
+  
 }
 
+/* Caixa de Registro de Time */
 .registro-box {
   background-color: var(--fundo-bege);
   border-radius: 25px;
   padding: 50px 40px;
   width: 100%;
   max-width: 800px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,230 +251,165 @@ body {
 }
 
 
-/* ================================= 
-   FOOTER
-==================================== */
-footer {
-  background-color: var(--cinza-escuro);
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  padding: 50px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-footer .contato-info {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  flex: 1 1 300px;
-}
-
-footer .contato-info h1 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-footer .contato-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-footer .contato-item a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-footer .contato-item a:hover {
-  text-decoration: underline;
-}
-
-footer .logo-banner {
-  max-width: 260px;
-  height: auto;
-  object-fit: contain;
-  align-self: center;
-  flex: 1 1 200px;
-}
-
-
-/* ================================= 
-   RESPONSIVIDADE GERAL
-==================================== */
-
-/* === Telas médias (Tablets) === */
-@media (max-width: 1024px) {
-  footer {
-    padding: 40px 40px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  footer .contato-info {
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  footer .logo-banner {
-    margin-top: 20px;
-    max-width: 220px;
-    align-self: flex-start;
-  }
-}
-
-
-/* === Telas pequenas (Celulares) === */
 @media (max-width: 768px) {
-  .main-container-mapa,
   .main-container-premios {
     padding: 60px 20px;
   }
-
-  .main-container-mapa h2,
   .main-container-premios h2 {
     font-size: 1.8rem;
   }
-  
-  .main-container-premios .trophy-icon {
-    width: 65px;
-  }
-
   .logos-container {
     gap: 30px 40px;
   }
-
   .logos-container img {
     max-width: 150px;
   }
-
   .registro-box h3 {
     font-size: 2.2rem;
   }
-
   .registro-box p {
     font-size: 0.95rem;
   }
-
   .registro-btn {
     font-size: 1.4rem;
     padding: 12px 35px;
   }
 }
 
-/* === Telas muito pequenas (Celulares) === */
 @media (max-width: 480px) {
-  .main-container-mapa,
   .main-container-premios {
     padding: 40px 15px;
   }
-
-  .main-container-mapa h2,
   .main-container-premios h2 {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
-  
-  .label-norte {
-    width: 17%;
-    left: 3%;
-  }
-  .label-nordeste {
-    width: 24%;
-  }
-  .label-centro-oeste {
-    width: 21%;
-  }
-  .label-sudeste {
-    width: 21%;
-    left: 94%;
-  }
-  .label-sul {
-    width: 14%;
-  }
-
-  .main-container-premios .trophy-icon {
-    width: 55px;
-  }
-
   .logos-container {
     gap: 25px;
   }
-
   .logos-container img {
     max-width: 120px;
   }
-
   .registro-box {
     padding: 30px 20px;
   }
-
   .registro-box h3 {
     font-size: 1.8rem;
   }
-
   .registro-box p {
     font-size: 0.9rem;
   }
-
   .registro-btn {
     font-size: 1.2rem;
     padding: 12px 30px;
     width: 100%;
+    box-sizing: border-box;
   }
-
   .registro-box .footnote {
     font-size: 0.75rem;
-  }
+  }  
+}
+
+
+
+.main-container-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: var(--fonte-principal);
+  background-color: var(--fundo-branco);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-container-mapa h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+  margin-bottom: 50px;
+}
+
+.map-container {
+  position: relative; 
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   
-  footer {
-    padding: 30px 20px;
-  }
+}
 
-  footer .contato-info h1 {
-    font-size: 22px;
-  }
+.map-image-full {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
 
-  footer .contato-item a {
-    font-size: 14px;
-  }
 
-  footer .logo-banner {
-    max-width: 180px;
+.map-label-link {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.map-label-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-label-link:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.label-norte {
+  width: 19%;
+  top: 18%;
+  left: 1%;
+}
+
+.label-nordeste {
+  width: 28%;
+  top: 15%;
+  left: 90%;
+}
+
+.label-centro-oeste {
+  width: 24%;
+  top: 61%;
+  left: 23%;
+}
+
+.label-sudeste {
+  width: 24%;
+  top: 70%;
+  left: 97%;
+}
+
+.label-sul {
+  width: 16%;
+  top: 89%;
+  left: 71%;
+}
+
+/* === RESPONSIVIDADE DA SEÇÃO MAPA === */
+
+@media (max-width: 768px) {
+  .main-container-mapa {
+    padding: 60px 20px;
+  }
+  .main-container-mapa h2 {
+    font-size: 1.8rem;
   }
 }
 
-/* ===================================================
-   AJUSTE PARA TELAS GRANDES (DESKTOP)
-====================================================== */
-@media (min-width: 1025px) {
-  .label-norte {
-    width: 21%;
-    left: 1%;
+@media (max-width: 480px) {
+  .main-container-mapa {
+    padding: 40px 15px;
   }
-
-  .label-nordeste {
-    width: 31%;
-  }
-
-  .label-centro-oeste {
-    width: 26%;
-  }
-
-  .label-sudeste {
-    width: 26%;
-    left: 96%;
-  }
-
-  .label-sul {
-    width: 18%;
+  .main-container-mapa h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
   }
 }
