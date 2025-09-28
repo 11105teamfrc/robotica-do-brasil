@@ -412,12 +412,7 @@ main section article .bottuns-container {
   top: 2px;
 }
 
-.card-footer {
-  display: flex;
-  bottom: 5px;
-  margin: 1%;
-  padding-top: 5%;
-}
+/* A REGRA ANTIGA E INCORRETA PARA .card-footer FOI REMOVIDA DAQUI */
 
 .contato-button,
 .btn-equipes-categoria,
@@ -492,6 +487,7 @@ main section article div .btn-equipes-categoria,
       font-size: 1rem;
   }
 
+  /* A regra de .team-card foi movida para a seção de cards unificada */
   .team-card {
       padding: 20px;
   }
@@ -523,6 +519,7 @@ main section article div .btn-equipes-categoria,
       gap: 15px;
       margin-top: 20px;
       padding-top: 15px;
+      border-top: 1px solid #eee; /* Adicionado para consistência */
   }
 
   .contato-button {
@@ -756,8 +753,6 @@ main section article div .btn-equipes-categoria,
   }
 }
 
-
-
 .team-card {
   background-color: var(--card-background);
   border-radius: 20px;
@@ -778,18 +773,15 @@ main section article div .btn-equipes-categoria,
   flex-direction: column;
 }
 
-.team-info {
-  flex-grow: 1;
-  width: 100%;
-}
-
+/* ESTA É A REGRA CORRETA E ÚNICA PARA O .card-footer */
 .card-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
+  margin-top: auto; /* Empurra o rodapé para a base do card */
+  padding-top: 15px; /* Cria um espaço acima do botão */
+  border-top: 1px solid #eee; /* Cria a linha cinza clara */
+  background-color: transparent; /* Garante que o fundo seja transparente */
 }
 
 .contato-overlay-content {
@@ -865,13 +857,6 @@ main section article div .btn-equipes-categoria,
   color: var(--verde);
   border-color: var(--verde);
 }
-
-
-
-
-
-
-
 
 /* footer */
 footer {
