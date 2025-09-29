@@ -179,23 +179,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;  /* Limita a largura máxima */
-  margin: 20 auto;     /* Centraliza horizontalmente */
+  max-width: 1200px;
+  margin: 20 auto;   
 }
 
 
 header .gctomorrow-banner {
-  margin: 10px /* Margem padrão para todos os tamanhos */
-  width: 50%;        /* Reduz para 50% da largura do container */
-  height: auto;      /* Mantém a proporção */
-  max-width: 100px;  /* Limita a largura máxima absoluta */
+  margin: 10px;
+  width: 50%;     
+  height: auto;    
+  max-width: 100px;
 }
 
-
-/* FIM - BANNER INICIAL */
-
-
-/* HEAD (ROBÓTICA DO BRASIL)*/
 .main-container {
   display: flex;
   justify-content: center;
@@ -203,7 +198,6 @@ header .gctomorrow-banner {
   margin-top: 20px;
   margin-bottom: 70px;
 }
-
 
 main section .logo-fll {
   width: 100%;
@@ -230,11 +224,6 @@ main section .button-equipes:hover {
   transition: 0.3s;
 }
 
-
-/* FIM - HEAD (ROBÓTICA DO BRASIL) */
-
-
-/* CONHEÇA AS CATEGORIAS */
 .main-container-titulos {
   display: flex;
   flex-wrap: wrap;
@@ -311,8 +300,8 @@ main section article .img-logo-categorias {
 
 
 .logo-ftc {
-  width: 90%;  /* Ajustado para 90% */
-  margin: 50px auto 0;  /* Margem superior, centralização horizontal, sem margem inferior */
+  width: 90%;  
+  margin: 50px auto 0;  
   display: block;
 }
 
@@ -379,22 +368,44 @@ main section .article-container-categorias p {
 
 
 /* ===== PRÊMIOS E ARTIGOS ===== */
+/* Estilo do container */
 .award {
-    /* Estilo do container */
-    background: #d4cece;
-    border-radius: 25px;
-    padding: 35px 45px;
-    margin: 30px auto;
-    width: calc(100% - 650px); /* 250px de cada lado - mais espaço em desktop */
-    
-    /* Sombra suave para destacar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-    /* Fonte padrão para todo o artigo */
-    font-family: var(--fonte-principal);
-    font-size: 18px;
+  background: #d4cece;
+  border-radius: 25px;
+  padding: 35px 45px;
+  margin: 30px auto;
+  width: calc(100% - 650px); 
+  max-width: 1400px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: var(--fonte-principal);
+  font-size: 18px;
 }
 
+/* Responsividade para diferentes tamanhos de tela */
+@media (max-width: 1024px) {
+  .award {
+      width: calc(100% - 250px);
+      padding: 30px 40px;
+      font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .award {
+      width: calc(100% - 250px);
+      padding: 25px 30px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .award {
+      width: calc(100% - 80px);
+      padding: 20px 25px;
+      font-size: 15px;
+      border-radius: 20px;
+  }
+}
 /* Título do prêmio */
 .award h2 {
     color: var(--cinza-escuro);
@@ -428,7 +439,7 @@ main section .article-container-categorias p {
     text-align: center;
     margin: 60px 0 40px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
 }
 
@@ -442,12 +453,15 @@ main section .article-container-categorias p {
 
 
 .competitions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto 60px auto;
+  display: flex; /* Mude de grid para flex */
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+  justify-content: center; /* CENTRALIZA os itens ao longo do eixo principal (horizontal) */
+  
+  gap: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  
 }
 
 
@@ -460,7 +474,9 @@ main section .article-container-categorias p {
     font-size: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
-}
+    max-width: calc(33% - 40px);
+    flex: 1 0 calc(1.33% - 8px);
+  }
 
 
 .comp-btn:hover {
