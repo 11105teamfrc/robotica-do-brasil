@@ -65,32 +65,26 @@ body {
   font-family: var(--fonte-principal);
 }
 
-
-.barra-navegacao {
+nav li {
   list-style: none;
   font-size: 1rem;
-  font-weight: 500;  /* Negrito mais suave */
+  font-weight: bold;
   cursor: pointer;
-  padding: 0 10px;  /* Reduzido o padding lateral */
 }
 
-
-.nav-desktop:focus {
+nav:focus {
   color: #bdbcbc;
 }
 
-
-.barra-navegacao a {
+nav li a {
   text-decoration: none;
   color: var(--cinza-escuro);
 }
 
-
 #container-nav-menu {
   display: flex;
   justify-content: center;
-  gap: 25px;  /* Reduzido o espaçamento entre itens */
-  width: 100%;
+  gap: 5%;
 }
 
 
@@ -134,7 +128,7 @@ body {
 
 
 .nav-sidebar li {
-  padding: 15px;  /* Reduzido o padding */
+  padding: 15px;
 }
 
 
@@ -143,7 +137,7 @@ body {
   color: var(--fundo-footer);
   opacity: 0;
   transition: opacity 0.3s;
-  font-weight: 500;  /* Negrito mais suave */
+  font-weight: 500;  
 }
 
 
@@ -186,9 +180,9 @@ body {
 
 header .gctomorrow-banner {
   margin: 10px;
-  width: 50%;     
+  width: 80%;     
   height: auto;    
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .main-container {
@@ -198,54 +192,6 @@ header .gctomorrow-banner {
   margin-top: 20px;
   margin-bottom: 70px;
 }
-
-main section .logo-fll {
-  width: 100%;
-  height: auto;
-}
-
-
-main section .button-equipes {
-  margin-top: 20px;
-  padding: 10px 20px;
-  color: var(--cinza-escuro);
-  border: none;
-  border-radius: 15px;
-  background-color: var(--cinza-bem-claro);
-  cursor: pointer;
-  font-weight: bold;
-  display: flex;
-  justify-self: center;
-}
-
-
-main section .button-equipes:hover {
-  background-color: #d2d1d1;
-  transition: 0.3s;
-}
-
-.main-container-titulos {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--fundo-bege);
-}
-
-
-main .h-categorias {
-  text-align: center;
-  width: 100%;
-}
-
-
-main h3 {
-  color: var(--fundo-branco);
-  margin-top: 30px;
-}
-
-
-
-
-
 
 .logo-ftc {
   width: 90%;  
@@ -269,9 +215,9 @@ main h3 {
 }
 
 /* Responsividade para diferentes tamanhos de tela */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .award {
-      width: calc(100% - 250px);
+      width: calc(100% - 450px);
       padding: 30px 40px;
       font-size: 17px;
   }
@@ -290,7 +236,7 @@ main h3 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .award {
       width: calc(100% - 250px);
       padding: 25px 30px;
@@ -331,7 +277,7 @@ main h3 {
     text-align: justify;
     font-family: var(--fonte-principal);
     margin-top: 15px;
-    font-size: 19px;  /* Aumentado de 16.5px */
+    font-size: 19px;  
 }
 
 
@@ -353,10 +299,9 @@ main h3 {
 
 
 .competitions {
-  display: flex; /* Mude de grid para flex */
-  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
-  justify-content: center; /* CENTRALIZA os itens ao longo do eixo principal (horizontal) */
-  
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
   gap: 15px;
   width: 90%;
   max-width: 600px;
@@ -485,21 +430,21 @@ footer {
     }
    
     .award {
-        width: calc(100% - 160px); /* 80px de cada lado - tablet */
+        width: calc(100% - 160px);
         padding: 25px;
         margin: 20px auto;
     }
 
     .award h2 {
-        font-size: 28px;  /* Ajustado proporcionalmente */
+        font-size: 28px;  
     }
 
     .award .award-name {
-        font-size: 1.2rem;  /* Ajustado proporcionalmente */
+        font-size: 1.2rem;  
     }
 
     .award p {
-        font-size: 17px;  /* Ajustado proporcionalmente */
+        font-size: 17px;  
     }
 }
 
@@ -511,20 +456,20 @@ footer {
     }
 
     .award {
-        width: calc(100% - 32px); /* 16px de cada lado - mobile */
+        width: calc(100% - 32px); 
         padding: 20px;
         margin: 15px auto;
     }
 
     .award h2 {
-        font-size: 24px;  /* Aumentado, mas ainda menor que tablet */
+        font-size: 24px;  
     }
 
     .award .award-name {
-        font-size: 1.1rem;  /* Aumentado, mas ainda menor que tablet */
+        font-size: 12px;
     }
 
     .award p {
-        font-size: 16px;  /* Aumentado, mas ainda menor que tablet */
+        font-size: 16px;  
     }
 }
