@@ -68,7 +68,7 @@ body {
 nav li {
   list-style: none;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
 }
 
