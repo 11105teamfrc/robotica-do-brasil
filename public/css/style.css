@@ -243,60 +243,8 @@ main h3 {
 }
 
 
-main h2 {
-  color: var(--cinza-escuro);
-  margin-bottom: 10px;
-}
 
 
-.main-container-categorias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--fundo-bege);
-  height: auto;
-}
-
-
-main .section-container-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  height: 50%;
-  padding: 0;
-}
-
-
-main section .article-container-categorias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--fundo-branco);
-  overflow: hidden;
-  padding-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 60px;
-  height: auto;
-  margin: 0;
-}
-
-
-main section article .image-extra {
-  width: 90%;
-  border-radius: 24px;
-}
-
-
-main section article .img-logo-categorias {
-  width: 30%;
-  height: 30%;
-  overflow-y: hidden;
-  margin-top: 20px;
-}
 
 
 .logo-ftc {
@@ -306,68 +254,7 @@ main section article .img-logo-categorias {
 }
 
 
-main section article .logo-frc {
-  width: 40%;
-}
-
-
-main section article .caso-especial-um {
-  width: 40%
-}
-
-
-main section article .caso-especial-dois {
-  width: 30%
-}
-
-
-main section article .caso-especial-tres {
-  width: 40%
-}
-
-
-main section article .idade-categoria {
-  font-size: 1rem;
-  color: var(--cinza-escuro);
-  margin: 10px 0;
-}
-
-
-main section .article-container-categorias p {
-  font-size: 0.9rem;
-  color: var(--cinza-escuro);
-  line-height: 1.5;
-  text-align: center;
-  padding: 0 15px;
-  margin-bottom: 15px;
-}
-
-
-
-
-@media (max-width: 1024px) {
-  main .section-container-categorias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-@media (max-width: 768px) {
-  main .section-container-categorias {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.subtitle {
-    text-align: center;
-    color: var(--cinza-escuro);
-    margin: 20px 0 30px 0;
-    font-size: 1.3rem;
-}
-
-
-/* ===== PRÊMIOS E ARTIGOS ===== */
+/* ===== PRÊMIOS  ===== */
 /* Estilo do container */
 .award {
   background: #d4cece;
@@ -389,6 +276,19 @@ main section .article-container-categorias p {
       font-size: 17px;
   }
 }
+
+@media (min-width: 1520px) {
+  .award {
+  width: calc(100% - 750px); 
+  }
+}
+
+@media (min-width: 1800px) {
+  .award {
+    width: calc(100% - 950px);
+  }
+}
+
 
 @media (max-width: 768px) {
   .award {
