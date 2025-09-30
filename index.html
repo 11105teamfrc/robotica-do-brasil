@@ -16,7 +16,6 @@
             alt="Banner Inicial da equipe desenvolvedora do site">
     </header>
 
-    <!--menu HAMBURGUER-->
     <nav class="nav-container-hamburguer">
         <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
         <ul class="nav-sidebar">
@@ -31,7 +30,6 @@
     </nav>
 
     <nav id="container-nav-menu">
-        <!--Barra de Navegação-->
         <li class="barra-navegacao"><a id="inicio" href="#inicio">Início</a></li>
         <li class="barra-navegacao"><a id="pesquise-regiao" href="#pesquise-regiao">Pesquise por Região</a></li>
         <li class="barra-navegacao"><a id="conheca-categorias" href="#conheca-categorias">Categorias</a></li>
@@ -47,10 +45,6 @@
             <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
         </section>
     </main>
-
-
-
-
 
     <main>
 
@@ -83,7 +77,9 @@
 
             <div class="logos-container">
                 <img src="./interfaces/img/first-lego-league_logo.png" alt="Logo FIRST LEGO League">
-                <img src="./interfaces/img/first-tech-challenge_logo.png" alt="Logo FIRST Tech Challenge">
+                <a href="./interfaces/html/premios-ftc.html">
+                    <img src="./interfaces/img/first-tech-challenge_logo.png" alt="Logo FIRST Tech Challenge">
+                </a>
                 <img src="./interfaces/img/first-robotics-competition_logo.png" alt="Logo FIRST Robotics Competition">
                 <img src="./interfaces/img/stem-racing_logo.png" alt="Logo STEM Racing">
                 <img src="./interfaces/img/olimpiadas-brasileiras-de-robotica_logo.png" alt="Logo OBR (Olimpíada Brasileira de Robótica)">
@@ -101,9 +97,6 @@
             </div>
         </section>
     </main>
-
-
-
 
     <main class="main-container-titulos">
         <h3 id="h3-ou" class="h-categorias">Ou...</h3>
@@ -130,8 +123,7 @@
             </article>
 
             <article class="article-container-categorias" id="article-ftc">
-                <img class="img-logo-categorias logo-ftc" src="./interfaces/img/first-tech-challenge_logo.png"
-                    alt="logo da first tech challenge">
+                <img class="img-logo-categorias logo-ftc" src="./interfaces/img/first-tech-challenge_logo.png" alt="logo da first tech challenge">
                 <h4 class="idade-categoria">14 a 18 anos</h4>
                 <p>
                     A <strong>FIRST Tech Challenge (FTC)</strong> é um torneio onde equipes projetam, constroem e
@@ -218,11 +210,6 @@
     </main>
     <script src="./interfaces/js/script.js"></script>
 
-
-
-
-
-
     <footer id="contatos">
         <div class="contato-info">
             <h1>Contatos</h1>
@@ -249,10 +236,6 @@
         </div>
         </footer>
 
-
-
-
-
         <script type="module">
             import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
       
@@ -274,8 +257,6 @@
             });
           </script>
       
-
     </body>
-
     
 </html>
