@@ -25,6 +25,105 @@
   /* Cinza para o botão */
   --button-hover-background: #888;
   --logo-background: #d1f1e2;
+
+
+
+
+
+
+  --chat--color-primary: #162d5e; 
+--chat--color-primary-shade-50: #1D4ED8;
+--chat--color-primary-shade-100: #1E3A8A;
+--chat--color-secondary: #1a1a1a; 
+--chat--color-secondary-shade-50: #000000;
+--chat--color-white: #ffffff;
+--chat--color-light: #F8FAFC;
+--chat--color-light-shade-50: #F1F5F9;
+--chat--color-light-shade-100: #E2E8F0;
+--chat--color-medium: #64748B;
+--chat--color-dark: #1E293B;
+--chat--color-disabled: #94A3B8;
+--chat--color-typing: #475569;
+
+/* Base Layout */
+--chat--spacing: 1.5rem;
+--chat--border-radius: 0.75rem;
+--chat--transition-duration: 0.2s;
+--chat--font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+/* Window Dimensions */
+--chat--window--width: 420px;
+--chat--window--height: 650px;
+--chat--window--bottom: var(--chat--spacing);
+--chat--window--right: var(--chat--spacing);
+--chat--window--z-index: 9999;
+--chat--window--border: none;
+--chat--window--border-radius: 1.25rem;
+--chat--window--margin-bottom: var(--chat--spacing);
+
+/* Header Styles */
+--chat--header-height: auto;
+--chat--header--padding: 1.5rem;
+--chat--header--background: var(--chat--color-secondary);
+--chat--header--color: var(--chat--color-white);
+--chat--header--border-top: none;
+--chat--header--border-bottom: none;
+--chat--header--border-left: none;
+--chat--header--border-right: none;
+--chat--heading--font-size: 1.75rem;
+--chat--subtitle--font-size: 0.875rem;
+--chat--subtitle--line-height: 1.6;
+
+/* Message Styles */
+--chat--message--font-size: 0.925rem;
+--chat--message--padding: 0.6rem 1rem;
+--chat--message--border-radius: 1.25rem;
+--chat--message-line-height: 1.6;
+--chat--message--margin-bottom: 0.5rem;
+--chat--message--bot--background: var(--chat--color-white);
+--chat--message--bot--color: var(--chat--color-dark);
+--chat--message--bot--border: 1px solid var(--chat--color-light-shade-100);
+--chat--message--user--background: var(--chat--color-secondary);
+--chat--message--user--color: var(--chat--color-white);
+--chat--message--user--border: none;
+--chat--message--pre--background: var(--chat--color-light-shade-50);
+--chat--messages-list--padding: 1rem;
+
+/* Toggle Button */
+--chat--toggle--size: 64px;
+--chat--toggle--width: var(--chat--toggle--size);
+--chat--toggle--height: var(--chat--toggle--size);
+--chat--toggle--border-radius: 50%;
+--chat--toggle--background: #121212; /* Yellow */
+--chat--toggle--hover--background: #162d5e;
+--chat--toggle--active--background: #939393;
+--chat--toggle--color: var(--chat--color-white);
+
+/* Input Area */
+--chat--textarea--height: 56px;
+--chat--textarea--max-height: 30rem;
+--chat--input--font-size: 0.925rem;
+--chat--input--border-radius: 1.5rem;
+--chat--input--padding: 1rem 1.25rem;
+--chat--input--background: rgb(255, 255, 255);
+--chat--input--text-color: var(--chat--color-dark);
+--chat--input--line-height: 1.5;
+--chat--input--placeholder--font-size: var(--chat--input--font-size);
+--chat--input--border-active: 2px solid var(--chat--color-primary);
+--chat--input--left--panel--width: 2rem;
+
+/* Button Styles */
+--chat--button--color: var(--chat--color-white);
+--chat--button--background: var(--chat--color-primary);
+--chat--button--border-radius: 0.75rem;
+--chat--button--hover--color: var(--chat--color-white);
+--chat--button--hover--background: var(--chat--color-primary-shade-50);
+
+/* Body and Footer */
+--chat--body--background: var(--chat--color-light);
+--chat--footer--background: var(--chat--color-white);
+--chat--footer--color: var(--chat--color-dark);
+
 }
 
 * {
@@ -1224,4 +1323,34 @@ footer .logo-banner {
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
+}
+
+/* Modern typography improvements */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.chat-message {
+max-width: 65%;
+padding: 1rem 1.25rem;
+margin-bottom: 1rem;
+border-radius: 1.25rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+font-weight: 400;
+letter-spacing: -0.01em;
+}
+
+.chat-header h1 {
+font-weight: 700;
+letter-spacing: -0.02em;
+}
+
+.chat-header p {
+font-weight: 400;
+letter-spacing: -0.01em;
+opacity: 0.9;
+}
+
+input, textarea, button {
+font-family: var(--chat--font-family);
+font-weight: 400;
+letter-spacing: -0.01em;
 }

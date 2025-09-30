@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica do Brasil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="./interfaces/css/style.css">
 </head>
 
@@ -246,6 +248,33 @@
             </div>
         </div>
         </footer>
+
+
+
+
+
+        <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      
+            createChat({
+              webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+              showWelcomeScreen: false,
+              initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+              ],
+              i18n: {
+                en: {
+                  title: 'Assistente Virtual',
+                  subtitle: "Estamos online para te atender.",
+                  getStarted: 'Iniciar Conversa',
+                  inputPlaceholder: 'Escreva sua mensagem...',
+                },
+              },
+            });
+          </script>
+      
+
     </body>
 
     
