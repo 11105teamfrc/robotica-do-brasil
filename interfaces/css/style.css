@@ -6,123 +6,126 @@
   --vermelho: #d41e1e;
   --rosa: #e42d84;
   --laranja: #f1740d;
+
   /* Cores Neutras */
   --cinza-escuro: #4f4f52;
+
   /* Para Fontes e Footer*/
   --cinza-claro: #a4a0a0;
   --fundo-branco: #efefef;
   --fundo-bege: #d4cece;
   --cinza-bem-claro: #d9d9d9;
+
   /* Serve também para estruturas geométricas */
   --fundo-footer: #4f4f52;
+
   /* Fontes */
   --fonte-principal: 'Poppins', sans-serif;
+
   /* Cor para "DO BRASIL" */
   --background-color: #f0f2f5;
   --card-background: #fff;
   --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   --button-background: #a9a9a9;
+
   /* Cinza para o botão */
   --button-hover-background: #888;
   --logo-background: #d1f1e2;
 
+  /* Cores - ChatBot */
+  --chat--color-primary: #162d5e;
+  --chat--color-primary-shade-50: #1D4ED8;
+  --chat--color-primary-shade-100: #1E3A8A;
+  --chat--color-secondary: #1a1a1a;
+  --chat--color-secondary-shade-50: #000000;
+  --chat--color-white: #ffffff;
+  --chat--color-light: #F8FAFC;
+  --chat--color-light-shade-50: #F1F5F9;
+  --chat--color-light-shade-100: #E2E8F0;
+  --chat--color-medium: #64748B;
+  --chat--color-dark: #1E293B;
+  --chat--color-disabled: #94A3B8;
+  --chat--color-typing: #475569;
 
+  /* Base Layout */
+  --chat--spacing: 1.5rem;
+  --chat--border-radius: 0.75rem;
+  --chat--transition-duration: 0.2s;
+  --chat--font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 
+  /* Window Dimensions */
+  --chat--window--width: 420px;
+  --chat--window--height: 650px;
+  --chat--window--bottom: var(--chat--spacing);
+  --chat--window--right: var(--chat--spacing);
+  --chat--window--z-index: 9999;
+  --chat--window--border: none;
+  --chat--window--border-radius: 1.25rem;
+  --chat--window--margin-bottom: var(--chat--spacing);
 
+  /* Header Styles */
+  --chat--header-height: auto;
+  --chat--header--padding: 1.5rem;
+  --chat--header--background: var(--chat--color-secondary);
+  --chat--header--color: var(--chat--color-white);
+  --chat--header--border-top: none;
+  --chat--header--border-bottom: none;
+  --chat--header--border-left: none;
+  --chat--header--border-right: none;
+  --chat--heading--font-size: 1.75rem;
+  --chat--subtitle--font-size: 0.875rem;
+  --chat--subtitle--line-height: 1.6;
 
+  /* Message Styles */
+  --chat--message--font-size: 0.925rem;
+  --chat--message--padding: 0.6rem 1rem;
+  --chat--message--border-radius: 1.25rem;
+  --chat--message-line-height: 1.6;
+  --chat--message--margin-bottom: 0.5rem;
+  --chat--message--bot--background: var(--chat--color-white);
+  --chat--message--bot--color: var(--chat--color-dark);
+  --chat--message--bot--border: 1px solid var(--chat--color-light-shade-100);
+  --chat--message--user--background: var(--chat--color-secondary);
+  --chat--message--user--color: var(--chat--color-white);
+  --chat--message--user--border: none;
+  --chat--message--pre--background: var(--chat--color-light-shade-50);
+  --chat--messages-list--padding: 1rem;
 
-  --chat--color-primary: #162d5e; 
---chat--color-primary-shade-50: #1D4ED8;
---chat--color-primary-shade-100: #1E3A8A;
---chat--color-secondary: #1a1a1a; 
---chat--color-secondary-shade-50: #000000;
---chat--color-white: #ffffff;
---chat--color-light: #F8FAFC;
---chat--color-light-shade-50: #F1F5F9;
---chat--color-light-shade-100: #E2E8F0;
---chat--color-medium: #64748B;
---chat--color-dark: #1E293B;
---chat--color-disabled: #94A3B8;
---chat--color-typing: #475569;
+  /* Toggle Button */
+  --chat--toggle--size: 64px;
+  --chat--toggle--width: var(--chat--toggle--size);
+  --chat--toggle--height: var(--chat--toggle--size);
+  --chat--toggle--border-radius: 50%;
+  --chat--toggle--background: #121212;
+  /* Yellow */
+  --chat--toggle--hover--background: #162d5e;
+  --chat--toggle--active--background: #939393;
+  --chat--toggle--color: var(--chat--color-white);
 
-/* Base Layout */
---chat--spacing: 1.5rem;
---chat--border-radius: 0.75rem;
---chat--transition-duration: 0.2s;
---chat--font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  /* Input Area */
+  --chat--textarea--height: 56px;
+  --chat--textarea--max-height: 30rem;
+  --chat--input--font-size: 0.925rem;
+  --chat--input--border-radius: 1.5rem;
+  --chat--input--padding: 1rem 1.25rem;
+  --chat--input--background: rgb(255, 255, 255);
+  --chat--input--text-color: var(--chat--color-dark);
+  --chat--input--line-height: 1.5;
+  --chat--input--placeholder--font-size: var(--chat--input--font-size);
+  --chat--input--border-active: 2px solid var(--chat--color-primary);
+  --chat--input--left--panel--width: 2rem;
 
-/* Window Dimensions */
---chat--window--width: 420px;
---chat--window--height: 650px;
---chat--window--bottom: var(--chat--spacing);
---chat--window--right: var(--chat--spacing);
---chat--window--z-index: 9999;
---chat--window--border: none;
---chat--window--border-radius: 1.25rem;
---chat--window--margin-bottom: var(--chat--spacing);
+  /* Button Styles */
+  --chat--button--color: var(--chat--color-white);
+  --chat--button--background: var(--chat--color-primary);
+  --chat--button--border-radius: 0.75rem;
+  --chat--button--hover--color: var(--chat--color-white);
+  --chat--button--hover--background: var(--chat--color-primary-shade-50);
 
-/* Header Styles */
---chat--header-height: auto;
---chat--header--padding: 1.5rem;
---chat--header--background: var(--chat--color-secondary);
---chat--header--color: var(--chat--color-white);
---chat--header--border-top: none;
---chat--header--border-bottom: none;
---chat--header--border-left: none;
---chat--header--border-right: none;
---chat--heading--font-size: 1.75rem;
---chat--subtitle--font-size: 0.875rem;
---chat--subtitle--line-height: 1.6;
-
-/* Message Styles */
---chat--message--font-size: 0.925rem;
---chat--message--padding: 0.6rem 1rem;
---chat--message--border-radius: 1.25rem;
---chat--message-line-height: 1.6;
---chat--message--margin-bottom: 0.5rem;
---chat--message--bot--background: var(--chat--color-white);
---chat--message--bot--color: var(--chat--color-dark);
---chat--message--bot--border: 1px solid var(--chat--color-light-shade-100);
---chat--message--user--background: var(--chat--color-secondary);
---chat--message--user--color: var(--chat--color-white);
---chat--message--user--border: none;
---chat--message--pre--background: var(--chat--color-light-shade-50);
---chat--messages-list--padding: 1rem;
-
-/* Toggle Button */
---chat--toggle--size: 64px;
---chat--toggle--width: var(--chat--toggle--size);
---chat--toggle--height: var(--chat--toggle--size);
---chat--toggle--border-radius: 50%;
---chat--toggle--background: #121212; /* Yellow */
---chat--toggle--hover--background: #162d5e;
---chat--toggle--active--background: #939393;
---chat--toggle--color: var(--chat--color-white);
-
-/* Input Area */
---chat--textarea--height: 56px;
---chat--textarea--max-height: 30rem;
---chat--input--font-size: 0.925rem;
---chat--input--border-radius: 1.5rem;
---chat--input--padding: 1rem 1.25rem;
---chat--input--background: rgb(255, 255, 255);
---chat--input--text-color: var(--chat--color-dark);
---chat--input--line-height: 1.5;
---chat--input--placeholder--font-size: var(--chat--input--font-size);
---chat--input--border-active: 2px solid var(--chat--color-primary);
---chat--input--left--panel--width: 2rem;
-
-/* Button Styles */
---chat--button--color: var(--chat--color-white);
---chat--button--background: var(--chat--color-primary);
---chat--button--border-radius: 0.75rem;
---chat--button--hover--color: var(--chat--color-white);
---chat--button--hover--background: var(--chat--color-primary-shade-50);
-
-/* Body and Footer */
---chat--body--background: var(--chat--color-light);
---chat--footer--background: var(--chat--color-white);
---chat--footer--color: var(--chat--color-dark);
+  /* Body and Footer */
+  --chat--body--background: var(--chat--color-light);
+  --chat--footer--background: var(--chat--color-white);
+  --chat--footer--color: var(--chat--color-dark);
 
 }
 
@@ -156,13 +159,20 @@ nav li {
   cursor: pointer;
 }
 
-nav:focus {
-  color: #bdbcbc;
-}
-
 nav li a {
   text-decoration: none;
   color: var(--cinza-escuro);
+}
+
+nav li:hover {
+  padding: 0.80rem;
+  border-radius: 20px;
+  background-color: var(--cinza-bem-claro);
+  transition: 0.5s ease-in-out;
+}
+
+nav li a:hover {
+  color: var(--verde);
 }
 
 #container-nav-menu {
@@ -221,17 +231,32 @@ nav li a {
   background-color: #e0dfdd;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .button-equipes {
+    width: 90%;
+    display: flex;
+    align-self: center;
+    text-align: center;
+  }
   #container-nav-menu {
-      display: none;
+    display: none;
   }
 
   .nav-container-hamburguer {
-      display: flex;
-      position: relative;
-      background-color: var(--fundo-bege);
-      height: 60px;
-      align-items: center;
+    display: flex;
+    position: relative;
+    background-color: var(--fundo-bege);
+    height: 60px;
+    align-items: center;
+  }
+
+  .nav-container-hamburguer li {
+    padding: 0.85rem;
+  }
+
+  .nav-container-hamburguer li:hover {
+    padding: 1rem;
+    border-radius: 0;
   }
 }
 
@@ -254,7 +279,7 @@ header .gctomorrow-banner {
 
 @media (max-width: 768px) {
   header .gctomorrow-banner {
-      width: 30%;
+    width: 30%;
   }
 }
 
@@ -275,6 +300,11 @@ main section .robotica-do-brasil {
   margin-top: 10%;
 }
 
+#inicio {
+  display: flex;
+  flex-direction: column;
+}
+
 main section .button-equipes {
   margin-top: 20px;
   padding: 1rem 2.5rem;
@@ -286,7 +316,7 @@ main section .button-equipes {
   font-weight: bold;
   font-size: 1.3rem;
   display: flex;
-  justify-self: center;
+  justify-content: center;
 }
 
 /* FIM - HEAD (ROBÓTICA DO BRASIL) */
@@ -400,13 +430,13 @@ main section article .bottuns-container {
 
 @media (max-width: 1024px) {
   main .section-container-categorias {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   main .section-container-categorias {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -579,51 +609,52 @@ main section article div .btn-equipes-categoria,
 /* RESPONSIVIDADE TESTE*/
 @media (max-width: 600px) {
   .page-header h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .page-header h2 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   /* A regra de .team-card foi movida para a seção de cards unificada */
   .team-card {
-      padding: 20px;
+    padding: 20px;
   }
 
   .card-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
   }
 
   .team-logo {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 10px;
-      overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    overflow: hidden;
   }
 
   .team-info h3 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 
   .team-info p {
-      justify-content: center;
+    justify-content: center;
   }
 
   .card-footer {
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
-      padding-top: 15px;
-      border-top: 1px solid #eee; /* Adicionado para consistência */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    /* Adicionado para consistência */
   }
 
   .contato-button {
-      width: 100%;
-      max-width: 200px;
+    width: 100%;
+    max-width: 200px;
   }
 }
 
@@ -631,9 +662,9 @@ main section article div .btn-equipes-categoria,
 
 @media (max-width: 600px) {
   .team-card {
-      width: 100%;
-      display: flex;
-      text-align: left;
+    width: 100%;
+    display: flex;
+    text-align: left;
   }
 }
 
@@ -709,12 +740,12 @@ main section article div .btn-equipes-categoria,
 
 @media (max-width: 600px) {
   .overlay-content {
-      width: 90%;
-      padding: 20px;
+    width: 90%;
+    padding: 20px;
   }
 
   .filter-buttons {
-      justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -844,11 +875,11 @@ main section article div .btn-equipes-categoria,
 
 @media (max-width: 600px) {
   .input-search {
-      padding: 10px 15px;
+    padding: 10px 15px;
   }
 
   .button-search {
-      padding: 0 15px;
+    padding: 0 15px;
   }
 }
 
@@ -860,7 +891,7 @@ main section article div .btn-equipes-categoria,
   min-width: 300px;
   padding: 30px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   margin: 20px;
   position: relative;
   transition: transform 0.3s ease;
@@ -868,7 +899,7 @@ main section article div .btn-equipes-categoria,
 
 .card-content {
   flex-grow: 1;
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
 
@@ -877,10 +908,14 @@ main section article div .btn-equipes-categoria,
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto; /* Empurra o rodapé para a base do card */
-  padding-top: 15px; /* Cria um espaço acima do botão */
-  border-top: 1px solid #eee; /* Cria a linha cinza clara */
-  background-color: transparent; /* Garante que o fundo seja transparente */
+  margin-top: auto;
+  /* Empurra o rodapé para a base do card */
+  padding-top: 15px;
+  /* Cria um espaço acima do botão */
+  border-top: 1px solid #eee;
+  /* Cria a linha cinza clara */
+  background-color: transparent;
+  /* Garante que o fundo seja transparente */
 }
 
 .contato-overlay-content {
@@ -902,7 +937,7 @@ main section article div .btn-equipes-categoria,
   justify-content: center;
   gap: 20px;
   margin-top: 25px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .contato-link {
@@ -943,7 +978,7 @@ main section article div .btn-equipes-categoria,
 }
 
 .email-link {
-  color: var(--azul); 
+  color: var(--azul);
   border-color: var(--azul);
 }
 
@@ -976,7 +1011,7 @@ footer .contato-info {
   flex-direction: column;
   gap: 18px;
   flex: 1 1 300px;
-  
+
 }
 
 footer .contato-info h1 {
@@ -1089,7 +1124,7 @@ footer .logo-banner {
 
 .logos-container img {
   max-width: 210px;
-  
+
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -1097,7 +1132,7 @@ footer .logo-banner {
 
 .logos-container img:hover {
   transform: scale(1.05);
-  
+
 }
 
 /* Caixa de Registro de Time */
@@ -1166,21 +1201,27 @@ footer .logo-banner {
   .main-container-premios {
     padding: 60px 20px;
   }
+
   .main-container-premios h2 {
     font-size: 1.8rem;
   }
+
   .logos-container {
     gap: 30px 40px;
   }
+
   .logos-container img {
     max-width: 150px;
   }
+
   .registro-box h3 {
     font-size: 2.2rem;
   }
+
   .registro-box p {
     font-size: 0.95rem;
   }
+
   .registro-btn {
     font-size: 1.4rem;
     padding: 12px 35px;
@@ -1191,34 +1232,42 @@ footer .logo-banner {
   .main-container-premios {
     padding: 40px 15px;
   }
+
   .main-container-premios h2 {
     font-size: 1.5rem;
     margin-bottom: 40px;
   }
+
   .logos-container {
     gap: 25px;
   }
+
   .logos-container img {
     max-width: 120px;
   }
+
   .registro-box {
     padding: 30px 20px;
   }
+
   .registro-box h3 {
     font-size: 1.8rem;
   }
+
   .registro-box p {
     font-size: 0.9rem;
   }
+
   .registro-btn {
     font-size: 1.2rem;
     padding: 12px 30px;
     width: 100%;
     box-sizing: border-box;
   }
+
   .registro-box .footnote {
     font-size: 0.75rem;
-  }  
+  }
 }
 
 
@@ -1243,17 +1292,17 @@ footer .logo-banner {
 }
 
 .map-container {
-  position: relative; 
+  position: relative;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  
+
 }
 
 .map-image-full {
-  width: 100%; 
-  height: auto; 
-  display: block; 
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
@@ -1306,10 +1355,13 @@ footer .logo-banner {
 
 /* === RESPONSIVIDADE DA SEÇÃO MAPA === */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .main-container-mapa {
     padding: 60px 20px;
+    width: 85%;
+    margin-left: 1rem;
   }
+
   .main-container-mapa h2 {
     font-size: 1.8rem;
   }
@@ -1319,6 +1371,7 @@ footer .logo-banner {
   .main-container-mapa {
     padding: 40px 15px;
   }
+
   .main-container-mapa h2 {
     font-size: 1.5rem;
     margin-bottom: 30px;
@@ -1329,30 +1382,32 @@ footer .logo-banner {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 .chat-message {
-max-width: 65%;
-padding: 1rem 1.25rem;
-margin-bottom: 1rem;
-border-radius: 1.25rem;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-font-weight: 400;
-letter-spacing: -0.01em;
+  max-width: 65%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .chat-header h1 {
-font-weight: 700;
-letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .chat-header p {
-font-weight: 400;
-letter-spacing: -0.01em;
-opacity: 0.9;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.9;
 }
 
-input, textarea, button {
-font-family: var(--chat--font-family);
-font-weight: 400;
-letter-spacing: -0.01em;
+input,
+textarea,
+button {
+  font-family: var(--chat--font-family);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .main-container-titulos {
@@ -1431,8 +1486,10 @@ main section article .img-logo-categorias {
 
 
 .logo-ftc {
-  width: 90%;  /* Ajustado para 90% */
-  margin: 50px auto 0;  /* Margem superior, centralização horizontal, sem margem inferior */
+  width: 90%;
+  /* Ajustado para 90% */
+  margin: 50px auto 0;
+  /* Margem superior, centralização horizontal, sem margem inferior */
   display: block;
 }
 
@@ -1491,197 +1548,207 @@ main section .article-container-categorias p {
 
 
 .subtitle {
-    text-align: center;
-    color: var(--cinza-escuro);
-    margin: 20px 0 30px 0;
-    font-size: 1.3rem;
+  text-align: center;
+  color: var(--cinza-escuro);
+  margin: 20px 0 30px 0;
+  font-size: 1.3rem;
 }
 
 
 /* ===== PRÊMIOS E ARTIGOS ===== */
 .award {
-    /* Estilo do container */
-    background: #d4cece;
-    border-radius: 25px;
-    padding: 35px 45px;
-    margin: 30px auto;
-    width: calc(100% - 650px); /* 250px de cada lado - mais espaço em desktop */
-    
-    /* Sombra suave para destacar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-    /* Fonte padrão para todo o artigo */
-    font-family: var(--fonte-principal);
-    font-size: 18px;
+  /* Estilo do container */
+  background: #d4cece;
+  border-radius: 25px;
+  padding: 35px 45px;
+  margin: 30px auto;
+  width: calc(100% - 650px);
+  /* 250px de cada lado - mais espaço em desktop */
+
+  /* Sombra suave para destacar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Fonte padrão para todo o artigo */
+  font-family: var(--fonte-principal);
+  font-size: 18px;
 }
 
 /* Título do prêmio */
 .award h2 {
-    color: var(--cinza-escuro);
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-family: var(--fonte-principal);
-    letter-spacing: 0.5px;
+  color: var(--cinza-escuro);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--fonte-principal);
+  letter-spacing: 0.5px;
 }
 
 /* Nome traduzido do prêmio */
 .award .award-name {
-    color: var(--cinza-escuro);
-    font-size: 1.4rem;
-    font-family: var(--fonte-principal);
-    font-weight: normal;
+  color: var(--cinza-escuro);
+  font-size: 1.4rem;
+  font-family: var(--fonte-principal);
+  font-weight: normal;
 }
 
 /* Texto descritivo do prêmio */
 .award p {
-    color: #4a4a4a;
-    line-height: 1.6;
-    text-align: justify;
-    font-family: var(--fonte-principal);
-    margin-top: 15px;
-    font-size: 19px;  /* Aumentado de 16.5px */
+  color: #4a4a4a;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: var(--fonte-principal);
+  margin-top: 15px;
+  font-size: 19px;
+  /* Aumentado de 16.5px */
 }
 
 
 .see-also {
-    text-align: center;
-    margin: 60px 0 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  margin: 60px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .see-also h3 {
-    margin-bottom: 30px;
-    font-size: 1.3rem;
-    font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 
 .competitions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto 60px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
 }
 
 
 .comp-btn {
-    color: rgb(255, 255, 255);
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 
 .comp-btn:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 
 .comp-btn:nth-child(1) {
-    background-color: #ffa0a0;
-    color: #cc4040;
+  background-color: #ffa0a0;
+  color: #cc4040;
 }
 
 
 .comp-btn:nth-child(2) {
-    background-color: #a3bee2;
-    color: #2c5c9c;
+  background-color: #a3bee2;
+  color: #2c5c9c;
 }
 
 
 .comp-btn:nth-child(3) {
-    background-color: #8ad0ae;
-    color: #2c805c;
+  background-color: #8ad0ae;
+  color: #2c805c;
 }
 
 
 .comp-btn:nth-child(4) {
-    background-color: #ffa0a0;
-    color: #cc4040;
+  background-color: #ffa0a0;
+  color: #cc4040;
 }
 
 
 .comp-btn:nth-child(5) {
-    background-color: #f77eb8;
-    color: #b92475;
+  background-color: #f77eb8;
+  color: #b92475;
 }
 
 
 .comp-btn:nth-child(6) {
-    background-color: #a3bee2;
-    color: #2c5c9c;
+  background-color: #a3bee2;
+  color: #2c5c9c;
 }
 
 
 
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        max-width: 600px;
-        padding: 0 20px;
-    }
-   
-    .credits {
-        text-align: left;
-    }
-   
-    .competitions {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 300px;
-    }
-   
-    .award {
-        width: calc(100% - 160px); /* 80px de cada lado - tablet */
-        padding: 25px;
-        margin: 20px auto;
-    }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    padding: 0 20px;
+  }
 
-    .award h2 {
-        font-size: 28px;  /* Ajustado proporcionalmente */
-    }
+  .credits {
+    text-align: left;
+  }
 
-    .award .award-name {
-        font-size: 1.2rem;  /* Ajustado proporcionalmente */
-    }
+  .competitions {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 300px;
+  }
 
-    .award p {
-        font-size: 17px;  /* Ajustado proporcionalmente */
-    }
+  .award {
+    width: calc(100% - 160px);
+    /* 80px de cada lado - tablet */
+    padding: 25px;
+    margin: 20px auto;
+  }
+
+  .award h2 {
+    font-size: 28px;
+    /* Ajustado proporcionalmente */
+  }
+
+  .award .award-name {
+    font-size: 1.2rem;
+    /* Ajustado proporcionalmente */
+  }
+
+  .award p {
+    font-size: 17px;
+    /* Ajustado proporcionalmente */
+  }
 }
 
 
 @media (max-width: 480px) {
-    .competitions {
-        grid-template-columns: 1fr;
-        max-width: 200px;
-    }
+  .competitions {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+  }
 
-    .award {
-        width: calc(100% - 32px); /* 16px de cada lado - mobile */
-        padding: 20px;
-        margin: 15px auto;
-    }
+  .award {
+    width: calc(100% - 32px);
+    /* 16px de cada lado - mobile */
+    padding: 20px;
+    margin: 15px auto;
+  }
 
-    .award h2 {
-        font-size: 24px;  /* Aumentado, mas ainda menor que tablet */
-    }
+  .award h2 {
+    font-size: 24px;
+    /* Aumentado, mas ainda menor que tablet */
+  }
 
-    .award .award-name {
-        font-size: 1.1rem;  /* Aumentado, mas ainda menor que tablet */
-    }
+  .award .award-name {
+    font-size: 1.1rem;
+    /* Aumentado, mas ainda menor que tablet */
+  }
 
-    .award p {
-        font-size: 16px;  /* Aumentado, mas ainda menor que tablet */
-    }
+  .award p {
+    font-size: 16px;
+    /* Aumentado, mas ainda menor que tablet */
+  }
 }
