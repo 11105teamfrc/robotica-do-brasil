@@ -1582,7 +1582,7 @@ main section .article-container-categorias p {
 /* ===== PRÊMIOS E ARTIGOS ===== */
 .award {
   /* Estilo do container */
-  background: #d4cece;
+  background: var(--cinza-bem-claro);
   border-radius: 25px;
   padding: 35px 45px;
   margin: 30px auto;
