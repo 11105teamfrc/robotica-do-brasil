@@ -13,7 +13,7 @@ let toggleNav = function () {
             link.style.opacity = "1";
         });
 
-        logoBtnMenu.style.backgroundColor = "var(--fundo-bege)";
+        logoBtnMenu.style.backgroundColor = "var(--cinza-bem-claro)";
         toggleNavStatus = true;
     } else {
         getSidebar.style.width = "0";
