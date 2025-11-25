@@ -1,0 +1,22 @@
+{
+  "name": "robotica-do-brasil",
+  "version": "1.0.0",
+  "description": "Robótica do Brasil",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./backend/server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node ./backend/init_db.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.15.3",
+    "sqlite3": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

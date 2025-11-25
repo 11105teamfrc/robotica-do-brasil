@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+const loginBtn = document.getElementById('btn-login');
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -160,3 +160,36 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+// TESTE
+
+document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    try {
+        const response = await fetch('http://localhost:3000/api/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert('Usuário ou senha inválidos!');
+            return;
+        }
+
+        sessionStorage.setItem('token', data.token);
+        window.location.href = 'index.html';
+
+    } catch (error) {
+        console.error(error);
+        alert('Erro ao conectar ao servidor.');
+    }
+});  
