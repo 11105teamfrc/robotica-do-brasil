@@ -150,8 +150,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // LOGIN E CADASTRO
 
 const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
+const registerBtn = document.getElementById('btn-register');
 const loginBtn = document.getElementById('btn-login');
+
+const register = document.getElementById('register');
+const login = document.getElementById('login');
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
