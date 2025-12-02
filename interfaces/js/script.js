@@ -169,8 +169,8 @@ loginBtn.addEventListener('click', () => {
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
+    const email = document.getElementById('email-login').value.trim();
+    const password = document.getElementById('password-login').value.trim();
 
     try {
         const response = await fetch('http://localhost:3000/api/auth/login', {
@@ -178,7 +178,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ email, password })
         });
 
         const data = await response.json();
@@ -195,4 +195,4 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
         console.error(error);
         alert('Erro ao conectar ao servidor.');
     }
-});  
+});
