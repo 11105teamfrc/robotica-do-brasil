@@ -270,13 +270,15 @@ nav li a:hover {
   align-items: center;
 }
 
-header .gctomorrow-banner {
-  margin: 2%;
-  width: 15%;
+header div .gctomorrow-banner {
+  margin-bottom: 10%;
+  width: 30%;
+  display: flex;
+  justify-self: center;
 }
 
 @media (max-width: 768px) {
-  header .gctomorrow-banner {
+  header div .gctomorrow-banner {
     width: 30%;
   }
 }
@@ -1781,21 +1783,110 @@ main section .article-container-categorias p {
 LOGIN E CADASTRO
 */
 
-.main-container-entrar{
-  width: 90%;
+.header-container-robotica {
+  margin-top: 3%;
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container-entrar {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
-main .section-container-entrar {
-  box-sizing: border-box;
-  background-color: #003a8c;
-  width: 60%;
-  height: 20%;
-  margin: 10%;
-  padding: 10%;
+
+.section-container-entrar {
+  background-color: var(--cinza-bem-claro);
+  width: min(90%, 600px);
+  padding: 2rem;
+  margin: 3rem 0;
+  border-radius: 20px;
+}
+
+.article-container-cadastro {
   display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.article-container-cadastro h1 {
+  text-align: center;
+  font-family: var(--fonte-principal);
+  color: var(--cinza-escuro);
+}
+
+.div-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-ajustada {
+  margin-top: 1.5rem;
+}
+
+label {
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  font-size: 0.99rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+  color: var(--cinza-escuro);
+}
+
+input, select {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid var(--cinza-claro);
+  font-size: 0.9rem;
+  background-color: #f3f3f3;
+}
+
+fieldset {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-family: var(--fonte-principal);
+  font-size: 0.85rem;
+  color: var(--cinza-escuro);
+}
+
+legend a {
+  color: var(--cinza-escuro);
+}
+
+legend a:hover {
+  color: var(--verde);
+}
+
+.btn-cadastrar {
+  margin-top: 1rem;
+  align-self: center;
+  width: 50%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+}
+
+.btn-cadastrar:hover {
+  background-color: var(--cinza-bem-claro);
+  border: solid 2px var(--verde);
+  color: var(--verde);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.legend-iniciativa {
+  display: flex;
+  align-self: center;
   justify-self: center;
-  align-items: center;
+  margin-top: 2%;
 }
