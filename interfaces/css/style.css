@@ -305,16 +305,22 @@ main section .robotica-do-brasil {
   padding: 2rem;
 }
 
+.legend-equipes {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .titulo {
   color: var(--azul);
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 1000;
 }
 
 .subtitulo {
   display: block;
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 1000;
 }
 
 .do {
