@@ -176,7 +176,7 @@ nav li a:hover {
 #container-nav-menu {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 4%;
 }
 
 /* ===== MENU HAMBÚRGUER (MOBILE) ===== */
@@ -1783,7 +1783,6 @@ LOGIN E CADASTRO
   display: flex;
   justify-content: center;
 }
-
 
 .main-container-entrar {
   width: 100%;
