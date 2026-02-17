@@ -23,7 +23,6 @@ let toggleNav = function () {
             link.style.opacity = "0";
         });
 
-        logoBtnMenu.style.backgroundColor = "var(--fundo-bege)";
         toggleNavStatus = false;
     }
 };

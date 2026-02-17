@@ -199,8 +199,6 @@ nav li a:hover {
   position: absolute;
   top: 60px;
   left: 0;
-  width: 0;
-  height: 100vh;
   background: var(--cinza-bem-claro);
   overflow-x: hidden;
   transition: 0.4s;
@@ -271,7 +269,7 @@ nav li a:hover {
 }
 
 header div .gctomorrow-banner {
-  margin-bottom: 10%;
+  margin-bottom: 15%;
   width: 30%;
   display: flex;
   justify-self: center;
@@ -290,8 +288,8 @@ header div .gctomorrow-banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
-  margin-bottom: 70px;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 main section .robotica-do-brasil {
@@ -303,6 +301,7 @@ main section .robotica-do-brasil {
 .logo {
   line-height: 1.1;
   padding: 2rem;
+  align-self: center;
 }
 
 .legend-equipes {
@@ -312,32 +311,16 @@ main section .robotica-do-brasil {
 }
 
 .titulo {
-  color: var(--azul);
-  font-size: 3.5rem;
+  height: 20vh;
   font-weight: 1000;
-}
-
-.subtitulo {
-  display: block;
-  font-size: 3.5rem;
-  font-weight: 1000;
-}
-
-.do {
-  color: var(--amarelo);
-}
-
-.brasil {
-  color: var(--verde);
+  margin: 0;
+  display: flex;
+  align-self: center;
 }
 
 @media (max-width: 600px) {
-  .titulo,
-  .subtitulo {
-    font-size: 2.5rem;
-  }
-  .emoji {
-    font-size: 2rem;
+  .titulo {
+    height: 16vh;
   }
 }
 
@@ -384,7 +367,7 @@ main h2 {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: var(--fundo-bege);
+  background-color: var(--cinza-claro);
   height: auto;
 }
 
@@ -1168,7 +1151,7 @@ footer .logo-banner {
 
 /* Caixa de Registro de Time */
 .registro-box {
-  background-color: var(--fundo-bege);
+  background-color: var(--cinza-bem-claro);
   border-radius: 25px;
   padding: 50px 40px;
   width: 100%;
@@ -1301,8 +1284,6 @@ footer .logo-banner {
   }
 }
 
-
-
 .main-container-mapa {
   display: flex;
   flex-direction: column;
@@ -1310,8 +1291,8 @@ footer .logo-banner {
   padding: 80px 20px;
   text-align: center;
   font-family: var(--fonte-principal);
-  background-color: var(--fundo-branco);
   width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -1327,7 +1308,6 @@ footer .logo-banner {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-
 }
 
 .map-image-full {
@@ -1444,7 +1424,7 @@ button {
 .main-container-titulos {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--fundo-bege);
+  background-color: var(--cinza-bem-claro);
 }
 
 
@@ -1472,7 +1452,7 @@ main h2 {
   align-items: center;
   padding: 20px;
   padding-bottom: 100px;
-  background-color: var(--fundo-bege);
+  background-color: var(--cinza-bem-claro);
   height: auto;
 }
 
@@ -1790,13 +1770,20 @@ LOGIN E CADASTRO
 */
 
 .header-container-robotica {
-  margin-top: 3%;
+  margin: 0;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
+
+.legend-cadastro, .legend-login {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
 
 .main-container-entrar {
   width: 100%;
@@ -1860,6 +1847,7 @@ legend {
   font-family: var(--fonte-principal);
   font-size: 0.85rem;
   color: var(--cinza-escuro);
+  margin-top: 3%;
 }
 
 legend a {
@@ -1867,7 +1855,7 @@ legend a {
 }
 
 legend a:hover {
-  color: var(--verde);
+  color: var(--amarelo);
 }
 
 .btn-cadastrar {
@@ -1885,8 +1873,8 @@ legend a:hover {
 
 .btn-cadastrar:hover {
   background-color: var(--cinza-bem-claro);
-  border: solid 2px var(--verde);
-  color: var(--verde);
+  border: solid 2px var(--amarelo);
+  color: var(--amarelo);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
