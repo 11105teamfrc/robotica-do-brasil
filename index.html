@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica do Brasil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./interfaces/css/style.css">
+</head>
+
+<body>
+    <legend class="legend-iniciativa">Uma iniciativa de:</legend>
+    <header class="header-container-banner">
+        <div>
+            <img class="gctomorrow-banner" src="./interfaces/img/gc4tomorrow_logo.png"
+            alt="Banner Inicial da equipe desenvolvedora do site">
+        </div>
+    </header>
+
+    <nav class="nav-container-hamburguer">
+        <div class="btn-toggle-nav" onclick="toggleNav()">☰</div>
+        <ul class="nav-sidebar">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#mapa">Pesquise por Região</a></li>
+            <li><a href="#premios-a">Prêmios</a></li>
+            <li><a href="#registrar-time">Registre seu Time</a></li>
+            <li><a href="#conheca-categorias">Categorias</a></li>
+            <li><a href="../../interfaces/html/plataforma-de-estudos.html">Plataforma de Estudos</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <nav id="container-nav-menu">
+        <li class="barra-navegacao"><a href="#inicio">Início</a></li>
+        <li class="barra-navegacao"><a href="#mapa">Pesquise por Região</a></li>
+        <li class="barra-navegacao"><a href="#premios">Prêmios</a></li>
+        <li class="barra-navegacao"><a href="#registrar-time">Registre seu Time</a></li>
+        <li class="barra-navegacao"><a href="#conheca-categorias">Categorias</a></li>
+        <li><a href="../../interfaces/html/plataforma-de-estudos.html">Plataforma de Estudos</a></li>
+        <li class="barra-navegacao"><a href="#sobre-nos">Sobre Nós</a></li>
+        <li class="barra-navegacao"><a href="#contatos">Contatos</a></li>
+    </nav>
+
+    <main class="main-container">
+        <section id="inicio">
+            <legend class="legend-equipes">Conheça as equipes de</legend>
+            <figure class="figure-robotica">
+                <figcaption>
+                    <img class="titulo" src="./interfaces/img/robotica-do-brasil.svg" alt="">
+                </figcaption>
+            </figure>
+            <button class="button-equipes" type="submit" onclick="navegarListaEquipes()">Veja a lista completa</button>
+        </section>
+    </main>
+
+    
+
+    <main>
+        <section class="main-container-mapa" id="mapa">
+            <h2>Pesquise por Região</h2>
+            <div class="map-container">
+                <img src="./interfaces/img/mapa.png" alt="Mapa do Brasil dividido por regiões" class="map-image-full">
+
+                <a href="#norte" class="map-label-link label-norte">
+                    <img src="./interfaces/img/norte.png" alt="Etiqueta da Região Norte">
+                </a>
+                <a href="#nordeste" class="map-label-link label-nordeste">
+                    <img src="./interfaces/img/nordeste.png" alt="Etiqueta da Região Nordeste">
+                </a>
+                <a href="#centro-oeste" class="map-label-link label-centro-oeste">
+                    <img src="./interfaces/img/centro-oeste.png" alt="Etiqueta da Região Centro-Oeste">
+                </a>
+                <a href="#sudeste" class="map-label-link label-sudeste">
+                    <img src="./interfaces/img/sudeste.png" alt="Etiqueta da Região Sudeste">
+                </a>
+                <a href="#sul" class="map-label-link label-sul">
+                    <img src="./interfaces/img/sul.png" alt="Etiqueta da Região Sul">
+                </a>
+            </div>
+        </section>
+
+        <section class="main-container-premios" id="premios">
+            <img src="./interfaces/img/trofeu.png" alt="Ícone de Troféu" class="trophy-icon">
+            <h2>Conheça os Prêmios!</h2>
+
+            <div class="logos-container">
+                <a href="./interfaces/html/premios-fll.html">
+                    <img src="./interfaces/img/first-lego-league_logo.png" alt="Logo FIRST LEGO League">
+                </a>
+                <a href="./interfaces/html/premios-ftc.html">
+                    <img src="./interfaces/img/first-tech-challenge_logo.png" alt="Logo FIRST Tech Challenge">
+                </a>
+                <a href="./interfaces/html/premios-frc.html">
+                    <img src="./interfaces/img/first-robotics-competition_logo.png"
+                        alt="Logo FIRST Robotics Competition">
+                </a>
+                <a href="./interfaces/html/premios-sr.html">
+                    <img src="./interfaces/img/stem-racing_logo.png" alt="Logo STEM Racing">
+                </a>
+                <a href="./interfaces/html/premios-obr.html">
+                    <img src="./interfaces/img/olimpiadas-brasileiras-de-robotica_logo.png"
+                        alt="Logo OBR (Olimpíada Brasileira de Robótica)">
+                </a>
+                <a href="./interfaces/html/premios-wro.html">
+                    <img src="./interfaces/img/world-robot-olympiad_logo.png" alt="Logo WRO (World Robot Olympiad)">
+                </a>
+            </div>
+
+            <div class="registro-box" id="registrar-time">
+                <h3>REGISTRE SEU TIME!</h3>
+                <p>Sua equipe também pode realizar um registro oficial em nosso site. Acesse o link abaixo, complete as
+                    informações e prontinho!</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQeMM6xnOV2ap1XpQKHSTcjLaTAIfj-ozuoTzDuHDAy_h7TA/viewform"
+                    target="_blank" class="registro-btn">
+                    <span class="link-icon">🔗</span>
+                    Clique aqui
+                </a>
+                <p class="footnote">*Os dados serão transferidos para o site em até 30 dias</p>
+            </div>
+        </section>
+    </main>
+
+    <main class="main-container-titulos">
+        <h3 id="h3-ou" class="h-categorias">Ou...</h3>
+        <h2 class="h-categorias">Pesquise por Categoria</h2>
+    </main>
+
+    <main class="main-container-categorias">
+        <section class="section-container-categorias" id="conheca-categorias">
+            <article class="article-container-categorias" id="article-fll">
+                <img class="img-logo-categorias" src="./interfaces/img/first-lego-league_logo.png"
+                    alt="logo da first lego league">
+                <h4 class="idade-categoria">9 a 15 anos</h4>
+                <p>
+                    A <strong>FIRST LEGO League (FLL)</strong> é um programa de robótica educacional que desafia equipes
+                    a resolverem problemas do mundo real usando tecnologia, robôs LEGO e programação, promovendo
+                    inovação, colaboração e habilidades STEM.
+                </p>
+                <img class="image-extra" src="./interfaces/img/fll-extra.png" alt="desafio da FLL">
+                <div class="buttons-container">
+                    <a href="/interfaces/html/equipes-fll.html" class="btn-equipes-categoria">Equipes</a>
+                    <a href="https://www.firstlegoleague.org/" class="btn-saiba-mais-categoria" target="_blank">Saiba
+                        Mais</a>
+                </div>
+            </article>
+
+            <article class="article-container-categorias" id="article-ftc">
+                <img class="img-logo-categorias logo-ftc" src="./interfaces/img/first-tech-challenge-logo.png"
+                    alt="logo da first tech challenge">
+                <h4 class="idade-categoria">14 a 18 anos</h4>
+                <p>
+                    A <strong>FIRST Tech Challenge (FTC)</strong> é um torneio onde equipes projetam, constroem e
+                    programam robôs para realizar tarefas específicas em arenas, promovendo criatividade, trabalho em
+                    equipe e habilidades em engenharia e tecnologia.
+                </p>
+                <img class="image-extra" src="./interfaces/img/ftc-extra.png" alt="desafio da FTC">
+                <div class="buttons-container">
+                    <a href="/interfaces/html/equipes-ftc.html" class="btn-equipes-categoria">Equipes</a>
+                    <a href="https://www.firstinspires.org/robotics/ftc" class="btn-saiba-mais-categoria"
+                        target="_blank">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="article-container-categorias" id="article-frc">
+                <img class="img-logo-categorias logo-frc" src="./interfaces/img/first-robotics-competition_logo.png"
+                    alt="logo da first robotics competition">
+                <h4 class="idade-categoria">14 a 18 anos</h4>
+                <p>
+                    A <strong>FIRST Robotics Competition (FRC)</strong> é um torneio global onde equipes constroem robôs
+                    industriais para enfrentar desafios complexos em arena, incentivando inovação, trabalho em equipe e
+                    o desenvolvimento de habilidades em engenharia.
+                </p>
+                <img class="image-extra" src="./interfaces/img/frc-extra.png" alt="desafio da FRC">
+                <div class="buttons-container">
+                    <a href="/interfaces/html/equipes-frc.html" class="btn-equipes-categoria">Equipes</a>
+                    <a href="https://www.firstinspires.org/robotics/frc" class="btn-saiba-mais-categoria"
+                        target="_blank">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="article-container-categorias caso-especial" id="article-stem-racing">
+                <img class="img-logo-categorias caso-especial-um" src="./interfaces/img/stem-racing_logo.png"
+                    alt="logo da stem racing">
+                <h4 class="idade-categoria">8 a 19 anos</h4>
+                <p>
+                    <strong>STEM Racing</strong> é um projeto educacional que conecta ciência, tecnologia, engenharia e
+                    matemática ao automobilismo, desafiando estudantes a criar carrinhos de corrida em miniatura
+                    enquanto aprendem de forma prática e divertida.
+                </p>
+                <img class="image-extra" src="./interfaces/img/sr-extra.png" alt="desafio da Stem Racing">
+                <div class="buttons-container">
+                    <a href="/interfaces/html/equipes-sr.html" class="btn-equipes-categoria">Equipes</a>
+                    <a href="http://stemracing.com/" class="btn-saiba-mais-categoria" target="_blank">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="article-container-categorias caso-especial" id="article-obr">
+                <img class="img-logo-categorias caso-especial-dois"
+                    src="./interfaces/img/olimpiadas-brasileiras-de-robotica_logo.png"
+                    alt="logo da olimpíada brasileira de robótica">
+                <h4 class="idade-categoria">6 a 19 anos</h4>
+                <p>
+                    A <strong>Olimpíada Brasileira de Robótica</strong> é uma competição nacional que desafia equipes a
+                    resolverem problemas práticos usando robôs, incentivando o aprendizado de programação, engenharia e
+                    tecnologia em diferentes modalidades e desafios.
+                </p>
+                <img class="image-extra" src="./interfaces/img/obr-extra.png" alt="desafio da OBR">
+                <div class="buttons-container">
+                    <a href="#" class="btn-equipes-categoria">Equipes</a>
+                    <a href="https://obr.robocup.org.br/" class="btn-saiba-mais-categoria" target="_blank">Saiba
+                        Mais</a>
+                </div>
+                </div>
+            </article>
+
+            <article class="article-container-categorias caso-especial" id="article-wro">
+                <img class="img-logo-categorias caso-especial-tres" src="./interfaces/img/world-robot-olympiad_logo.png"
+                    alt="logo da world robot olympiad">
+                <h4 class="idade-categoria">8 a 19 anos</h4>
+                <p>
+                    A <strong>World Robot Olympiad (WRO)</strong> é um torneio internacional que desafia estudantes a
+                    resolverem problemas por meio da robótica e da programação. Ela acontece em mais de 90 países e tem
+                    um torneio mundial anual.
+                </p>
+                <img class="image-extra" src="./interfaces/img/wro-extra.png" alt="desafio da WRO">
+                <div class="buttons-container">
+                    <a href="#" class="btn-equipes-categoria">Equipes</a>
+                    <a href="https://wro-association.org/" class="btn-saiba-mais-categoria" target="_blank">Saiba
+                        Mais</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="./interfaces/js/script.js"></script>
+
+    <footer id="contatos">
+        <div class="contato-info">
+            <h1>Contatos</h1>
+            <div class="contato-item">
+                <img src="interfaces/img/icon_email.png" alt="Email">
+                <a href="mailto:frcteam11105@gmail.com">frcteam11105@gmail.com</a>
+            </div>
+
+            <div class="contato-item">
+                <img src="interfaces/img/icon_ig.png" alt="Instagram"> <a
+                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">@gc4tomorrow</a>
+            </div>
+            <div class="contato-item">
+                <img src="interfaces/img/icon_email.png" alt="Email">
+                <a href="mailto:luludarobotica@gmail.com">luludarobotica@gmail.com</a>
+            </div>
+            <div class="contato-item">
+                <img src="interfaces/img/icon_ig.png" alt="Instagram">
+                <a href="https://www.instagram.com/lulu_da_robotica">@lulu_da_robotica</a>
+            </div>
+        </div>
+        <img class="logo-banner" src="interfaces/img/extensao-de-luludarobotica_banner-e-footer.png"
+            alt="Banner Extensão">
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+            showWelcomeScreen: false,
+            initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Assistente Virtual',
+                    subtitle: "Estamos online para te atender.",
+                    getStarted: 'Iniciar Conversa',
+                    inputPlaceholder: 'Escreva sua mensagem...',
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
