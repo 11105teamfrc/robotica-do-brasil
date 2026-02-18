@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica do Brasil</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -32,10 +33,12 @@
 
     <nav id="container-nav-menu">
         <li class="barra-navegacao"><a id="inicio" href="../../index.html">Início</a></li>
-        <li class="barra-navegacao"><a id="pesquise-regiao" href="../../index.html#pesquise-regiao">Pesquise por Região</a></li>
+        <li class="barra-navegacao"><a id="pesquise-regiao" href="../../index.html#pesquise-regiao">Pesquise por
+                Região</a></li>
         <li class="barra-navegacao"><a id="conheca-categorias" href="../../index.html#premios">Prêmios</a></li>
         <li class="barra-navegacao"><a id="premios" href="../../index.html#conheca-categorias">Categorias</a></li>
-        <li class="barra-navegacao"><a id="resgistrar-time" href="../../index.html#registrar-time">Registre seu Time</a></li>
+        <li class="barra-navegacao"><a id="resgistrar-time" href="../../index.html#registrar-time">Registre seu Time</a>
+        </li>
         <li><a href="../../interfaces/html/plataforma-de-estudos.html">Plataforma de Estudos</a></li>
         <li class="barra-navegacao"><a id="sobre-nos" href="../../index.html#sobre-nos">Sobre Nós</a></li>
         <li class="barra-navegacao"><a id="contatos" href="../../index.html#contatos">Contatos</a></li>
@@ -152,6 +155,51 @@
     </main>
 
     <script src="../js/script.js"></script>
+
+    <footer id="contatos">
+        <div class="contato-info">
+            <h1>Contatos</h1>
+            <div class="contato-item">
+                <img src="../img/icon_email.png" alt="Email">
+                <a href="mailto:frcteam11105@gmail.com">frcteam11105@gmail.com</a>
+            </div>
+
+            <div class="contato-item">
+                <img src="../img/icon_ig.png" alt="Instagram"> <a
+                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">@gc4tomorrow</a>
+            </div>
+            <div class="contato-item">
+                <img src="../img/icon_email.png" alt="Email">
+                <a href="mailto:luludarobotica@gmail.com">luludarobotica@gmail.com</a>
+            </div>
+            <div class="contato-item">
+                <img src="../img/icon_ig.png" alt="Instagram">
+                <a href="https://www.instagram.com/lulu_da_robotica">@lulu_da_robotica</a>
+            </div>
+        </div>
+        <img class="logo-banner" src="../img/extensao-de-luludarobotica_banner-e-footer.png" alt="Banner Extensão">
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+            showWelcomeScreen: false,
+            initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Assistente Virtual',
+                    subtitle: "Estamos online para te atender.",
+                    getStarted: 'Iniciar Conversa',
+                    inputPlaceholder: 'Escreva sua mensagem...',
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>

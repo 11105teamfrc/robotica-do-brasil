@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma de Estudos</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header class="header-container-banner">
-        <img class="gctomorrow-banner" src="../img/gc4tomorrow_logo.png"
-            alt="Banner Inicial da equipe desenvolvedora do site">
+        <legend class="legend-iniciativa">Uma iniciativa de:</legend>
+        <div>
+            <img class="gctomorrow-banner" src="../img/gc4tomorrow_logo.png"
+                alt="Banner Inicial da equipe desenvolvedora do site">
+        </div>
     </header>
 
     <nav class="nav-container-hamburguer">
@@ -39,5 +45,144 @@
         <li class="barra-navegacao"><a id="sobre-nos" href="../../index.html#sobre-nos">Sobre Nós</a></li>
         <li class="barra-navegacao"><a id="contatos" href="../../index.html#contatos">Contatos</a></li>
     </nav>
+
+    <main>
+
+        <!-- HERO / APRESENTAÇÃO -->
+        <section class="main-container-apresentacao" aria-labelledby="titulo-plataforma">
+            <div class="section-container-apresentacao">
+
+                <figure class="article-container-nicolas">
+                    <img class="banner-inicial-plataforma" src="../img/banner-platafprma_nicolas.svg"
+                        alt="Estudante sorrindo representando a Plataforma de Estudos">
+                </figure>
+
+                <article class="article-container-apresentacao">
+                    <header>
+                        <h1 id="titulo-plataforma" class="titulo-apresentacao">
+                            Estude Robótica de Casa!
+                        </h1>
+                    </header>
+
+                    <p class="p-apresentacao">
+                        Aprenda conceitos de mecânica, programação e produção de conteúdo
+                        com materiais desenvolvidos por estudantes e mentores.
+                        Estude no seu ritmo e evolua suas habilidades técnicas.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- BUSCA -->
+        <section class="section-busca" aria-label="Pesquisar conteúdos">
+            <form class="form-busca">
+                <label for="campo-busca" class="label-hidden">Pesquisar conteúdo</label>
+                <input type="search" id="campo-busca" placeholder="Pesquisar..." aria-label="Pesquisar conteúdo">
+            </form>
+        </section>
+
+
+        <!-- CONTEÚDOS -->
+        <section class="section-conteudos" aria-labelledby="titulo-conteudos">
+
+            <header>
+                <h2 id="titulo-conteudos">Conteúdos Recentes</h2>
+            </header>
+
+            <div class="container-cards">
+
+                <!-- CARD 1 -->
+                <article class="card-conteudo">
+                    <div class="card-thumb"></div>
+
+                    <div class="card-info">
+                        <h3>Dicas de Projetos Mecânicos e Utilização do OnShape</h3>
+
+                        <p>
+                            Boas práticas para criação e desenvolvimento de componentes
+                            mecânicos aplicados à robótica.
+                        </p>
+
+                        <span class="autor">Por: Giovani Prado</span>
+
+                        <a href="#" class="btn-categoria">Mecânica / CAD</a>
+                    </div>
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="card-conteudo">
+                    <div class="card-thumb"></div>
+
+                    <div class="card-info">
+                        <h3>Boas Práticas para Produção em Mídias Sonoras</h3>
+
+                        <p>
+                            Da sala de aula ao microfone: estruturação de roteiro,
+                            entrevistas e produção de conteúdo.
+                        </p>
+
+                        <span class="autor">Por: Maria Mattos</span>
+
+                        <a href="#" class="btn-categoria">Comunicação e Marketing</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/script.js"></script>
+
+    <footer id="contatos">
+        <div class="contato-info">
+            <h1>Contatos</h1>
+            <div class="contato-item">
+                <img src="../img/icon_email.png" alt="Email">
+                <a href="mailto:frcteam11105@gmail.com">frcteam11105@gmail.com</a>
+            </div>
+
+            <div class="contato-item">
+                <img src="../img/icon_ig.png" alt="Instagram"> <a
+                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">@gc4tomorrow</a>
+            </div>
+            <div class="contato-item">
+                <img src="../img/icon_email.png" alt="Email">
+                <a href="mailto:luludarobotica@gmail.com">luludarobotica@gmail.com</a>
+            </div>
+            <div class="contato-item">
+                <img src="../img/icon_ig.png" alt="Instagram">
+                <a href="https://www.instagram.com/lulu_da_robotica">@lulu_da_robotica</a>
+            </div>
+        </div>
+        <img class="logo-banner" src="../img/extensao-de-luludarobotica_banner-e-footer.png" alt="Banner Extensão">
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+            showWelcomeScreen: false,
+            initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Assistente Virtual',
+                    subtitle: "Estamos online para te atender.",
+                    getStarted: 'Iniciar Conversa',
+                    inputPlaceholder: 'Escreva sua mensagem...',
+                },
+            },
+        });
+    </script>
 </body>
+
 </html>

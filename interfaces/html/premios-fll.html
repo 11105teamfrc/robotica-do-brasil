@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica do Brasil - Prêmios FTC</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -52,7 +55,8 @@
     </main>
 
     <article class="award">
-        <h2 style="color:#d41e1e;" style="color:#d41e1e;">CHAMPION'S AWARD <span class="award-name">/ prêmio [cam.pe.ões]</span></h2>
+        <h2 style="color:#d41e1e;" style="color:#d41e1e;">CHAMPION'S AWARD <span class="award-name">/ prêmio
+                [cam.pe.ões]</span></h2>
         <p>
             Este prêmio celebra a equipe que incorpora a experiência da FIRST® LEGO® League através da demonstração de
             todos os nossos Core Values, ao mesmo tempo que alcança excelência e inovação tanto no Desempenho do Robô,
@@ -70,7 +74,8 @@
     </article>
 
     <article class="award">
-        <h2 style="color:#d41e1e;">INNOVATION PROJECT AWARD <span class="award-name">/ prêmio [pro.je.to de i.no.va.ção]</span></h2>
+        <h2 style="color:#d41e1e;">INNOVATION PROJECT AWARD <span class="award-name">/ prêmio [pro.je.to de
+                i.no.va.ção]</span></h2>
         <p>
             Esta equipe utiliza diversos recursos para seu Projeto de Inovação para ajudá-la a ter uma compreensão
             integral de seu problema. Além disso, tem uma solução criativa e bem fundamentada e comunica efetivamente
@@ -87,7 +92,8 @@
     </article>
 
     <article class="award">
-        <h2 style="color:#d41e1e;">ROBOT PERFORMANCE AWARD <span class="award-name">/ prêmio [per.for.man.ce do ro.bô]</span></h2>
+        <h2 style="color:#d41e1e;">ROBOT PERFORMANCE AWARD <span class="award-name">/ prêmio [per.for.man.ce do
+                ro.bô]</span></h2>
         <p>
             Este prêmio celebra a equipe que marca o maior número de pontos durante o Desafio do Robô. As equipes têm
             chance de competir em, pelo menos, 3 partidas de 2'30", e apenas sua maior pontuação é a que conta.
@@ -112,7 +118,8 @@
     </article>
 
     <article class="award">
-        <h2 style="color:#d41e1e;">EXCELLENCE IN ENGINEERING AWARD <span class="award-name">/ prêmio [ex.ce.lên.cia em en.ge.na.ri.a]</span></h2>
+        <h2 style="color:#d41e1e;">EXCELLENCE IN ENGINEERING AWARD <span class="award-name">/ prêmio [ex.ce.lên.cia em
+                en.ge.na.ri.a]</span></h2>
         <p>
             Técnicos e mentores inspiram suas equipes a fazer seu melhor, tanto individualmente quanto em conjunto, e,
             sem eles, a FIRST LEGO League não existiria. Este prêmio vai para o técnico ou mentor cuja liderança e
@@ -121,7 +128,8 @@
     </article>
 
     <article class="award">
-        <h2 style="color:#d41e1e;">RISING ALL-STAR AWARD <span class="award-name">/ prêmio [es.tre.la i.ni.ci.an.te]</span></h2>
+        <h2 style="color:#d41e1e;">RISING ALL-STAR AWARD <span class="award-name">/ prêmio [es.tre.la
+                i.ni.ci.an.te]</span></h2>
         <p>
             Este prêmio celebra as equipes que avançaram significativamente com relação à sua confiança e capacidade
             tanto no Desafio do Robô quanto no Projeto de Inovação e que apresentam excelentes Core Values. Essas
@@ -141,7 +149,9 @@
 
     </main>
 
-    <footer>
+    <script src="../js/script.js"></script>
+
+    <footer id="contatos">
         <div class="contato-info">
             <h1>Contatos</h1>
             <div class="contato-item">
@@ -151,7 +161,7 @@
 
             <div class="contato-item">
                 <img src="../img/icon_ig.png" alt="Instagram"> <a
-                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">gc4tomorrow</a>
+                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">@gc4tomorrow</a>
             </div>
             <div class="contato-item">
                 <img src="../img/icon_email.png" alt="Email">
@@ -165,8 +175,26 @@
         <img class="logo-banner" src="../img/extensao-de-luludarobotica_banner-e-footer.png" alt="Banner Extensão">
     </footer>
 
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-    <script src="../js/script.js"></script>
+        createChat({
+            webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+            showWelcomeScreen: false,
+            initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Assistente Virtual',
+                    subtitle: "Estamos online para te atender.",
+                    getStarted: 'Iniciar Conversa',
+                    inputPlaceholder: 'Escreva sua mensagem...',
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>

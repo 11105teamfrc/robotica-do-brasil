@@ -235,6 +235,7 @@ nav li a:hover {
     text-align: center;
     justify-content: center;
   }
+
   #container-nav-menu {
     display: none;
   }
@@ -267,6 +268,7 @@ nav li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 header div .gctomorrow-banner {
@@ -1785,7 +1787,8 @@ LOGIN E CADASTRO
   align-items: center;
 }
 
-.legend-cadastro, .legend-login {
+.legend-cadastro,
+.legend-login {
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
@@ -1835,7 +1838,8 @@ label {
   color: var(--cinza-escuro);
 }
 
-input, select {
+input,
+select {
   padding: 0.6rem;
   border-radius: 5px;
   border: 1px solid var(--cinza-claro);
@@ -1889,4 +1893,189 @@ legend a:hover {
   align-self: center;
   justify-self: center;
   margin-top: 2%;
+}
+
+/*
+** DESIGN DA PLATAFORMA DE ESTUDOS
+*/
+
+.main-container-apresentacao {
+  margin-top: 10%;
+  margin-left: 2.45%;
+  margin-right: 2.45%;
+  display: flex;
+}
+
+main .section-container-apresentacao {
+  display: flex;
+}
+
+main section article .banner-inicial-plataforma {
+  width: 80%;
+  margin-left: 10%;
+}
+
+main section .article-container-nicolas {
+  width: 48%;
+}
+
+main section article .banner-inicial-plataforma {
+  width: 100%;
+}
+
+main section .article-container-apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  margin-right: 2.45;
+}
+
+/* ===== HERO ===== */
+
+.titulo-apresentacao {
+  font-size: 2.8rem;
+  color: var(--azul);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.p-apresentacao {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 500px;
+  line-height: 1.6;
+  color: var(--cinza-escuro);
+}
+
+
+/* ===== BUSCA ===== */
+
+.section-busca {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.form-busca input {
+  width: 400px;
+  max-width: 90%;
+  padding: 1rem 1.5rem;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--cinza-bem-claro);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-busca input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.2);
+}
+
+
+/* ===== CONTEÚDOS ===== */
+
+.section-conteudos {
+  width: 90%;
+  margin: 0 auto 8%;
+}
+
+.section-conteudos h2 {
+  font-size: 2rem;
+  margin-bottom: 3%;
+  color: var(--cinza-escuro);
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+
+/* ===== CARD ===== */
+
+.card-conteudo {
+  display: flex;
+  gap: 2rem;
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card-conteudo:hover {
+  transform: translateY(-5px);
+}
+
+.card-thumb {
+  width: 300px;
+  height: 180px;
+  background-color: var(--cinza-claro);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.card-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--cinza-escuro);
+}
+
+.card-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  color: var(--cinza-escuro);
+}
+
+.autor {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--cinza-claro);
+}
+
+.btn-categoria {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  background-color: var(--button-background);
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-categoria:hover {
+  background-color: var(--button-hover-background);
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1000px) {
+
+  .section-container-apresentacao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article-container-nicolas,
+  .article-container-apresentacao {
+    width: 100% !important;
+  }
+
+  .card-conteudo {
+    flex-direction: column;
+  }
+
+  .card-thumb {
+    width: 100%;
+  }
+
 }

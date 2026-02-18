@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robótica do Brasil - Prêmios FTC</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -211,24 +212,33 @@
         <h2 style="color: #004aad;">TEAM SPIRIT AWARD <span class="award-name">/ prêmio [es.pí.ri.to de e.qui.pe]</span>
         </h2>
         <p>
-            Celebra o entusiasmo e o espírito extraordinários por meio de parcerias e trabalho em equipe excepcionais, impulsionando os objetivos da FIRST. Prêmio de Sustentabilidade em Equipe patrocinado pela Dow - celebra uma equipe que desenvolveu práticas sustentáveis com foco no "tripé da sustentabilidade" (Pessoas, Prosperidade e Planeta) para gerar um impacto positivo e alcançar a continuidade a longo prazo
+            Celebra o entusiasmo e o espírito extraordinários por meio de parcerias e trabalho em equipe excepcionais,
+            impulsionando os objetivos da FIRST. Prêmio de Sustentabilidade em Equipe patrocinado pela Dow - celebra uma
+            equipe que desenvolveu práticas sustentáveis com foco no "tripé da sustentabilidade" (Pessoas, Prosperidade
+            e Planeta) para gerar um impacto positivo e alcançar a continuidade a longo prazo
 
         </p>
     </article>
 
     <article class="award">
-        <h2 style="color: #004aad;">TEAM SUSTAINABILITY AWARD <span class="award-name">/ prêmio [sus.ten.ta.bi.li.da.de em e.qui.pe</span>
+        <h2 style="color: #004aad;">TEAM SUSTAINABILITY AWARD <span class="award-name">/ prêmio [sus.ten.ta.bi.li.da.de
+                em e.qui.pe</span>
         </h2>
         <p>
-            Concedido a um indivíduo, empresa ou organização que se destaca consistentemente em seus esforços, com resultados comprovados nas áreas de impacto, liderança, comprometimento pessoal, comunidade e contribuições históricas.
+            Concedido a um indivíduo, empresa ou organização que se destaca consistentemente em seus esforços, com
+            resultados comprovados nas áreas de impacto, liderança, comprometimento pessoal, comunidade e contribuições
+            históricas.
         </p>
     </article>
 
     <article class="award">
-        <h2 style="color: #004aad;">VOLUNTEER OF THE YEAR AWARD <span class="award-name">/ prêmio [vo.lun.tá.ri.o do a.no]</span>
+        <h2 style="color: #004aad;">VOLUNTEER OF THE YEAR AWARD <span class="award-name">/ prêmio [vo.lun.tá.ri.o do
+                a.no]</span>
         </h2>
         <p>
-            Concedido a um indivíduo, empresa ou organização que se destaca consistentemente em seus esforços, com resultados comprovados nas áreas de impacto, liderança, comprometimento pessoal, comunidade e contribuições históricas.
+            Concedido a um indivíduo, empresa ou organização que se destaca consistentemente em seus esforços, com
+            resultados comprovados nas áreas de impacto, liderança, comprometimento pessoal, comunidade e contribuições
+            históricas.
 
         </p>
     </article>
@@ -242,16 +252,22 @@
     </article>
 
     <article class="award">
-        <h2 style="color: #004aad;">WOODIE FLOWERS FINALIST AWARD <span class="award-name">/ prêmio [fi.na.lis.ta Woo.die Flo.wers]</span>
+        <h2 style="color: #004aad;">WOODIE FLOWERS FINALIST AWARD <span class="award-name">/ prêmio [fi.na.lis.ta
+                Woo.die Flo.wers]</span>
         </h2>
         <p>
-            Concedido a um mentor excepcional que melhor lidera, inspira, ensina e capacita sua equipe usando excelentes habilidades de comunicação. O Dr. William Murphy e a Small Parts Inc. criaram este prestigioso prêmio em 1996. A partir de 2004, o prêmio foi ampliado para homenagear mais comunicadores exemplares na comunidade FIRST.
+            Concedido a um mentor excepcional que melhor lidera, inspira, ensina e capacita sua equipe usando excelentes
+            habilidades de comunicação. O Dr. William Murphy e a Small Parts Inc. criaram este prestigioso prêmio em
+            1996. A partir de 2004, o prêmio foi ampliado para homenagear mais comunicadores exemplares na comunidade
+            FIRST.
         </p>
     </article>
 
     </main>
 
-    <footer>
+    <script src="../js/script.js"></script>
+
+    <footer id="contatos">
         <div class="contato-info">
             <h1>Contatos</h1>
             <div class="contato-item">
@@ -261,7 +277,7 @@
 
             <div class="contato-item">
                 <img src="../img/icon_ig.png" alt="Instagram"> <a
-                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">gc4tomorrow</a>
+                    href="https://www.instagram.com/gc4tomorrow/?igsh=b2J0eHM5bXBsMnlm">@gc4tomorrow</a>
             </div>
             <div class="contato-item">
                 <img src="../img/icon_email.png" alt="Email">
@@ -275,8 +291,26 @@
         <img class="logo-banner" src="../img/extensao-de-luludarobotica_banner-e-footer.png" alt="Banner Extensão">
     </footer>
 
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-    <script src="../js/script.js"></script>
+        createChat({
+            webhookUrl: 'https://testefrc.app.n8n.cloud/webhook/09c5a2e6-f3c4-4ff2-a7cb-c760fcb4168f/chat',
+            showWelcomeScreen: false,
+            initialMessages: [
+                'Olá! Seja bem-vindo(a) 👋',
+                'Como posso te ajudar hoje?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Assistente Virtual',
+                    subtitle: "Estamos online para te atender.",
+                    getStarted: 'Iniciar Conversa',
+                    inputPlaceholder: 'Escreva sua mensagem...',
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
