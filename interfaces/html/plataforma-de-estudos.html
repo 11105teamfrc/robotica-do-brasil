@@ -47,7 +47,6 @@
     </nav>
 
     <main>
-
         <!-- HERO / APRESENTAÇÃO -->
         <section class="main-container-apresentacao" aria-labelledby="titulo-plataforma">
             <div class="section-container-apresentacao">
@@ -74,7 +73,6 @@
             </div>
         </section>
 
-
         <!-- BUSCA -->
         <section class="section-busca" aria-label="Pesquisar conteúdos">
             <form class="form-busca">
@@ -83,19 +81,17 @@
             </form>
         </section>
 
-
         <!-- CONTEÚDOS -->
         <section class="section-conteudos" aria-labelledby="titulo-conteudos">
-
             <header>
                 <h2 id="titulo-conteudos">Conteúdos Recentes</h2>
             </header>
 
             <div class="container-cards">
-
                 <!-- CARD 1 -->
                 <article class="card-conteudo">
-                    <div class="card-thumb"></div>
+                    <div class="thumbnail" data-video="https://www.youtube.com/embed/PPx-ODHByOc"></div>
+
 
                     <div class="card-info">
                         <h3>Dicas de Projetos Mecânicos e Utilização do OnShape</h3>
@@ -106,16 +102,21 @@
                         </p>
 
                         <span class="autor">Por: Giovani Prado</span>
-
-                        <a href="#" class="btn-categoria">Mecânica / CAD</a>
+                        <p>Mecânica/CAD</p>
                     </div>
                 </article>
 
+                <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
 
                 <!-- CARD 2 -->
                 <article class="card-conteudo">
-                    <div class="card-thumb"></div>
-
+                    <div class="thumbnail" data-video="https://www.youtube.com/embed/Fm-B9-vldEk"></div>
                     <div class="card-info">
                         <h3>Boas Práticas para Produção em Mídias Sonoras</h3>
 
@@ -125,15 +126,19 @@
                         </p>
 
                         <span class="autor">Por: Maria Mattos</span>
-
-                        <a href="#" class="btn-categoria">Comunicação e Marketing</a>
+                        <p>Comunicação e Marketing</p>
                     </div>
                 </article>
 
+                <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
-
         </section>
-
     </main>
 
 

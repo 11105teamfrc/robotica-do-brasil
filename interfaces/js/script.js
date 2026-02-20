@@ -7,7 +7,7 @@ let toggleNav = function () {
 
     if (toggleNavStatus === false) {
         getSidebar.style.width = "250px";
-        getSidebar.style.visibility = "visible";
+        getSidebar.style.visibaility = "visible";
 
         getSidebarLinks.forEach(link => {
             link.style.opacity = "1";
@@ -144,4 +144,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+});
+
+/**
+ *  MODAL DO VÍDEO
+ */
+
+const modal = document.getElementById("videoModal");
+const iframe = document.getElementById("videoFrame");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".thumbnail").forEach(item => {
+    item.addEventListener("click", function () {
+        const videoURL = this.getAttribute("data-video");
+        iframe.src = videoURL + "?autoplay=1";
+        modal.style.display = "flex";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    iframe.src = ""; // para parar o vídeo
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        iframe.src = "";
+    }
 });
