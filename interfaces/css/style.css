@@ -2071,8 +2071,22 @@ main section .article-container-apresentacao {
   padding: 0.70rem;
   border: 0.5px solid var(--laranja);
   border-radius: 40px;
-  width: 30%;
+  width: 50%;
   color: var(--laranja);
+}
+
+@media (max-width: 800px) {
+  .p-area {
+    width: 90%;
+  }
+
+  .titulo-apresentacao {
+    font-size: 2rem;
+  }
+
+  .form-busca {
+    width: 100%;
+  }
 }
 
 /* ===== RESPONSIVO ===== */
@@ -2134,8 +2148,36 @@ main section .article-container-apresentacao {
 
 .card-thumbnail {
   width: 90%;
-  height: 200px;
+ height: 200px;
   background: #aaa;
   border-radius: 12px;
   cursor: pointer;
+}
+
+/*
+** PÚBLICO ALVO DE WORKSHOPS
+*/
+
+.div-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 40%;
+}
+
+.publico-alvo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.publico-alvo .img-publico {
+  width: 50px;
+  object-fit: contain;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 0.85rem;
 }
