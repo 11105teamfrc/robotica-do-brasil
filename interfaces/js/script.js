@@ -37,7 +37,7 @@ const equipesContatos = [
     },
     {
         id: 'gc4tomorrow',
-        nome: 'GC 4Tomorrow #11105',
+        nome: 'GC 4 Tomorrow #11105',
         email: 'frcteam11105@gmail.com',
         instagram: '@gc4tomorrow',
         website: 'https://gc4tomorrow.com'

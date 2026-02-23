@@ -1902,8 +1902,6 @@ legend a:hover {
 .main-container-apresentacao {
   margin-top: 10%;
   margin-left: 2.45%;
-  margin-right: 2.45%;
-  display: flex;
 }
 
 main .section-container-apresentacao {
@@ -1916,11 +1914,11 @@ main section article .banner-inicial-plataforma {
 }
 
 main section .article-container-nicolas {
-  width: 70%;
+  width: 100%;
 }
 
 .banner-inicial-plataforma {
-  width: 100%;
+  width: 80%;
 }
 
 main section .article-container-apresentacao {
@@ -1930,7 +1928,7 @@ main section .article-container-apresentacao {
   align-items: center;
   max-width: 500px;
   width: 80%;
-  margin-right: 5%;
+  margin-right: 15%;
 }
 
 @media (max-width: 910px) {
@@ -2006,11 +2004,13 @@ main section .article-container-apresentacao {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  object-fit: contain;
 }
 
 .titulo-conteudos {
   margin-bottom: 2.5%;
 }
+
 
 /* ===== CARD ===== */
 
@@ -2073,12 +2073,13 @@ main section .article-container-apresentacao {
   border-radius: 40px;
   width: 50%;
   color: var(--laranja);
+  max-width: 200px;
 }
 
 @media (max-width: 800px) {
   .p-area {
     width: 90%;
-  }
+  } 
 
   .titulo-apresentacao {
     font-size: 2rem;
@@ -2161,7 +2162,6 @@ main section .article-container-apresentacao {
 .div-conteudo {
   display: flex;
   align-items: center;
-  gap: 40%;
 }
 
 .publico-alvo {
